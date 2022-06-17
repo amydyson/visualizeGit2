@@ -1,0 +1,61 @@
+
+.visGitApp {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.font-size-32 {
+    font-size: 32px;
+}
+
+.font-size-48 {
+    font-size: 48px;
+}
+
+.pl-16 {
+    padding-left: 16px;
+}
+
+.bold {
+    font-weight: bold;;
+}
+.background-beige {
+    background-color: #beaf98;
+}
+
+.background-red {
+    background-color: #CD5C5C;
+}
+.background-gray {
+    background-color: #BEBEBE;
+}
+
+.w-250 {
+    width: 250px;
+}
+
+.rectangle {
+    width: 400px;
+    height: 10px;
+}
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.pb-16 {
+    padding-bottom: 16px;
+}
+.pb-32 {
+    padding-bottom: 32px;
+}
