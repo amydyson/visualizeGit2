@@ -4,11 +4,32 @@
     <img width="200" alt="Angular Logo" src="favicon.ico"/>
     <div class="font-size-48 bold pl-16">Visualize Git</div>
   </div>
-  <mat-form-field class="w-250" appearance="fill">
+  <mat-form-field class="w-250 pb-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
-    <mat-select>
-      <mat-option *ngFor = "let command of commands" [value]="command.name">{{command.name}}</mat-option>
+    <mat-select (selectionChange)="selectCommand($event.value)">
+      <mat-option *ngFor = "let command of commands" [value]="command.name"
+      >{{command.name}}</mat-option>
     </mat-select>
   </mat-form-field>
+  <section *ngIf="chosenCommand === 'init'">
+    <div>initial-scale</div>
+  </section>
+  <section *ngIf="chosenCommand === 'clone'">
+    <div>Clone</div>
+  </section>
+  <section>
+    <div class="flex bt-beige bb-beige">
+        <div class="w-150 h-200 bl-beige br-beige text-align"> 
+          <div class="w-150 background-black white">Stash</div></div>
+        <div class="flex direction-column w-150 h-200 br-beige text-align">
+          <div class="w-150 background-black white">Working Area</div>
+          <div class="w-150 pt-32">index.html</div>
+          <div class="w-150 pt-4">index.js</div>
+          <div class="w-150 pt-4">index.css</div>
+        </div>
+        <div class="w-150 h-200 br-beige text-align"><div class="w-150 background-black white">Index</div></div>
+        <div class="w-150 h-200 br-beige text-align"><div class="w-150 background-black white">Repository</div></div>
+    </div>
+  </section>
 
 </section>

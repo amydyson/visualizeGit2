@@ -15,6 +15,10 @@
     padding-left: 16px;
 }
 
+.pr-16 {
+    padding-right: 16px;
+}
+
 .bold {
     font-weight: bold;;
 }
@@ -28,9 +32,43 @@
 .background-gray {
     background-color: #BEBEBE;
 }
+.background-black {
+    background-color: #000000;
+}
 
+.white {
+    color: white;
+}
+.w-100 {
+    width: 100px;
+}
+
+.w-150 {
+    width: 150px;
+}
 .w-250 {
     width: 250px;
+}
+
+.h-200 {
+    height: 200px;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.br-beige {
+    border-right: 2px solid #beaf98;
+}
+.bl-beige {
+    border-left: 2px solid #beaf98;
+}
+.bt-beige {
+    border-top: 2px solid #beaf98;
+}
+.bb-beige {
+    border-bottom: 2px solid #beaf98;
 }
 
 .rectangle {
@@ -58,4 +96,14 @@
 }
 .pb-32 {
     padding-bottom: 32px;
+}
+.pt-32 {
+    padding-top: 32px;
+}
+.pt-4 {
+    padding-top: 4px;
+}
+
+.change-direction {
+ color: pink;
 }
