@@ -12,12 +12,12 @@
     </mat-select>
   </mat-form-field>
   <section *ngIf="chosenCommand === 'init'">
-    <div>initial-scale</div>
+    <div>Init</div>
   </section>
   <section *ngIf="chosenCommand === 'clone'">
     <div>Clone</div>
   </section>
-  <section class="flex w-full justify-center change-direction">
+  <section @fade   *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction">
         <!-- <div class="w-150 h-200 bl-beige br-beige text-align"> 
           <div class="w-150 background-black white">Stash</div>
         </div> -->
