@@ -4,6 +4,8 @@
     <img class="image-size" alt="Visual Git Logo" src="favicon.ico"/>
     <div class="font-size-48 bold pl-16">Visualize Git</div>
   </div>
+  <!-- <button [@myTrigger]="state" (click)="toggleState()">TEST</button> -->
+  <!-- <button [@myTrigger2]="state" (click)="toggleState()">TEST2</button> -->
   <mat-form-field class="w-250 pb-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
     <mat-select (selectionChange)="selectCommand($event.value)">
@@ -17,18 +19,6 @@
   <section *ngIf="chosenCommand === 'clone'">
     <div>Clone</div>
   </section>
-  <section @fade   *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction">
-        <!-- <div class="w-150 h-200 bl-beige br-beige text-align"> 
-          <div class="w-150 background-black white">Stash</div>
-        </div> -->
-        <div class="order-switch-2 flex direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">
-          <div class="w-full min-w-150 background-black white">Working Area</div>
-          <div class="pt-change">index.html</div>
-          <div class="pt-4">index.js</div>
-          <div class="pt-4 pb-change">index.css</div>
-        </div>
-        <div class="order-1 height-change bl-change bb-beige br-beige text-align"><div class="w-full min-w-150 background-black white">Index</div></div>
-        <div class="order-switch-0 height-change bl-change bb-beige br-beige text-align"><div class="w-full min-w-150 background-black white">Repository</div></div>
-  </section>
+  <visualize-add @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
 
 </section>

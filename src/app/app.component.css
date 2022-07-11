@@ -10,7 +10,9 @@
 .font-size-48 {
     font-size: 48px;
 }
-
+.pl-4 {
+    padding-left: 4px;
+}
 .pl-16 {
     padding-left: 16px;
 }
@@ -24,6 +26,10 @@
 }
 .background-beige {
     background-color: #beaf98;
+}
+
+.red {
+    color: #CD5C5C;
 }
 
 .background-red {
@@ -62,6 +68,11 @@
     text-align: center;
 }
 
+.blue {
+    color: blue;
+}
+
+
 .br-beige {
     border-right: 2px solid #beaf98;
 }
@@ -79,8 +90,65 @@
     width: 400px;
     height: 10px;
 }
-.flex {
+.flex, .show{
     display: flex;
+}
+.float {
+    float: right;
+}
+.pull-up{
+    margin-top: -20px;
+}
+.move {
+    animation: move 2s linear;
+    animation-fill-mode: forwards;
+
+}
+    @media only screen and (min-device-width: 960px) {
+        @keyframes move {
+            0% {
+                transform: translateX(0)
+            }
+            50% {
+                transform: translateX(50px)
+            }
+            100% {
+                transform: translateX(145px)
+            }
+        } 
+    }
+
+    @media only screen and (max-device-width: 959px) {
+        @keyframes move {
+            0% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateU(-50px)
+            }
+            100% {
+                transform: translateY(-105px)
+            }
+        } 
+    }
+
+
+.hide{
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 30px 30px 0 0;
+    padding: 0;
+}
+
+li {
+    padding: 15px;
+    width: 100%;
+    background: #f1f1f1;
+    margin-bottom: 2px;
+    font-weight: bold;
 }
 
 .align-center {
