@@ -1,11 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <section class="visGitApp flex direction-column align-center"> 
-  <div class="flex align-center justify-center pb-32">
+  <div class="flex align-center justify-center pl-8 pb-32">
     <img class="image-size" alt="Visual Git Logo" src="favicon.ico"/>
     <div class="font-size-48 bold pl-16">Visualize Git</div>
   </div>
-  <!-- <button [@myTrigger]="state" (click)="toggleState()">TEST</button> -->
-  <!-- <button [@myTrigger2]="state" (click)="toggleState()">TEST2</button> -->
   <mat-form-field class="w-250 pb-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
     <mat-select (selectionChange)="selectCommand($event.value)">
@@ -19,6 +16,7 @@
   <section *ngIf="chosenCommand === 'clone'">
     <div>Clone</div>
   </section>
+  <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
   <visualize-add @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
 
 </section>

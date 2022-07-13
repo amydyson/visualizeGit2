@@ -7,11 +7,13 @@ import { MatButtonModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddComponent } from './add/add.component';
+import { CommitComponent } from './commit/commit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddComponent
+    AddComponent,
+    CommitComponent
   ],
   imports: [
     BrowserModule,

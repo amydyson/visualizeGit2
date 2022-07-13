@@ -23,11 +23,8 @@ export class AddComponent implements OnInit {
  
   }
 
-  toggleState(){
+  visualizeAdd(){
     this.hideIndexHtml2 = false;
-    // this.state = (this.state === 'small' ? 'large' : 'small');
-    // this.items.push('another item');
-    // this.state = 'fadeIn';
   }
 
 }

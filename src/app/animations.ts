@@ -4,10 +4,10 @@ import { MissingTranslationStrategy } from '@angular/core';
 export let fade =     trigger('fade', [
     state('void', style({opacity: 0})),
     transition(':enter', [
-      animate(1000)
+      animate(500)
     ]),
     transition(':leave', [
-      animate(500)
+      animate(100)
     ])
   ])
 

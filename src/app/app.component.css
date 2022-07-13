@@ -10,8 +10,14 @@
 .font-size-48 {
     font-size: 48px;
 }
+.h-48 {
+    height: 48px;
+}
 .pl-4 {
     padding-left: 4px;
+}
+.pl-8 {
+    padding-left: 8px;
 }
 .pl-16 {
     padding-left: 16px;
@@ -19,6 +25,14 @@
 
 .pr-16 {
     padding-right: 16px;
+}
+
+.pt-48{
+    padding-top: 48px;
+}
+
+.pt-52{
+    padding-top: 52px;
 }
 
 .bold {
@@ -30,6 +44,10 @@
 
 .red {
     color: #CD5C5C;
+}
+
+.green {
+    color: green;
 }
 
 .background-red {
@@ -99,6 +117,47 @@
 .pull-up{
     margin-top: -20px;
 }
+
+.moveAndColor {
+    animation: moveAndColor 2s linear;
+    animation-fill-mode: forwards;
+
+}
+    @media only screen and (min-device-width: 960px) {
+        @keyframes moveAndColor {
+            0% {
+                transform: translateX(0);
+                color: green;
+            }
+            50% {
+                transform: translateX(72.5px);
+                color: green;
+            }
+            100% {
+                transform: translateX(145px);
+                color: black;
+            }
+        } 
+    }
+
+    @media only screen and (max-device-width: 959px) {
+        @keyframes moveAndColor {
+            0% {
+                transform: translateY(0);
+                color: green;
+            }
+            50% {
+                transform: translateU(-50px);
+                color: green;
+            }
+            100% {
+                transform: translateY(-105px);
+                color: black;
+            }
+        } 
+    }
+
+
 .move {
     animation: move 2s linear;
     animation-fill-mode: forwards;
@@ -107,13 +166,13 @@
     @media only screen and (min-device-width: 960px) {
         @keyframes move {
             0% {
-                transform: translateX(0)
+                transform: translateX(0);
             }
             50% {
-                transform: translateX(50px)
+                transform: translateX(72.5px);
             }
             100% {
-                transform: translateX(145px)
+                transform: translateX(158px);
             }
         } 
     }
@@ -127,7 +186,7 @@
                 transform: translateU(-50px)
             }
             100% {
-                transform: translateY(-105px)
+                transform: translateY(-108px)
             }
         } 
     }
@@ -194,6 +253,10 @@ li {
     .pb-change {
         padding-bottom: 32px;
     }
+
+    .index_commit {
+        padding-top: 52px;
+    }
     .order-switch-0 {
         order: 2;
     }
@@ -211,7 +274,6 @@ li {
     }
     .change-direction {
         flex-direction: column;
-        width: 50%;
     }
 
     .height-change {
@@ -228,6 +290,10 @@ li {
 
     .bl-change {
         border-left: 2px solid #beaf98;
+    }
+
+    .index_commit {
+        padding-top: 30px;
     }
 
     .order-switch-0 {
