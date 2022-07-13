@@ -3,6 +3,10 @@
     font-family: 'Roboto', sans-serif !important;
 }
 
+.font-size-24 {
+    font-size: 24px;
+}
+
 .font-size-32 {
     font-size: 32px;
 }
@@ -23,6 +27,15 @@
     padding-left: 16px;
 }
 
+.pl-24 {
+    padding-left: 24px;
+}
+.pl-32 {
+    padding-left: 32px;
+}
+.pl-64 {
+    padding-left: 64px;
+}
 .pr-16 {
     padding-right: 16px;
 }
@@ -82,7 +95,7 @@
     height: 200px;
 }
 
-.text-align {
+.text-align, .text-center {
     text-align: center;
 }
 
@@ -230,6 +243,10 @@ li {
 }
 .pt-32 {
     padding-top: 32px;
+}
+
+.pt-64 {
+    padding-top: 64px;
 }
 .pt-4 {
     padding-top: 4px;

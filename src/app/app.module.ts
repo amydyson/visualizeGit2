@@ -8,12 +8,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddComponent } from './add/add.component';
 import { CommitComponent } from './commit/commit.component';
+import { InitComponent } from './init/init.component';
+import { CloneComponent } from './clone/clone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddComponent,
-    CommitComponent
+    CommitComponent,
+    InitComponent,
+    CloneComponent
   ],
   imports: [
     BrowserModule,

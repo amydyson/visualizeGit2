@@ -10,12 +10,8 @@
       >{{command.name}}</mat-option>
     </mat-select>
   </mat-form-field>
-  <section *ngIf="chosenCommand === 'init'">
-    <div>Init</div>
-  </section>
-  <section *ngIf="chosenCommand === 'clone'">
-    <div>Clone</div>
-  </section>
+  <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>
+  <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
   <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
   <visualize-add @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
 

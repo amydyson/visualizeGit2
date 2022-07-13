@@ -1,0 +1,26 @@
+<section class= "flex direction-column align-center">
+  <div class="blue h-48">
+    <span [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: No git repository exists.</span>
+    <span class="text-center" [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">
+      A git repository is created (look for a hidden folder call .git).
+      Git init only needs to be run once. </span>
+   </div>
+ <button [disabled]="!hideMessage" (click)="visualizeInit()" class="w-250" mat-raised-button color="warn">Visualize "git init"</button>
+ <div class="flex pt-32 change-direction">
+    <div class="order-switch-2 flex  direction-column height-change text-align"
+         [ngClass]="{'bt-beige bb-beige bl-beige br-beige ': !hideMessage}">
+      <div class="w-full min-w-150 background-black white" [ngClass]="{'hide': hideMessage}">Working Area</div>
+      <div class="pt-change">index.html</div>
+      <div class="pt-4 ">index.js</div>
+      <div class="pt-4 pb-change">index.css</div>
+    </div>
+    <div class="order-1 height-change text-align"
+        [ngClass]="{'bt-beige bb-beige bl-beige br-beige ': !hideMessage}">
+      <div class="w-full min-w-150 background-black white" [ngClass]="{'hide': hideMessage}">Index</div>
+    </div>
+    <div class="order-switch-0 height-change text-align"
+          [ngClass]="{'bt-beige bb-beige bl-beige br-beige ': !hideMessage}">
+      <div class="w-full min-w-150 background-black white" [ngClass]="{'hide': hideMessage}">Repository</div>
+    </div>
+  </div>
+</section>

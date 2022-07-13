@@ -1,0 +1,17 @@
+<div class="flex direction-column">
+  <div class="flex direction-column align-center justify-center">
+    <div class="blue h-48">
+      <span [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">The git repo is cloned on the user's computer</span>
+    </div>
+    <button [disabled]="!hideMessage" (click)="visualizeClone()" class="w-250" mat-raised-button color="warn">Visualize "git clone url"</button>
+  </div>
+ <div class="flex pt-64"> 
+    <section class="flex direction-column"> 
+      <div>Repository on GitHub (at url)</div>
+      <img  class="image-size"  src="assets/gitRepoGray.jpeg" alt="repository on GitHub">
+    </section>
+    <section class="pl-64">
+      <div>User's Computer</div>
+    </section>
+  </div>
+</div>
