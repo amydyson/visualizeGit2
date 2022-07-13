@@ -8,23 +8,16 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
   animations: [ fade, myTrigger2, fade2, ani3 ]
 })
 export class AddComponent implements OnInit {
-  state: string;
-  items: any;
-  hideIndexHtml2: boolean;
-  text: string;
+  hideMessage: boolean;
 
   constructor() { }
 
   ngOnInit() {
-    this.state = 'small';
-    this.items = [];
-    this.hideIndexHtml2 = true;
-    this.text = 'copy!'
- 
+    this.hideMessage = true;
   }
 
   visualizeAdd(){
-    this.hideIndexHtml2 = false;
+    this.hideMessage = false;
   }
 
 }

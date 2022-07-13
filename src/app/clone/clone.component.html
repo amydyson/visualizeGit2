@@ -6,9 +6,10 @@
     <button [disabled]="!hideMessage" (click)="visualizeClone()" class="w-250" mat-raised-button color="warn">Visualize "git clone url"</button>
   </div>
  <div class="flex pt-64"> 
-    <section class="flex direction-column"> 
-      <div>Repository on GitHub (at url)</div>
+    <section class="flex direction-column text-center"> 
+      <div>Repository at url <br>(example: GitHub repo) </div>
       <img  class="image-size"  src="assets/gitRepoGray.jpeg" alt="repository on GitHub">
+      <img  class="image-size pull-up-image" [ngClass]="{'hide': hideMessage, 'show, move-image': !hideMessage}"  src="assets/gitRepoGray.jpeg" alt="repository on GitHub">
     </section>
     <section class="pl-64">
       <div>User's Computer</div>

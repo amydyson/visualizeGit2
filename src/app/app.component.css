@@ -131,6 +131,10 @@
     margin-top: -20px;
 }
 
+.pull-up-image{
+    margin-top: -135px;
+}
+
 .moveAndColor {
     animation: moveAndColor 2s linear;
     animation-fill-mode: forwards;
@@ -171,8 +175,14 @@
     }
 
 
-.move {
+.move{
     animation: move 2s linear;
+    animation-fill-mode: forwards;
+
+}
+
+.move-image {
+    animation: move-image 2s linear;
     animation-fill-mode: forwards;
 
 }
@@ -188,10 +198,30 @@
                 transform: translateX(158px);
             }
         } 
+        @keyframes move-image {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(210px);
+            }
+        } 
     }
 
     @media only screen and (max-device-width: 959px) {
         @keyframes move {
+            0% {
+                transform: translateY(0)
+            }
+            50% {
+                transform: translateU(-50px)
+            }
+            100% {
+                transform: translateY(-108px)
+            }
+        } 
+
+        @keyframes move-image {
             0% {
                 transform: translateY(0)
             }
