@@ -124,6 +124,7 @@
 .flex, .show{
     display: flex;
 }
+
 .float {
     float: right;
 }
@@ -132,7 +133,7 @@
 }
 
 .pull-up-image{
-    margin-top: -135px;
+    margin-top: -178px;
 }
 
 .moveAndColor {
@@ -174,6 +175,10 @@
         } 
     }
 
+.show-fadeIn{
+    animation: show-fadeIn 2s linear;
+    animation-fill-mode: forwards;
+}
 
 .move{
     animation: move 2s linear;
@@ -186,6 +191,15 @@
     animation-fill-mode: forwards;
 
 }
+
+@keyframes show-fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} 
     @media only screen and (min-device-width: 960px) {
         @keyframes move {
             0% {
