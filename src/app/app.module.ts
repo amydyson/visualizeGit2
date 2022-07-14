@@ -10,6 +10,7 @@ import { AddComponent } from './add/add.component';
 import { CommitComponent } from './commit/commit.component';
 import { InitComponent } from './init/init.component';
 import { CloneComponent } from './clone/clone.component';
+import { PushComponent } from './push/push.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CloneComponent } from './clone/clone.component';
     AddComponent,
     CommitComponent,
     InitComponent,
-    CloneComponent
+    CloneComponent,
+    PushComponent
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,8 @@ export class AppComponent implements OnInit {
     {name: 'add'},
     {name: 'clone'},
     {name: 'commit'},
-    {name: 'init'}
+    {name: 'init'},
+    {name: 'push'}
   ];
   public chosenCommand: string;
 
