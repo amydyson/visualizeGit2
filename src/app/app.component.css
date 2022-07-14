@@ -28,6 +28,12 @@
 .h-58 {
     height: 58px;
 }
+.mr-2 {
+    margin-right: 2px;
+}
+.mr-4 {
+    margin-right: 4px;
+}
 .mt-2 {
     margin-top: 2px;
 }
@@ -42,6 +48,9 @@
 }
 .pb-48 {
     padding-bottom: 48px;
+}
+.pl-2 {
+    padding-left: 2px;
 }
 .pl-4 {
     padding-left: 4px;
@@ -253,6 +262,11 @@
     animation-fill-mode: forwards;
 }
 
+.move-right {
+    animation: move-right 2s linear;
+    animation-fill-mode: forwards;
+}
+
 .move-up {
     animation: move-up 3s linear;
     animation-fill-mode: forwards;
@@ -303,6 +317,14 @@
             }
             100% {
                 transform: translateX(-390px);
+            }
+        } 
+        @keyframes move-right {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(416px);
             }
         } 
         @keyframes move-up {

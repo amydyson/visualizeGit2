@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     {name: 'clone'},
     {name: 'commit'},
     {name: 'init'},
+    {name: 'pull'},
     {name: 'push'}
   ];
   public chosenCommand: string;

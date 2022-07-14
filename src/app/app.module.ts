@@ -11,6 +11,7 @@ import { CommitComponent } from './commit/commit.component';
 import { InitComponent } from './init/init.component';
 import { CloneComponent } from './clone/clone.component';
 import { PushComponent } from './push/push.component';
+import { PullComponent } from './pull/pull.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PushComponent } from './push/push.component';
     CommitComponent,
     InitComponent,
     CloneComponent,
-    PushComponent
+    PushComponent,
+    PullComponent
   ],
   imports: [
     BrowserModule,
