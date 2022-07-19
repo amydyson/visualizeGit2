@@ -34,10 +34,45 @@ export class ResetComponent implements OnInit {
     this.chosen = false;
   }
 
+  headPointer(){
+    switch(this.chosenCommit) {
+      case ('HEAD' || 'no parameter' || ''):
+        return 'head';
+        break;
+      case 'HEAD~1':
+        return 'head1';
+        break;
+      case 'HEAD~2':
+        return 'head2';
+          break;
+      case 'HEAD~3':
+        return 'head3';
+        break;
+      default:
+        return 'head';
+    }
+  }
+
+  overwriteType(){
+    switch(this.chosenCommand) {
+      case ('mixed' || 'no parameter' || ''):
+        return 'mixed';
+        break;
+      case 'soft':
+        return 'soft';
+        break;
+      case 'hard':
+        return 'hard';
+          break;
+      default:
+        return 'mixed';
+    }
+  }
+
   visualizeReset(){
     switch(this.chosenCommit) {
-      case 'HEAD':
-        const groupH = document.getElementsByClassName('toMove');
+      case ('HEAD' || 'no parameter'):
+        const groupH = document.getElementsByClassName('toMove--arrow');
         for (let i = 0; i < groupH.length; i++){
           groupH[i].classList.add('move-in-place');
         }
@@ -70,7 +105,7 @@ export class ResetComponent implements OnInit {
       case 'soft':
         const groupH = document.getElementsByClassName('head');
         for (let i = 0; i < groupH.length; i++){
-          groupH[i].classList.add('move-left');
+          // groupH[i].classList.add('move-left');
         }
         break;
       case 'mixed':
@@ -82,7 +117,7 @@ export class ResetComponent implements OnInit {
       default:
         const groupDefault = document.getElementsByClassName('head');
         for (let i = 0; i < groupDefault.length; i++){
-          groupDefault[i].classList.add('move-left');
+          // groupDefault[i].classList.add('move-left');
         }
     }
     this.hideMessage = false;
