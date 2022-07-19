@@ -35,6 +35,56 @@ export class ResetComponent implements OnInit {
   }
 
   visualizeReset(){
+    switch(this.chosenCommit) {
+      case 'HEAD':
+        const groupH = document.getElementsByClassName('toMove');
+        for (let i = 0; i < groupH.length; i++){
+          groupH[i].classList.add('move-in-place');
+        }
+        break;
+      case 'HEAD~1':
+        const groupH1 = document.getElementsByClassName('toMove');
+        for (let i = 0; i < groupH1.length; i++){
+          groupH1[i].classList.add('move-down-one');
+        }
+        break;
+      case 'HEAD~2':
+        const groupH2 = document.getElementsByClassName('toMove');
+        for (let i = 0; i < groupH2.length; i++){
+          groupH2[i].classList.add('move-down-two');
+        }
+          break;
+      case 'HEAD~3':
+        const groupH3 = document.getElementsByClassName('toMove');
+        for (let i = 0; i < groupH3.length; i++){
+          groupH3[i].classList.add('move-down-three');
+        }
+        break;
+      default:
+        const groupBlank = document.getElementsByClassName('toMove');
+        for (let i = 0; i < groupBlank.length; i++){
+          groupBlank[i].classList.add('move-in-place');
+        }
+    }
+    switch(this.chosenCommand) {
+      case 'soft':
+        const groupH = document.getElementsByClassName('head');
+        for (let i = 0; i < groupH.length; i++){
+          groupH[i].classList.add('move-left');
+        }
+        break;
+      case 'mixed':
+        alert('mixed')
+        break;
+      case 'hard':
+        alert('hard');
+          break;
+      default:
+        const groupDefault = document.getElementsByClassName('head');
+        for (let i = 0; i < groupDefault.length; i++){
+          groupDefault[i].classList.add('move-left');
+        }
+    }
     this.hideMessage = false;
     this.chosen = false;
   }

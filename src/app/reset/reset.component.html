@@ -38,22 +38,23 @@
     </div>
     <div class="order-switch-0 height-change bt-beige bl-change bb-beige br-beige text-align">
       <div class="w-full min-w-250 background-black white">Repository</div>
-      <div class="flex align-center justify-center pt-8 pb-8">
-        <div>HEAD</div>
-        <div class="font-size-32 pr-2">&#10132;</div> <!--arrow right-->
-        <div class="dot seaGreen"></div>
+      <div class="flex align-center  pt-8 pb-8">
+        <div class="toMove pl-20 pr-8">HEAD</div>
+        <div class="toMove font-size-32 pr-8">&#10132;</div> <!--arrow right-->
+        <div class="head dot seaGreen" [ngClass]="{'hide': hideMessage, 'show overwrite-index': !hideMessage}"></div>
+        <div class="dot seaGreen " [ngClass]="{'pull-left-24': !hideMessage}"></div>
         <div class="pl-8">index.html</div>
       </div>
       <div class="flex align-center justify-center ml-6 pl-64 pb-8">
-        <div class="dot indianRed"></div>
+        <div class="dot indianRed head1"></div>
         <div class="pl-8">index.html</div>
       </div>
       <div class="flex align-center justify-center pt-8 ml-6 pl-64 pb-8">
-        <div class="dot mediumPurple"></div>
+        <div class="dot mediumPurple head2"></div>
         <div class="pl-8">index.html</div>
       </div>
       <div class="flex align-center justify-center pt-8 ml-6 pl-64 pb-8">
-        <div class="dot background-gray"></div>
+        <div class="dot background-gray head3"></div>
         <div class="pl-8">index.html</div>
       </div>
     </div>
