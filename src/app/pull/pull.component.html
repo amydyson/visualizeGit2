@@ -1,11 +1,10 @@
 <div class="flex direction-column">
   <div class="flex direction-column align-center justify-center">
     <div class="blue h-58 pb-16">
-      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked</div>
+      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
       <div class="flex direction-column" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
-        <div>The recent commit on the remote repo is pulled to main branch in the local repo. </div>
-        <div>The local HEAD pointer is updated.</div> 
-        <div class="font-size-12 red">A merge conflict may need to be resolved.</div>
+        <div>The local main branch now points to the latest commit from the repo main branch. </div>
+        <div class="">(A merge conflict may need to be resolved.)</div>
       </div>
     </div>
     <button [disabled]="!hideMessage" (click)="visualizePull()" class="w-250" mat-raised-button color="warn">Visualize "git pull origin main"</button>
@@ -14,7 +13,7 @@
    <section>
    </section>
     <section class="flex direction-column text-center pr-64"> 
-      <div class="pb-16 pl-92">Repository at url <br>(example: GitHub repo) </div>
+      <div class="pb-16 pl-92">Remote Repo main branch </div>
       <div class="flex pr-48">
 
         <div class="flex direction-column">
@@ -32,7 +31,7 @@
       </div>
     </section>
     <section class="flex direction-column text-center pr-64"> 
-      <div class="pl-92 pb-36">Repository on User's Computer</div>
+      <div class="pl-92 pb-16">Local Repo main branch</div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">

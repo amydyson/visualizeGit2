@@ -3,10 +3,9 @@
     <div class="blue h-58 pb-16">
       <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked</div>
       <div class="flex direction-column" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
-        <div>The recent commit is pushed to main branch in the remote repo. </div>
-        <div>The remote HEAD pointer is updated.</div> 
-        <div class="font-size-12 red">It's advisable to do a pull before a push to a shared repo.</div>
-        <div class="font-size-12 red">When combining code with a push or a pull, merge conflicts may need to be resolved.</div>
+        <div>TThe remote main branch now points to the latest commit from the local main branch. </div>
+        <div class="">It's advisable to do a pull before a push to a shared repo.</div>
+        <div class="">When combining code with a push or a pull, merge conflicts may need to be resolved.</div>
       </div>
     </div>
     <button [disabled]="!hideMessage" (click)="visualizePush()" class="w-250" mat-raised-button color="warn">Visualize "git push origin main"</button>
@@ -15,7 +14,7 @@
    <section>
    </section>
     <section class="flex direction-column text-center pr-64"> 
-      <div class="pb-16 pl-92">Repository at url <br>(example: GitHub repo) </div>
+      <div class="pb-16 pl-92">Remote Repo main branch</div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
@@ -31,7 +30,7 @@
       </div>
     </section>
     <section class="flex direction-column text-center pr-64"> 
-      <div class="pl-92 pb-36">Repository on User's Computer</div>
+      <div class="pl-92 pb-16">Local Repo main branch</div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">

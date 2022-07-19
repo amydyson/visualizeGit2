@@ -1,0 +1,61 @@
+<section class= "flex direction-column align-center">
+  <div class="blue h-48">
+   <span [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">git reset optionally moves the HEAD in the Repository and optionally overwrites the Index and Working Area</span>
+   <span [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">Reset complete</span>
+  </div>
+  <div class="flex">
+    <mat-form-field class="w-250" appearance="fill">
+      <mat-label float="never">Choose where to move HEAD</mat-label>
+      <mat-select (selectionChange)="selectCommit($event.value)">
+        <mat-option *ngFor = "let commit of commits" [value]="commit.name"
+        >{{commit.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="pr-8"></div>
+    <mat-form-field class="w-250" appearance="fill">
+      <mat-label float="never">Choose overwrite option</mat-label>
+      <mat-select (selectionChange)="selectCommand($event.value)">
+        <mat-option *ngFor = "let command of commands" [value]="command.name"
+        >{{command.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <button [disabled]="!chosen" (click)="visualizeReset()" class="w-350" mat-raised-button color="warn">Visualize "git reset<span *ngIf="chosenCommit !=='no parameter'"> {{chosenCommit}}</span><span *ngIf="chosenCommand !=='no parameter' && chosenCommand !==''"> --{{chosenCommand}}</span>"<span *ngIf="chosenCommand==='mixed'">(default)</span></button>
+  <div class="flex pt-32 change-direction">
+    <div class="order-switch-2 flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">
+      <div class="w-full min-w-150 background-black white">Working Area</div>
+      <div class="flex align-center justify-center pt-8 mt-4 pb-32">
+        <div class="dot gold"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+    </div>
+    <div class="order-1 height-change bt-beige bl-change bb-beige br-beige text-align">
+      <div class="w-full min-w-150 background-black white">Index</div>
+      <div class="flex align-center justify-center pt-8 mt-4 pb-32">
+        <div class="dot gold"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+    </div>
+    <div class="order-switch-0 height-change bt-beige bl-change bb-beige br-beige text-align">
+      <div class="w-full min-w-250 background-black white">Repository</div>
+      <div class="flex align-center justify-center pt-8 pb-8">
+        <div>HEAD</div>
+        <div class="font-size-32 pr-2">&#10132;</div> <!--arrow right-->
+        <div class="dot seaGreen"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+      <div class="flex align-center justify-center ml-6 pl-64 pb-8">
+        <div class="dot indianRed"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+      <div class="flex align-center justify-center pt-8 ml-6 pl-64 pb-8">
+        <div class="dot mediumPurple"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+      <div class="flex align-center justify-center pt-8 ml-6 pl-64 pb-8">
+        <div class="dot background-gray"></div>
+        <div class="pl-8">index.html</div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -12,6 +12,7 @@ import { InitComponent } from './init/init.component';
 import { CloneComponent } from './clone/clone.component';
 import { PushComponent } from './push/push.component';
 import { PullComponent } from './pull/pull.component';
+import { ResetComponent } from './reset/reset.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PullComponent } from './pull/pull.component';
     InitComponent,
     CloneComponent,
     PushComponent,
-    PullComponent
+    PullComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,

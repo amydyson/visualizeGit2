@@ -31,7 +31,8 @@ export class AppComponent implements OnInit {
     {name: 'commit'},
     {name: 'init'},
     {name: 'pull'},
-    {name: 'push'}
+    {name: 'push'},
+    {name: 'reset'}
   ];
   public chosenCommand: string;
 
@@ -45,7 +46,5 @@ export class AppComponent implements OnInit {
   selectCommand(command){
     this.chosenCommand = command;
   }
-  // toggleState(){
-  //   this.state = (this.state === 'small' ? 'large' : 'small');
-  // }
+
 }
