@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResetComponent implements OnInit {
   public hideMessage: boolean;
-  public chosen: boolean;
+  public completed: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -31,7 +31,13 @@ export class ResetComponent implements OnInit {
     this.hideMessage = true;
     this.chosenCommand = '';
     this.chosenCommit = '';
-    this.chosen = false;
+    this.completed = false;
+    const groupH1 = document.getElementsByClassName('toMove');
+    for (let i = 0; i < groupH1.length; i++){
+      groupH1[i].classList.remove('move-down-one');
+      groupH1[i].classList.remove('move-down-two');
+      groupH1[i].classList.remove('move-down-three');
+    }
   }
 
   copyHead(){
@@ -148,7 +154,7 @@ export class ResetComponent implements OnInit {
       default:
     }
     this.hideMessage = false;
-    this.chosen = false;
+    this.completed = true;
   }
 
   selectCommand(command){
@@ -156,6 +162,5 @@ export class ResetComponent implements OnInit {
   }
   selectCommit(commit){
     this.chosenCommit = commit;
-    this.chosen = true;
   }
 }

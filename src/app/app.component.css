@@ -363,14 +363,14 @@
 
 .headColorGreen {
     background-color: darkseagreen;
-    animation: moveToWorkingArea 2.0s linear;
+    animation: moveToWorkingArea 2s linear;
     animation-fill-mode: forwards;
 }
 
 
 .headColorRed {
     background-color: indianred;
-    animation: moveToWorkingArea 2.0s linear;
+    animation: moveToWorkingArea 2.5s linear;
     animation-fill-mode: forwards;
 }
 
