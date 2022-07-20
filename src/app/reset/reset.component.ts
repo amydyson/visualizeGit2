@@ -81,9 +81,11 @@ export class ResetComponent implements OnInit {
   headPointer(){
     switch(this.chosenCommit) {
       case ('HEAD' || 'no parameter' || ''):
+        console.log('head')
         return 'head';
         break;
       case 'HEAD~1':
+        console.log('head1')
         return 'head1';
         break;
       case 'HEAD~2':
@@ -110,6 +112,14 @@ export class ResetComponent implements OnInit {
           break;
       default:
         return 'mixed';
+    }
+  }
+
+  hardOverwrite(){
+    if (!this.hideMessage && this.overwriteType()=== 'hard'){
+      return true;
+    } else {
+      return false;
     }
   }
 

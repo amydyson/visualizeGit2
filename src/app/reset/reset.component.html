@@ -33,6 +33,12 @@
       <div class="w-full min-w-150 background-black white">Index</div>
       <div class="flex align-center justify-center pt-8 mt-4 pb-32">
         <div class="dot gold"></div>
+        <div class="" 
+        [ngClass]="{'hide': !hardOverwrite() , 'dot pull-left-24 show' : !hideMessage, 
+        'headColorGreen': (chosenCommand === 'hard' && headPointer() === 'head'),
+        'headColorRed': (chosenCommand === 'hard' && headPointer() === 'head1'),
+        'headColorPurple': (chosenCommand === 'hard' && headPointer() === 'head2'),
+        'headColorGray': (chosenCommand === 'hard' && headPointer() === 'head3')}"></div>
         <div class="pl-8">index.html</div>
       </div>
     </div>

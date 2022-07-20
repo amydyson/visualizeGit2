@@ -343,7 +343,7 @@
 }
 
 .overwrite-index {
-    animation: overwrite-index 1.5s linear;
+    animation: overwrite-index 1s linear;
     animation-fill-mode: forwards;
 }
 
@@ -360,6 +360,46 @@
     animation: overwrite-index3 1.5s linear;
     animation-fill-mode: forwards;
 }
+
+.headColorGreen {
+    background-color: darkseagreen;
+    animation: moveToWorkingArea 2.0s linear;
+    animation-fill-mode: forwards;
+}
+
+
+.headColorRed {
+    background-color: indianred;
+    animation: moveToWorkingArea 2.0s linear;
+    animation-fill-mode: forwards;
+}
+
+.headColorPurple {
+    background-color: mediumpurple;
+    animation: moveToWorkingArea 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.headColorGray {
+    background-color: #BEBEBE;
+    animation: moveToWorkingArea 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveToWorkingArea {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    70% {
+        opacity: 0.3;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-152px);
+    }
+} 
 
 @keyframes show-fadeIn {
     0% {
