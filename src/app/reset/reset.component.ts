@@ -34,6 +34,17 @@ export class ResetComponent implements OnInit {
     this.chosen = false;
   }
 
+  copyHead(){
+    if (!this.hideMessage &&
+        this.headPointer() === 'head' && 
+        (this.overwriteType() === 'mixed' ||
+        this.overwriteType() === 'hard' )){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   headPointer(){
     switch(this.chosenCommit) {
       case ('HEAD' || 'no parameter' || ''):
@@ -99,25 +110,6 @@ export class ResetComponent implements OnInit {
         const groupBlank = document.getElementsByClassName('toMove');
         for (let i = 0; i < groupBlank.length; i++){
           groupBlank[i].classList.add('move-in-place');
-        }
-    }
-    switch(this.chosenCommand) {
-      case 'soft':
-        const groupH = document.getElementsByClassName('head');
-        for (let i = 0; i < groupH.length; i++){
-          // groupH[i].classList.add('move-left');
-        }
-        break;
-      case 'mixed':
-        alert('mixed')
-        break;
-      case 'hard':
-        alert('hard');
-          break;
-      default:
-        const groupDefault = document.getElementsByClassName('head');
-        for (let i = 0; i < groupDefault.length; i++){
-          // groupDefault[i].classList.add('move-left');
         }
     }
     this.hideMessage = false;
