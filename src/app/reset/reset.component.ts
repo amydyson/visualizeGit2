@@ -45,6 +45,39 @@ export class ResetComponent implements OnInit {
     }
   }
 
+  copyHead1(){
+    if (!this.hideMessage &&
+        this.headPointer() === 'head1' && 
+        (this.overwriteType() === 'mixed' ||
+        this.overwriteType() === 'hard' )){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  copyHead2(){
+    if (!this.hideMessage &&
+        this.headPointer() === 'head2' && 
+        (this.overwriteType() === 'mixed' ||
+        this.overwriteType() === 'hard' )){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  copyHead3(){
+    if (!this.hideMessage &&
+        this.headPointer() === 'head3' && 
+        (this.overwriteType() === 'mixed' ||
+        this.overwriteType() === 'hard' )){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   headPointer(){
     switch(this.chosenCommit) {
       case ('HEAD' || 'no parameter' || ''):
@@ -83,10 +116,6 @@ export class ResetComponent implements OnInit {
   visualizeReset(){
     switch(this.chosenCommit) {
       case ('HEAD' || 'no parameter'):
-        const groupH = document.getElementsByClassName('toMove--arrow');
-        for (let i = 0; i < groupH.length; i++){
-          groupH[i].classList.add('move-in-place');
-        }
         break;
       case 'HEAD~1':
         const groupH1 = document.getElementsByClassName('toMove');
@@ -107,10 +136,6 @@ export class ResetComponent implements OnInit {
         }
         break;
       default:
-        const groupBlank = document.getElementsByClassName('toMove');
-        for (let i = 0; i < groupBlank.length; i++){
-          groupBlank[i].classList.add('move-in-place');
-        }
     }
     this.hideMessage = false;
     this.chosen = false;

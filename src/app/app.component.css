@@ -325,28 +325,39 @@
     animation: move-up 3s linear;
     animation-fill-mode: forwards;
 }
-.move-in-place {
-    animation: move-in-place 3s linear;
-    animation-fill-mode: forwards;
-}
 
 .move-down-one {
-    animation: move-down-one 1.5s linear;
+    animation: move-down-one .5s linear;
     animation-fill-mode: forwards;
 }
 
+
 .move-down-two {
-    animation: move-down-two 1.5s linear;
+    animation: move-down-two .5s linear;
     animation-fill-mode: forwards;
 }
 
 .move-down-three {
-    animation: move-down-three 1.5s linear;
+    animation: move-down-three .5s linear;
     animation-fill-mode: forwards;
 }
 
 .overwrite-index {
-    animation: overwrite-index 2s linear;
+    animation: overwrite-index 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.overwrite-index1 {
+    animation: overwrite-index1 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.overwrite-index2 {
+    animation: overwrite-index2 1.5s linear;
+    animation-fill-mode: forwards;
+}
+.overwrite-index3 {
+    animation: overwrite-index3 1.5s linear;
     animation-fill-mode: forwards;
 }
 
@@ -417,21 +428,6 @@
             }
         } 
 
-        @keyframes move-in-place {
-            0% {
-                transform: 0;
-            }
-            5% {
-                transform: translateY(-5px);
-            }
-            7% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: 0;
-            }
-        } 
-
         @keyframes move-down-one {
             0% {
                 transform: translateY(0);
@@ -440,6 +436,7 @@
                 transform: translateY(40px);
             }
         } 
+
         @keyframes move-down-two {
             0% {
                 transform: translateY(0);
@@ -465,6 +462,39 @@
             }
             100% {
                 transform: translate(-237px, -3px);
+            }
+        } 
+        @keyframes overwrite-index1 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-237px, -40px);
+            }
+        } 
+        @keyframes overwrite-index2 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-237px, -83px);
+            }
+        } 
+        @keyframes overwrite-index3 {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-237px, -123px);
             }
         } 
     }
