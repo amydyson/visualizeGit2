@@ -220,6 +220,21 @@
     color: blue;
 }
 
+.khaki {
+    color: darkgreen;
+}
+
+.darkblue {
+    color: darkblue;
+}
+
+.limegreen {
+    color: #32CD32;
+}
+
+.darkred {
+    color: darkred;
+}
 
 .br-beige {
     border-right: 2px solid #beaf98;
