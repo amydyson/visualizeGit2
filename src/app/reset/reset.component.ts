@@ -22,6 +22,8 @@ export class ResetComponent implements OnInit {
     {name: 'HEAD~3'},
     {name: 'no parameter'}
   ];
+  public commands2 = ['hard','mixed','soft','no parameter'];
+  public commits2 = ['HEAD', 'HEAD~1', 'HEAD~2','HEAD~3', 'no parameter'];
   public chosenCommand: string;
   public chosenCommit: string;
 
