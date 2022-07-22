@@ -13,6 +13,7 @@ import { CloneComponent } from './clone/clone.component';
 import { PushComponent } from './push/push.component';
 import { PullComponent } from './pull/pull.component';
 import { ResetComponent } from './reset/reset.component';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ResetComponent } from './reset/reset.component';
     CloneComponent,
     PushComponent,
     PullComponent,
-    ResetComponent
+    ResetComponent,
+    LogComponent
   ],
   imports: [
     BrowserModule,

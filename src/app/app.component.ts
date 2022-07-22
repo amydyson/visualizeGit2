@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
     {name: 'clone'},
     {name: 'commit'},
     {name: 'init'},
+    {name: 'log'},
     {name: 'pull'},
     {name: 'push'},
     {name: 'reset'}

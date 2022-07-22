@@ -1,0 +1,13 @@
+<div class="flex direction-column">
+  <div class="pb-32" *ngIf="!hideMessage">Use git log without options to see more information</div>
+  <section class= "flex direction-column align-center" >
+    <button [disabled]="!hideMessage" (click)="visualizeLog()" class="w-250" mat-raised-button color="warn">Visualize "git log --oneline"</button>
+  </section>
+  <section class="flex align-center direction-column">
+    <div *ngIf="!hideMessage" class="flex direction-column align-left pl-50" >
+      <div class="commit flex commit-fadeIn-1 pt-32 pb-8"><div class="w-100 pr-8">da91bc1a</div><div>add reset button</div></div>
+      <div class="commit flex commit-fadeIn-2 pb-8"><div class="w-100 pr-8">37bce8f6</div><div>all colors working</div></div>
+      <div class="commit flex commit-fadeIn-3 pb-8"><div class="w-100 pr-8">1dd25ea0</div><div>mixed overwrite working</div></div>
+    </div>
+  </section>
+</div>
