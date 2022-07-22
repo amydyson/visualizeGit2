@@ -11,6 +11,7 @@
     </mat-select>
   </mat-form-field>
   <visualize-add @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
+  <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
   <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
   <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
   <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>

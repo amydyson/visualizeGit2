@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger2, ani3 } from '../animations';
 
 @Component({
-  selector: 'visualize-log',
-  templateUrl: './log.component.html',
+  selector: 'visualize-branch',
+  templateUrl: './branch.component.html',
   styleUrls: ['../app.component.css'],
   animations: [ fade, myTrigger2, fade2, ani3 ]
 })
-export class LogComponent implements OnInit {
+export class BranchComponent implements OnInit {
   public hideMessage: boolean;
 
   constructor() { }
@@ -16,7 +16,7 @@ export class LogComponent implements OnInit {
     this.hideMessage = true;
   }
 
-  visualizeLog(){
+  visualizeBranch(){
     this.hideMessage = false;
   }
 

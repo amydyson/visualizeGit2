@@ -14,6 +14,7 @@ import { PushComponent } from './push/push.component';
 import { PullComponent } from './pull/pull.component';
 import { ResetComponent } from './reset/reset.component';
 import { LogComponent } from './log/log.component';
+import { BranchComponent } from './branch/branch.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LogComponent } from './log/log.component';
     PushComponent,
     PullComponent,
     ResetComponent,
-    LogComponent
+    LogComponent,
+    BranchComponent
   ],
   imports: [
     BrowserModule,

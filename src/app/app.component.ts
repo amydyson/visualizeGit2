@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   public title = 'visualize-git';
   public commands = [
     {name: 'add'},
+    {name: 'branch'},
     {name: 'clone'},
     {name: 'commit'},
     {name: 'init'},
