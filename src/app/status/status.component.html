@@ -1,4 +1,4 @@
-<div class="flex direction-column align-center">
+<!-- <div class="flex direction-column align-center">
   <div class="blue w-450 text-center pb-8" *ngIf="!hideMessage"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
   <section class= "flex direction-column align-center" >
     <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
@@ -12,7 +12,23 @@
       <div class="commit flex pb-8"><div class="pl-8">(use "git add file..." to update what will be committed)</div></div>
       <div class="commit flex pb-8"><div class="pl-8">(use "git checkout -- file..." to discard changes in working directory)</div></div>
       <div class="commit flex pb-8"><div class="pl-16 pt-8 red bold">modified: index.js</div></div>
- 
     </div>
   </section>
+</div> -->
+
+<div class="flex direction-column w-full align-center">
+  <div class="blue pt-8 h-48" >
+    <div class="blue w-450 text-center pb-8" *ngIf="!hideMessage" [@myTrigger]="fadeIn"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
+  </div>
+  <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
+  <section class= "flex direction-column pl-250 pt-16 w-half align-left" >
+    <div [ngClass]="{
+                    'green bold pl-16': i == '1',
+                    'pl-16': (i == '1' || i == '3'),
+                    'red bold': i == '3'
+                  }" 
+                    class="pt-8 pb-8" *ngFor="let message of messages; let i = index" [@myTrigger]="fadeIn">{{message}}</div>
+  </section>
 </div>
+
+

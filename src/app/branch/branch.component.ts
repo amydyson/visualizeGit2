@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { throwToolbarMixedModesError } from '@angular/material';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 
 @Component({
@@ -11,7 +10,6 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 export class BranchComponent implements OnInit {
   public hideMessage: boolean;
   public branches: Array<string>;
-  public state: string;
 
   constructor() { }
 
@@ -39,7 +37,7 @@ export class BranchComponent implements OnInit {
     }, 800);
     setTimeout(() => {
       this.hideMessage = false;
-    }, 2000);
+    }, 1500);
   }
 
 }

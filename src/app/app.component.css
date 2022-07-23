@@ -91,13 +91,25 @@
 .pl-50 {
     padding-left: 50px;
 }
+.pl-100 {
+    padding-left: 100px;
+}
+.pl-150 {
+    padding-left: 150px;
+}
+.pl-200 {
+    padding-left: 200px;
+}
+.pl-250 {
+    padding-left: 250px;
+}
 .pl-64 {
     padding-left: 64px;
 }
 .pl-92 {
     padding-left: 92px;
 }
-.pl-150 {
+.pl-350 {
     padding-left: 350px;
 }
 .pr-2 {
