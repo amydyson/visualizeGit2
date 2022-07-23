@@ -15,6 +15,7 @@ import { PullComponent } from './pull/pull.component';
 import { ResetComponent } from './reset/reset.component';
 import { LogComponent } from './log/log.component';
 import { BranchComponent } from './branch/branch.component';
+import { StatusComponent } from './status/status.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BranchComponent } from './branch/branch.component';
     PullComponent,
     ResetComponent,
     LogComponent,
-    BranchComponent
+    BranchComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule,

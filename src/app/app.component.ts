@@ -34,7 +34,8 @@ export class AppComponent implements OnInit {
     {name: 'log'},
     {name: 'pull'},
     {name: 'push'},
-    {name: 'reset'}
+    {name: 'reset'},
+    {name: 'status'}
   ];
   public chosenCommand: string;
 

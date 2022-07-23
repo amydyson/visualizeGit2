@@ -134,6 +134,10 @@
     padding-top: 76px;
 }
 
+.regular, .normal {
+    font-weight: normal;
+}
+
 .bold {
     font-weight: bold;;
 }
@@ -150,6 +154,10 @@
 
 .red {
     color: #CD5C5C;
+}
+
+.black {
+    color: black;
 }
 
 .green {
