@@ -22,7 +22,7 @@ export let fade =     trigger('fade', [
       opacity: '1'
     })),
     transition('void => *', [
-      style({opacity: '0'}),
+      style({opacity: '0', transform: 'translate(0px, 20px)'}),
       animate('500ms 0s ease-in')
     ])
   ])

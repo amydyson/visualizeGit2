@@ -1,8 +1,10 @@
-<div class="flex direction-column align-center">
-  <div class="blue text-center pt-8 pb-32" *ngIf="!hideMessage">The asterisk (*) indicates the current branch</div>
+<div class="flex direction-column w-full align-center">
+  <div class="blue pt-8 h-48" >
+    <div *ngIf="!hideMessage" [@myTrigger]="fadeIn">The asterisk (*) indicates the current branch</div>  
+  </div>
   <button [disabled]="!hideMessage" (click)="visualizeBranch()" class="w-250" mat-raised-button color="warn">Visualize "git branch"</button>
-  <section class= "flex direction-column pt-16" >
-    <div class="pl-16 pt-8 pb-8 bold" *ngFor="let branch of branches" [@myTrigger]="fadeIn">{{branch}}</div>
+  <section class= "flex direction-column pt-16 w-quarter align-left" >
+    <div class="pl-50 pt-8 pb-8 bold" *ngFor="let branch of branches" [@myTrigger]="fadeIn">{{branch}}</div>
   </section>
 </div>
 

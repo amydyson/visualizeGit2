@@ -28,6 +28,9 @@
 .h-58 {
     height: 58px;
 }
+.h-69 {
+    height: 69px;
+}
 .mr-2 {
     margin-right: 2px;
 }
@@ -754,7 +757,13 @@ li {
 .pr-64 {
     padding-right: 64px;
 }
+.w-quarter {
+    width: 25%;
+}
 
+.w-half {
+    width: 50%;
+}
 
 .w-full {
     width: 100%;

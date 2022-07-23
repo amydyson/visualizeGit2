@@ -27,17 +27,19 @@ export class BranchComponent implements OnInit {
   visualizeBranch(){
     setTimeout(() => {
       this.push('main')
-    }, 100);
-    setTimeout(() => {
-      this.push('bug/25282*')
-      this.hideMessage = false;
     }, 200);
     setTimeout(() => {
+      this.push('bug/25282*')
+    }, 400);
+    setTimeout(() => {
       this.push('pbi/25391')
-    }, 300);
+    }, 600);
     setTimeout(() => {
       this.push('navigation')
-    }, 400);
+    }, 800);
+    setTimeout(() => {
+      this.hideMessage = false;
+    }, 3000);
   }
 
 }
