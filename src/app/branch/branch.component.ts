@@ -39,7 +39,7 @@ export class BranchComponent implements OnInit {
     }, 800);
     setTimeout(() => {
       this.hideMessage = false;
-    }, 3000);
+    }, 2000);
   }
 
 }
