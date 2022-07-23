@@ -4,7 +4,7 @@
   </div>
   <button [disabled]="!hideMessage" (click)="visualizeBranch()" class="w-250" mat-raised-button color="warn">Visualize "git branch"</button>
   <section class= "flex direction-column pt-16 w-quarter align-left" >
-    <div class="pl-50 pt-8 pb-8 bold" *ngFor="let branch of branches" [@myTrigger]="fadeIn">{{branch}}</div>
+    <div [ngClass]="{'green': i == '1'}" class="pl-50 pt-8 pb-8 bold" *ngFor="let branch of branches; let i = index" [@myTrigger]="fadeIn">{{branch}}{{i}}</div>
   </section>
 </div>
 

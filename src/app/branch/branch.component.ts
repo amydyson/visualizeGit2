@@ -29,7 +29,7 @@ export class BranchComponent implements OnInit {
       this.push('main')
     }, 200);
     setTimeout(() => {
-      this.push('bug/25282*')
+      this.push('*bug/25282')
     }, 400);
     setTimeout(() => {
       this.push('pbi/25391')
