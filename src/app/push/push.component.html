@@ -3,9 +3,10 @@
     <div class="blue h-58 pb-16">
       <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked</div>
       <div class="flex direction-column" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
-        <div>TThe remote main branch now points to the latest commit from the local main branch. </div>
-        <div class="">It's advisable to do a pull before a push to a shared repo.</div>
-        <div class="">When combining code with a push or a pull, merge conflicts may need to be resolved.</div>
+        <div class="w-600 text-left">The remote main branch now points to the latest commit from the local main branch.
+          It's advisable to do a pull before a push to a shared repo.
+          When combining code with a push or a pull, merge conflicts may need to be resolved.
+         </div>
       </div>
     </div>
     <button [disabled]="!hideMessage" (click)="visualizePush()" class="w-250" mat-raised-button color="warn">Visualize "git push origin main"</button>

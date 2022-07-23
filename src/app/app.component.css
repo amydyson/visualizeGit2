@@ -235,11 +235,13 @@
     width: 350px;
 }
 
-.w-450 {
-    width: 350px;
-}
+
 .w-450 {
     width: 450px;
+}
+
+.w-600 {
+    width: 600px;
 }
 
 .h-200 {
@@ -248,6 +250,9 @@
 
 .text-align, .text-center {
     text-align: center;
+}
+.text-left {
+    text-align: left;
 }
 
 .blue {
