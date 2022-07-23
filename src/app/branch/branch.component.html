@@ -1,14 +1,8 @@
-<div class="flex direction-column">
-  <div class="blue text-center" *ngIf="!hideMessage">Lists the branches, with the asterisk indicating the current branch.</div>
-  <div class="pb-32 blue w-450 text-center" *ngIf="!hideMessage">Note: git sometimes does not show all remote branches, but these remote branches are available for checkout.</div>
-  <section class= "flex direction-column align-center" >
-    <button [disabled]="!hideMessage" (click)="visualizeBranch()" class="w-250" mat-raised-button color="warn">Visualize "git branch"</button>
-  </section>
-  <section class="flex align-center direction-column">
-    <div *ngIf="!hideMessage" class="flex direction-column align-left pl-50" >
-      <div class="commit flex commit-fadeIn-1 pt-32 pb-8"><div class="w-100 pr-8 bold">main</div></div>
-      <div class="commit flex commit-fadeIn-2 pb-8"><div class="w-100 pr-8 green bold">bug/25282*</div></div>
-      <div class="commit flex commit-fadeIn-3 pb-8"><div class="w-100 pr-8 bold">pbi/82347</div></div>
-    </div>
+<div class="flex direction-column align-center">
+  <div class="blue text-center pt-8 pb-32" *ngIf="!hideMessage">The asterisk (*) indicates the current branch</div>
+  <button [disabled]="!hideMessage" (click)="visualizeBranch()" class="w-250" mat-raised-button color="warn">Visualize "git branch"</button>
+  <section class= "flex direction-column pt-16" >
+    <div class="pl-16 pt-8 pb-8 bold" *ngFor="let branch of branches" [@myTrigger]="fadeIn">{{branch}}</div>
   </section>
 </div>
+

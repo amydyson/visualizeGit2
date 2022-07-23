@@ -11,6 +11,21 @@ export let fade =     trigger('fade', [
     ])
   ])
 
+  export let myTrigger =     trigger('myTrigger', [
+    state('small', style({
+      transform: 'scale(1)'
+    })),
+    state('large', style({
+      transform: 'scale(1.7)'
+    })),
+    state('fadeIn', style({
+      opacity: '1'
+    })),
+    transition('void => *', [
+      style({opacity: '0'}),
+      animate('500ms 0s ease-in')
+    ])
+  ])
 
   export let myTrigger2 =     trigger('myTrigger2', [
     state('small', style({
