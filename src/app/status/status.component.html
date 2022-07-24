@@ -1,21 +1,3 @@
-<!-- <div class="flex direction-column align-center">
-  <div class="blue w-450 text-center pb-8" *ngIf="!hideMessage"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
-  <section class= "flex direction-column align-center" >
-    <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
-  </section>
-  <section class="flex align-center direction-column">
-    <div *ngIf="!hideMessage" class="flex direction-column align-left pl-50" >
-      <div class="commit flex pt-32 pb-8"><div class="pr-8 ">Changes to be committed:</div></div>
-      <div class="commit flex pb-8"><div class="pl-8 ">(use "git reset HEAD ..." to unstage)</div></div>
-      <div class="commit flex pb-8"><div class="pl-16 pt-8 green bold">modified: index.html</div></div>
-      <div class="commit flex pt-32 pb-8"><div class="pr-8">Changes not staged for commit:</div></div>
-      <div class="commit flex pb-8"><div class="pl-8">(use "git add file..." to update what will be committed)</div></div>
-      <div class="commit flex pb-8"><div class="pl-8">(use "git checkout -- file..." to discard changes in working directory)</div></div>
-      <div class="commit flex pb-8"><div class="pl-16 pt-8 red bold">modified: index.js</div></div>
-    </div>
-  </section>
-</div> -->
-
 <div class="flex direction-column w-full align-center">
   <div class="blue pt-8 h-48" >
     <div class="blue w-450 text-center pb-8" *ngIf="!hideMessage" [@myTrigger]="fadeIn"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>

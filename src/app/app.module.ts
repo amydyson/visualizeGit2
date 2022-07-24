@@ -17,6 +17,7 @@ import { LogComponent } from './log/log.component';
 import { BranchComponent } from './branch/branch.component';
 import { StatusComponent } from './status/status.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { StashComponent } from './stash/stash.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     LogComponent,
     BranchComponent,
     StatusComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    StashComponent
   ],
   imports: [
     BrowserModule,

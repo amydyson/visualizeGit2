@@ -24,16 +24,16 @@ export class BranchComponent implements OnInit {
 
   visualizeBranch(){
     setTimeout(() => {
-      this.push('main')
+      this.push('bug/25282')
     }, 200);
     setTimeout(() => {
-      this.push('*bug/25282')
+      this.push('*main')
     }, 400);
     setTimeout(() => {
-      this.push('pbi/25391')
+      this.push('navigation1')
     }, 600);
     setTimeout(() => {
-      this.push('navigation')
+      this.push('pbi/2539')
     }, 800);
     setTimeout(() => {
       this.hideMessage = false;

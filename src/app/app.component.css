@@ -239,6 +239,10 @@
     width: 250px;
 }
 
+.w-300 {
+    width: 300px;
+}
+
 .w-350 {
     width: 350px;
 }
@@ -830,6 +834,9 @@ li {
 }
 
 @media only screen and (min-device-width: 960px) {
+    .image-size-icon {
+        width: 50px;
+    }
     .image-size {
         width: 150px;
     }
@@ -851,10 +858,17 @@ li {
         order: 0;
     }
 
+    .order-switch-stash {
+        order: -1;
+    }
+
  }
 
 
 @media only screen and (max-device-width: 959px) {
+    .image-size-icon {
+        width: 30px;
+    }
     .image-size {
         width: 100px;
     }
@@ -887,6 +901,10 @@ li {
     }
     .order-switch-2 {
         order: 2;
+    }
+
+    .order-switch-stash {
+        order: 3;
     }
 
  }

@@ -1,6 +1,6 @@
 <section class="visGitApp flex direction-column align-center"> 
   <div class="flex align-center justify-center pl-8 pb-32">
-    <img class="image-size" alt="Visual Git Logo" src="favicon.ico"/>
+    <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
     <div class="font-size-48 bold pl-16">Visualize Git</div>
   </div>
   <mat-form-field class="w-250" appearance="fill">
@@ -20,6 +20,7 @@
   <visualize-pull @fade *ngIf="chosenCommand === 'pull'" class="flex w-full justify-center change-direction"></visualize-pull>
   <visualize-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-push>
   <visualize-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-reset>
+  <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
   <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>
 
 </section>

@@ -36,6 +36,7 @@ export class AppComponent implements OnInit {
     {name: 'pull'},
     {name: 'push'},
     {name: 'reset'},
+    {name: 'stash'},
     {name: 'status'}
   ];
   public chosenCommand: string;
