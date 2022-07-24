@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../app.component.css']
 })
 export class MergeComponent implements OnInit {
+  public hideMessage: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.hideMessage = true;
   }
 
+  visualizeMerge(){
+    this.hideMessage = false;
+  }
 }

@@ -139,6 +139,10 @@
 .pt-16{
     padding-top: 16px;
 }
+
+.pt-18{
+    padding-top: 18px;
+}
 .pt-48{
     padding-top: 48px;
 }
@@ -424,6 +428,11 @@
     animation-fill-mode: forwards;
 }
 
+.move-right-merge {
+    animation: move-right-merge 2s linear;
+    animation-fill-mode: forwards;
+}
+
 .move-up {
     animation: move-up 3s linear;
     animation-fill-mode: forwards;
@@ -633,6 +642,14 @@
             }
             100% {
                 transform: translateX(416px);
+            }
+        } 
+        @keyframes move-right-merge {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(220px);
             }
         } 
         @keyframes move-up {
