@@ -3,6 +3,14 @@
     font-family: 'Roboto', sans-serif !important;
 }
 
+.image-size-icon {
+    width: 50px;
+}
+
+.font-size-change {
+    font-size: 22px;
+}
+
 .font-size-12 {
     font-size: 12px;
 }
@@ -353,6 +361,14 @@
 
 }
     @media only screen and (min-device-width: 960px) {
+        .font-size-change {
+            font-size: 36px;
+        }
+        .pv-change {
+            padding-bottom: 32px;
+            padding-top: 32px;
+        }
+
         @keyframes moveAndColor {
             0% {
                 transform: translateX(0);
@@ -369,7 +385,7 @@
         } 
     }
 
-    @media only screen and (max-device-width: 959px) {
+    @media only screen and (max-device-width: 959px) and (orientation : portrait) {
         @keyframes moveAndColor {
             0% {
                 transform: translateY(0);
@@ -784,13 +800,28 @@
         } 
     }
 
-    @media only screen and (max-device-width: 959px) {
+    @media only screen and (max-device-width: 959px) and (orientation : landscape)  {
+        .pv-change {
+            padding-bottom: 8px;
+            padding-top: 8px;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0)
+            }
+            100% {
+                transform: translate(150px, 5px)
+            }
+        }
+    }
+
+    @media only screen and (max-device-width: 959px) and (orientation : portrait)  {
         @keyframes move {
             0% {
                 transform: translateY(0)
             }
             50% {
-                transform: translateU(-50px)
+                transform: translateY(-50px)
             }
             100% {
                 transform: translateY(-108px)
@@ -952,12 +983,20 @@ li {
  }
 
 
-@media only screen and (max-device-width: 959px) {
+@media only screen and (max-device-width: 959px)  and (orientation : portrait) {
     .image-size-icon {
         width: 30px;
     }
     .image-size {
         width: 100px;
+    }
+    .font-size-change {
+        font-size: 22px;
+    }
+
+    .pv-change {
+        padding-bottom: 16px;
+        padding-top: 8px;
     }
     .change-direction {
         flex-direction: column;
