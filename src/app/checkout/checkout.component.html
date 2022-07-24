@@ -1,21 +1,33 @@
 <div class="flex direction-column w-full align-center">
   <div class="blue pt-8 h-48" >
-    <div *ngIf="hideMessage" [@myTrigger]="fadeIn">The HEAD points to the branch "bug/25282"</div>  
-    <div *ngIf="!hideMessage2" [@myTrigger]="fadeIn-slow">The HEAD points to the branch "main"</div>  
+    <div *ngIf="hideMessage2 && hideMessage3" [@myTrigger]="fadeIn">The HEAD points to the branch "bug/25282"</div>  
+    <div *ngIf="!hideMessage2 && !hideMessage" [@myTrigger]="fadeIn">The HEAD points to the branch "main"</div>  
+    <div *ngIf="!hideMessage3 && !hideMessage" [@myTrigger]="fadeIn-slower">A new branch is created and the HEAD points to it.</div>  
   </div>
-  <button [disabled]="!hideMessage" (click)="visualizeCheckout()" class="w-250" mat-raised-button color="warn">Visualize "git checkout main"</button>
+  <section class="flex">
+    <button [disabled]="!hideMessage" (click)="visualizeCheckout()" class="w-250" mat-raised-button color="warn">Visualize "git checkout main"</button>
+    <div class="pr-8"></div>
+    <button [disabled]="!hideMessage" (click)="visualizeCheckoutNew()" class="w-250" mat-raised-button color="warn">Visualize "git checkout -b new"</button>
+    
+  </section>
+  
   <div class="flex direction-column">
     <div class="flex pr-2">
       <div class="font-size-32 pt-16 mt-4 pr-4 white">&#10132;</div> <!--arrow right-->
       <div class="pt-32 pr-8">main</div>
     </div>
     <div class="flex pr-2">
-      <div class="font-size-32 pr-4" [ngClass]="{'move-up-fast': !hideMessage }">&#10132;</div> <!--arrow right-->
+      <div class="font-size-32 pr-4" 
+      [ngClass]="{'move-up-fast': !hideMessage2, 'move-down-fast': !hideMessage3 }">&#10132;</div> <!--arrow right-->
       <div class="mt-8 pr-8">bug/25282</div>
     </div>
     <div class="flex pr-2">
       <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
       <div class="mt-8 pr-8">pbi/25391</div>
+    </div>
+    <div class="flex pr-2">
+      <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
+      <div class="mt-8 pr-8" [ngClass]="{'hide': hideMessage3, 'show-fadeIn': !hideMessage3 }">new</div>
     </div>
   </div>
 </div>

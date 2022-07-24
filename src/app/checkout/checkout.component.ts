@@ -11,20 +11,28 @@ export class CheckoutComponent implements OnInit {
   public branches: Array<string>;
   public hideMessage: boolean;
   public hideMessage2: boolean;
+  public hideMessage3: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.hideMessage = true;
     this.hideMessage2 = true;
-    this.branches = ['&#10132; main','bug/25282','pbi/25391'];
+    this.hideMessage3 = true;
   }
 
   visualizeCheckout(){
-    this.hideMessage = false;
+    this.hideMessage2 = false;
     setTimeout(() => {
-      this.hideMessage2 = false;
+      this.hideMessage = false;
     }, 1000)
+  }
+
+  visualizeCheckoutNew(){
+    this.hideMessage3 = false;
+    setTimeout(() => {
+      this.hideMessage = false;
+    }, 2000)
   }
 
 }

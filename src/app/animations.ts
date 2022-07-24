@@ -31,6 +31,13 @@ export let fade =     trigger('fade', [
     transition('void => *', [
       style({opacity: '0', transform: 'translate(0px, 20px)'}),
       animate('2000ms 0s ease-in')
+    ]),
+    state('fadeIn-slower', style({
+      opacity: '1'
+    })),
+    transition('void => *', [
+      style({opacity: '0', transform: 'translate(0px, 20px)'}),
+      animate('4000ms 0s ease-in')
     ])
   ])
 
