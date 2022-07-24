@@ -12,19 +12,10 @@ export class StashComponent implements OnInit {
   
   public commands = [
     {name: 'no option'},
-    {name: 'apply '},
-    {name: '--include-untracked'},
-    {name: '--include-index'}
+    {name: 'include-untracked'},
+    {name: 'keep-index'}
   ];
-  public commits = [
-    {name: 'HEAD'},
-    {name: 'HEAD~1'},
-    {name: 'HEAD~2'},
-    {name: 'HEAD~3'},
-    {name: 'no parameter'}
-  ];
-  public commands2 = ['hard','mixed','soft','no parameter'];
-  public commits2 = ['HEAD', 'HEAD~1', 'HEAD~2','HEAD~3', 'no parameter'];
+
   public chosenCommand: string;
   public chosenCommit: string;
 
@@ -33,14 +24,14 @@ export class StashComponent implements OnInit {
   ngOnInit() {
     this.hideMessage = true;
     this.chosenCommand = '';
-    this.chosenCommit = '';
+    // this.chosenCommit = '';
     this.completed = false;
-    const groupH1 = document.getElementsByClassName('toMove');
-    for (let i = 0; i < groupH1.length; i++){
-      groupH1[i].classList.remove('move-down-one');
-      groupH1[i].classList.remove('move-down-two');
-      groupH1[i].classList.remove('move-down-three');
-    }
+    // const groupH1 = document.getElementsByClassName('toMove');
+    // for (let i = 0; i < groupH1.length; i++){
+    //   groupH1[i].classList.remove('move-down-one');
+    //   groupH1[i].classList.remove('move-down-two');
+    //   groupH1[i].classList.remove('move-down-three');
+    // }
   }
 
   copyHead(){
@@ -132,26 +123,48 @@ export class StashComponent implements OnInit {
     }
   }
 
-  visualizeReset(){
-    switch(this.chosenCommit) {
-      case ('HEAD' || 'no parameter'):
-        break;
-      case 'HEAD~1':
-        const groupH1 = document.getElementsByClassName('toMove');
-        for (let i = 0; i < groupH1.length; i++){
-          groupH1[i].classList.add('move-down-one');
+  visualizeStash(){
+    debugger;
+    let group;
+    switch(this.chosenCommand) {
+      case (''):
+        group = document.getElementsByClassName('tracked');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-working');
+        }
+        group = document.getElementsByClassName('index');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-index');
         }
         break;
-      case 'HEAD~2':
-        const groupH2 = document.getElementsByClassName('toMove');
-        for (let i = 0; i < groupH2.length; i++){
-          groupH2[i].classList.add('move-down-two');
+      case ('no option'):
+        group = document.getElementsByClassName('tracked');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-working');
         }
-          break;
-      case 'HEAD~3':
-        const groupH3 = document.getElementsByClassName('toMove');
-        for (let i = 0; i < groupH3.length; i++){
-          groupH3[i].classList.add('move-down-three');
+        group = document.getElementsByClassName('index');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-index');
+        }
+        break;
+      case 'include-untracked':
+        group = document.getElementsByClassName('tracked');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-working');
+        }
+        group = document.getElementsByClassName('untracked');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-working');
+        }
+        group = document.getElementsByClassName('index');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-index-2');
+        }
+        break;
+      case 'keep-index':
+        group = document.getElementsByClassName('tracked');
+        for (let i = 0; i < group.length; i++){
+          group[i].classList.add('move-left-from-working');
         }
         break;
       default:
@@ -163,8 +176,6 @@ export class StashComponent implements OnInit {
   selectCommand(command){
     this.chosenCommand = command;
   }
-  selectCommit(commit){
-    this.chosenCommit = commit;
-  }
+
 }
 

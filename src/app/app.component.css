@@ -405,6 +405,20 @@
     animation-fill-mode: forwards;
 }
 
+.move-left-from-working {
+    animation: move-left-from-working 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.move-left-from-index {
+    animation: move-left-from-index 1s linear;
+    animation-fill-mode: forwards;
+}
+.move-left-from-index-2 {
+    animation: move-left-from-index-2 1s linear;
+    animation-fill-mode: forwards;
+}
+
 .move-right {
     animation: move-right 2s linear;
     animation-fill-mode: forwards;
@@ -587,6 +601,30 @@
             }
             100% {
                 transform: translateX(-390px);
+            }
+        } 
+        @keyframes move-left-from-working {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-135px);
+            }
+        } 
+        @keyframes move-left-from-index {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translate(-287px, 20px);
+            }
+        } 
+        @keyframes move-left-from-index-2 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translate(-287px, 40px);
             }
         } 
         @keyframes move-right {

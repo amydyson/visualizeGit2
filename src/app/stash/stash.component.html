@@ -1,15 +1,6 @@
 <section class= "flex direction-column align-center">
   <div class="h-48">
    <span class="blue align-center pl-16 pr-16" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">"git stash" stores changes from the Working Area to the Stash Area. These changes can be retrieved later with "git stash apply".</span>
-  <div class="flex direction-column">
-    <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head1' }">Points to commit one place before HEAD</span>
-    <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head' }">Points to HEAD (default)</span>
-    <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head2' }">Points to commit two places before HEAD</span>
-    <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head3' }">Points to commit three places before HEAD</span>
-    <span [ngClass]="{'hide': hideMessage || overwriteType() !== 'soft' }">Soft: no overwrites</span>
-     <span [ngClass]="{'hide': hideMessage || overwriteType() !== 'mixed' }">Mixed (default): overwrite Index</span>
-    <span [ngClass]="{'hide': hideMessage || overwriteType() !== 'hard' }">Hard: overwrite Index and Working Area</span>
-  </div>
   </div>
   <div class="flex pt-16">
     <div class="pr-8"></div>
@@ -23,32 +14,25 @@
   </div>
   <div class="flex"f>
     <div class="pr-8"></div>
-    <button [disabled]="completed" (click)="visualizeReset()" class="w-350" mat-raised-button color="warn">Visualize "git stash<span *ngIf="chosenCommand !=='no parameter' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
+    <button [disabled]="completed" (click)="visualizeStash()" class="w-350" mat-raised-button color="warn">Visualize "git stash<span *ngIf="chosenCommand !=='no option' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
   </div>
   <div class="flex pt-32 change-direction">
     <div class="order-switch-stash flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">
       <div class="w-full min-w-150 background-black white">Stash Area</div>
       <div class="flex align-center justify-center pt-8 mt-4 pb-32">
-        <div class="pl-8">index.js</div>
       </div>
     </div>
     <div class="order-switch-2 flex  direction-column height-change bt-beige bb-beige br-beige text-align">
       <div class="w-full min-w-150 background-black white">Working Area</div>
       <div class="flex align-center direction-column align-left justify-center pt-8 mt-4 pb-32">
-        <div class="pl-8">index.html</div>
-        <div class="pl-8">untracked: nav.js</div>
+        <div class="pl-8 toMove tracked noOption">index.html</div>
+        <div class="pl-8 toMove untracked">untracked: nav.js</div>
       </div>
     </div>
     <div class="order-1 height-change bt-beige bl-change bb-beige br-beige text-align">
       <div class="w-full min-w-150 background-black white">Index</div>
-      <div class="flex align-left justify-center pt-8 mt-4 pb-32">
-        <div class="" 
-        [ngClass]="{'hide': !hardOverwrite() , 'dot pull-left-24 show' : !hideMessage, 
-        'headColorGreen': (chosenCommand === 'hard' && headPointer() === 'head'),
-        'headColorRed': (chosenCommand === 'hard' && headPointer() === 'head1'),
-        'headColorPurple': (chosenCommand === 'hard' && headPointer() === 'head2'),
-        'headColorGray': (chosenCommand === 'hard' && headPointer() === 'head3')}"></div>
-        <div class="pl-8">index.css</div>
+      <div class="flex align-left pt-8 mt-4 pb-32">
+        <div class="pl-8 toMove index noOption">index.css</div>
       </div>
     </div>
     <div class="order-switch-0 height-change bt-beige bl-change bb-beige br-beige text-align">
