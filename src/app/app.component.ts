@@ -31,6 +31,7 @@ export class AppComponent implements OnInit {
     {name: 'checkout'},
     {name: 'clone'},
     {name: 'commit'},
+    {name: 'fetch'},
     {name: 'init'},
     {name: 'log'},
     {name: 'merge'},

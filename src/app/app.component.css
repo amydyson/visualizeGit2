@@ -90,8 +90,20 @@
 .pl-24 {
     padding-left: 24px;
 }
+.pl-30 {
+    padding-left: 30px;
+}
 .pl-32 {
     padding-left: 32px;
+}
+.pl-34 {
+    padding-left: 34px;
+}
+.pl-36 {
+    padding-left: 36px;
+}
+.pl-46 {
+    padding-left: 46px;
 }
 .pl-48 {
     padding-left: 48px;
@@ -436,6 +448,10 @@
     animation: move-right-merge 2s linear;
     animation-fill-mode: forwards;
 }
+.move-right-fetch {
+    animation: move-right-fetch 2s linear;
+    animation-fill-mode: forwards;
+}
 
 .move-up {
     animation: move-up 3s linear;
@@ -648,6 +664,14 @@
                 transform: translateX(416px);
             }
         } 
+        @keyframes move-right-fetch {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(330px);
+            }
+        } 
         @keyframes move-right-merge {
             0% {
                 transform: translateX(0);
@@ -853,6 +877,10 @@ li {
 
 .pt-64 {
     padding-top: 64px;
+}
+
+.pt-100 {
+    padding-top: 100px;
 }
 
 .pt-4 {

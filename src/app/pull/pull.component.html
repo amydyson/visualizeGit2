@@ -2,9 +2,9 @@
   <div class="flex direction-column align-center justify-center">
     <div class="blue h-38 pb-16">
       <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
-      <div class="flex direction-column" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
-        <div>The local main branch now points to the latest commit from the repo main branch. </div>
-        <div class="">(A merge conflict may need to be resolved.)</div>
+      <div class="flex direction-column w-600" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+        The local main branch now points to the latest commit from the repo main branch. 
+        git pull = git fetch + git merge. (A merge conflict may need to be resolved.) 
       </div>
     </div>
     <button [disabled]="!hideMessage" (click)="visualizePull()" class="w-250" mat-raised-button color="warn">Visualize "git pull origin main"</button>

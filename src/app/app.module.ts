@@ -19,6 +19,7 @@ import { StatusComponent } from './status/status.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StashComponent } from './stash/stash.component';
 import { MergeComponent } from './merge/merge.component';
+import { FetchComponent } from './fetch/fetch.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MergeComponent } from './merge/merge.component';
     StatusComponent,
     CheckoutComponent,
     StashComponent,
-    MergeComponent
+    MergeComponent,
+    FetchComponent
   ],
   imports: [
     BrowserModule,
