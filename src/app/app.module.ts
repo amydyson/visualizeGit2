@@ -18,6 +18,7 @@ import { BranchComponent } from './branch/branch.component';
 import { StatusComponent } from './status/status.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StashComponent } from './stash/stash.component';
+import { MergeComponent } from './merge/merge.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { StashComponent } from './stash/stash.component';
     BranchComponent,
     StatusComponent,
     CheckoutComponent,
-    StashComponent
+    StashComponent,
+    MergeComponent
   ],
   imports: [
     BrowserModule,

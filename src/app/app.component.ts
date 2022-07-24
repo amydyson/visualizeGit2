@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
     {name: 'commit'},
     {name: 'init'},
     {name: 'log'},
+    {name: 'merge'},
     {name: 'pull'},
     {name: 'push'},
     {name: 'reset'},
