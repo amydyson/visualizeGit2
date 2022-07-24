@@ -16,6 +16,7 @@ import { ResetComponent } from './reset/reset.component';
 import { LogComponent } from './log/log.component';
 import { BranchComponent } from './branch/branch.component';
 import { StatusComponent } from './status/status.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { StatusComponent } from './status/status.component';
     ResetComponent,
     LogComponent,
     BranchComponent,
-    StatusComponent
+    StatusComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

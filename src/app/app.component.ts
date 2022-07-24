@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   public commands = [
     {name: 'add'},
     {name: 'branch'},
+    {name: 'checkout'},
     {name: 'clone'},
     {name: 'commit'},
     {name: 'init'},

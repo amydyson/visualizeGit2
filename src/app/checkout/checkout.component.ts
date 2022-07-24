@@ -1,0 +1,30 @@
+import { Component, OnInit } from '@angular/core';
+import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
+
+@Component({
+  selector: 'visualize-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['../app.component.css'],
+  animations: [ fade, myTrigger, myTrigger2, fade2, ani3 ]
+})
+export class CheckoutComponent implements OnInit {
+  public branches: Array<string>;
+  public hideMessage: boolean;
+  public hideMessage2: boolean;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.hideMessage = true;
+    this.hideMessage2 = true;
+    this.branches = ['&#10132; main','bug/25282','pbi/25391'];
+  }
+
+  visualizeCheckout(){
+    this.hideMessage = false;
+    setTimeout(() => {
+      this.hideMessage2 = false;
+    }, 1000)
+  }
+
+}
