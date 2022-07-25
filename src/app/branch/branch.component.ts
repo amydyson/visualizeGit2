@@ -10,6 +10,7 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 export class BranchComponent implements OnInit {
   public hideMessage: boolean;
   public branches: Array<string>;
+  public showReset: boolean;
 
   constructor() { }
 
@@ -38,6 +39,13 @@ export class BranchComponent implements OnInit {
     setTimeout(() => {
       this.hideMessage = false;
     }, 1500);
+    setTimeout(() => {
+      this.showReset = true;
+    }, 2500)
+  }
+
+  public reset(){
+    window.location.reload();
   }
 
 }

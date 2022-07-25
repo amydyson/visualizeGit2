@@ -17,4 +17,7 @@ export class FetchComponent implements OnInit {
   visualizeFetch(){
     this.hideMessage = false;
   }
+  public reset(){
+    window.location.reload();
+  }
 }

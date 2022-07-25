@@ -10,9 +10,15 @@
 .font-size-change {
     font-size: 22px;
 }
-
+.pl-change {
+    padding-left: 50px;
+}
 .font-size-12 {
     font-size: 12px;
+}
+
+.mat-fab .mat-button-wrapper {
+    line-height: 4px !important;
 }
 
 .italics {
@@ -713,7 +719,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-37px);
+                transform: translateY(-35px);
             }
         } 
 
@@ -804,6 +810,9 @@
         .pv-change {
             padding-bottom: 8px;
             padding-top: 8px;
+        }
+        .pl-change {
+            padding-left: 50px;
         }
         @keyframes move {
             0% {
@@ -997,6 +1006,9 @@ li {
     .pv-change {
         padding-bottom: 16px;
         padding-top: 8px;
+    }
+    .pl-change {
+        padding-left: 0px;
     }
     .change-direction {
         flex-direction: column;

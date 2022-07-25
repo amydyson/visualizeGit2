@@ -46,12 +46,17 @@ export class AppComponent implements OnInit {
   @Output() selectionChange: EventEmitter< MatSelectChange >
 
   ngOnInit(): void {
-    this.chosenCommand = '';
-
+    const temp = localStorage.getItem('chosenCommand');
+    if (temp){
+      this.chosenCommand = temp;
+    } else {
+      this.chosenCommand = '';
+    }
   }
 
   selectCommand(command){
     this.chosenCommand = command;
+    localStorage.setItem('chosenCommand', this.chosenCommand);
   }
 
 }

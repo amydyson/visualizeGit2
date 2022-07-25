@@ -24,14 +24,7 @@ export class StashComponent implements OnInit {
   ngOnInit() {
     this.hideMessage = true;
     this.chosenCommand = '';
-    // this.chosenCommit = '';
     this.completed = false;
-    // const groupH1 = document.getElementsByClassName('toMove');
-    // for (let i = 0; i < groupH1.length; i++){
-    //   groupH1[i].classList.remove('move-down-one');
-    //   groupH1[i].classList.remove('move-down-two');
-    //   groupH1[i].classList.remove('move-down-three');
-    // }
   }
 
   copyHead(){
@@ -175,6 +168,9 @@ export class StashComponent implements OnInit {
 
   selectCommand(command){
     this.chosenCommand = command;
+  }
+  public reset(){
+    window.location.reload();
   }
 
 }

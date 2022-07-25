@@ -18,4 +18,7 @@ export class PullComponent implements OnInit {
   visualizePull(){
     this.hideMessage = false;
   }
+  public reset(){
+    window.location.reload();
+  }
 }

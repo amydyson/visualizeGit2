@@ -16,5 +16,9 @@ export class CommitComponent implements OnInit {
   visualizeCommit(){
     this.hideMessage = false;
   }
+  
+  public reset(){
+    window.location.reload();
+  }
 
 }

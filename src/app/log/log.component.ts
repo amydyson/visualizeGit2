@@ -19,5 +19,9 @@ export class LogComponent implements OnInit {
   visualizeLog(){
     this.hideMessage = false;
   }
+  
+  public reset(){
+    window.location.reload();
+  }
 
 }

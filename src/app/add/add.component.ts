@@ -9,15 +9,24 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
 })
 export class AddComponent implements OnInit {
   hideMessage: boolean;
+  showReset: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.showReset = false;
   }
 
   visualizeAdd(){
     this.hideMessage = false;
+    setTimeout(() => {
+      this.showReset = true;
+    }, 2500)
+  }
+
+  public reset(){
+    window.location.reload();
   }
 
 }

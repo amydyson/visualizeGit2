@@ -12,6 +12,7 @@ export class CheckoutComponent implements OnInit {
   public hideMessage: boolean;
   public hideMessage2: boolean;
   public hideMessage3: boolean;
+  public showReset: boolean;
 
   constructor() { }
 
@@ -19,20 +20,33 @@ export class CheckoutComponent implements OnInit {
     this.hideMessage = true;
     this.hideMessage2 = true;
     this.hideMessage3 = true;
+    this.showReset = false;
   }
 
   visualizeCheckout(){
     this.hideMessage2 = false;
+    this.hideMessage = false;
     setTimeout(() => {
       this.hideMessage = false;
-    }, 1000)
+    }, 1000);
+    setTimeout(() => {
+      this.showReset = true;
+    }, 2500)
   }
 
   visualizeCheckoutNew(){
     this.hideMessage3 = false;
+    this.hideMessage = false;
     setTimeout(() => {
       this.hideMessage = false;
-    }, 2000)
+    }, 2000);
+    setTimeout(() => {
+      this.showReset = true;
+    }, 2900)
+  }
+
+  public reset(){
+    window.location.reload();
   }
 
 }

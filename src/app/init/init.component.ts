@@ -17,5 +17,8 @@ export class InitComponent implements OnInit {
   visualizeInit(){
     this.hideMessage = false;
   }
+  public reset(){
+    window.location.reload();
+  }
 
 }

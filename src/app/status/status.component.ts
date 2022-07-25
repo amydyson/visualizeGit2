@@ -40,5 +40,7 @@ export class StatusComponent implements OnInit {
     }, 2000);
   }
 
-
+  public reset(){
+    window.location.reload();
+  }
 }

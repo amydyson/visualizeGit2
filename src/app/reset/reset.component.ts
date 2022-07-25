@@ -165,4 +165,7 @@ export class ResetComponent implements OnInit {
   selectCommit(commit){
     this.chosenCommit = commit;
   }
+  public reset(){
+    window.location.reload();
+  }
 }
