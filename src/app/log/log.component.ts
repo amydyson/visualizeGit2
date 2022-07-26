@@ -9,17 +9,22 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
 })
 export class LogComponent implements OnInit {
   public hideMessage: boolean;
+  public showReset: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.showReset = false;
   }
 
   visualizeLog(){
     this.hideMessage = false;
+    setTimeout(() => {
+      this.showReset = true;
+    }, 3300)
   }
-  
+
   public reset(){
     window.location.reload();
   }

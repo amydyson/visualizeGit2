@@ -1,7 +1,12 @@
 <div class="flex direction-column align-center">
   <div class="pb-32 blue w-450 align-center text-center" *ngIf="!hideMessage">Lists the commits for the current branch. Use "git log" without options to see more information such as author and date</div>
   <section class= "flex direction-column align-center" >
-    <button [disabled]="!hideMessage" (click)="visualizeLog()" class="w-250" mat-raised-button color="warn">Visualize "git log --oneline"</button>
+    <div class="flex">
+      <div class="pr-8"></div>
+      <button [disabled]="!hideMessage" (click)="visualizeLog()" class="w-250" mat-raised-button color="warn">Visualize "git log --oneline"</button>
+      <div class="pr-8"></div>
+      <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
+    </div>
   </section>
   <section class="flex align-center direction-column">
     <div *ngIf="!hideMessage" class="flex direction-column align-left pl-50" >

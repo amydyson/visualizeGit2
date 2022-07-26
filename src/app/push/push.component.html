@@ -9,7 +9,11 @@
          </div>
       </div>
     </div>
-    <button [disabled]="!hideMessage" (click)="visualizePush()" class="w-250" mat-raised-button color="warn">Visualize "git push origin main"</button>
+    <div class="flex">
+      <button [disabled]="!hideMessage" (click)="visualizePush()" class="w-250" mat-raised-button color="warn">Visualize "git push origin main"</button>
+      <div class="pr-8"></div>
+      <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
+    </div>
   </div>
  <div class="flex pt-32"> 
    <section>

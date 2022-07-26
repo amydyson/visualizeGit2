@@ -7,7 +7,11 @@
         (A merge conflict may need to be resolved.)
       </div>
     </div>
-    <button [disabled]="!hideMessage" (click)="visualizeMerge()" class="w-250" mat-raised-button color="warn">Visualize "git merge feature"</button>
+    <div class="flex">
+      <button [disabled]="!hideMessage" (click)="visualizeMerge()" class="w-250" mat-raised-button color="warn">Visualize "git merge feature"</button>
+      <div class="pr-8"></div>
+      <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
+    </div>
   </div>
  <div class="flex pt-32 w-full"> 
     <section class="flex direction-column text-left pr-16"> 

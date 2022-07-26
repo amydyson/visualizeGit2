@@ -9,6 +9,7 @@ export class StashComponent implements OnInit {
 
   public hideMessage: boolean;
   public completed: boolean;
+  public showReset: boolean;
   
   public commands = [
     {name: 'no option'},
@@ -25,6 +26,7 @@ export class StashComponent implements OnInit {
     this.hideMessage = true;
     this.chosenCommand = '';
     this.completed = false;
+    this.showReset = false;
   }
 
   copyHead(){
@@ -164,6 +166,9 @@ export class StashComponent implements OnInit {
     }
     this.hideMessage = false;
     this.completed = true;
+    setTimeout(() => {
+      this.showReset = true;
+    }, 1500)
   }
 
   selectCommand(command){

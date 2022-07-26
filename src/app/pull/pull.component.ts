@@ -8,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class PullComponent implements OnInit {
 
   public hideMessage: boolean;
+  public showReset: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.showReset = false;
   }
 
   visualizePull(){
     this.hideMessage = false;
+    setTimeout(() => {
+      this.showReset = true;
+    }, 3000)
   }
   public reset(){
     window.location.reload();

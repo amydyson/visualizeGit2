@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ResetComponent implements OnInit {
   public hideMessage: boolean;
   public completed: boolean;
+  public showReset: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -31,6 +32,7 @@ export class ResetComponent implements OnInit {
 
   ngOnInit() {
     this.hideMessage = true;
+    this.showReset = false;
     this.chosenCommand = '';
     this.chosenCommit = '';
     this.completed = false;
@@ -157,6 +159,9 @@ export class ResetComponent implements OnInit {
     }
     this.hideMessage = false;
     this.completed = true;
+    setTimeout(() => {
+      this.showReset = true;
+    }, 3000)
   }
 
   selectCommand(command){

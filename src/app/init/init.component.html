@@ -5,8 +5,12 @@
       A git repository is created (look for a hidden folder call .git).
       Git init only needs to be run once. </span>
    </div>
- <button [disabled]="!hideMessage" (click)="visualizeInit()" class="w-250" mat-raised-button color="warn">Visualize "git init"</button>
- <div class="flex pt-32 change-direction">
+   <div class="flex">
+    <button [disabled]="!hideMessage" (click)="visualizeInit()" class="w-250" mat-raised-button color="warn">Visualize "git init"</button>
+    <div class="pr-8"></div>
+    <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
+  </div>
+  <div class="flex pt-32 change-direction">
     <div class="order-switch-2 flex  direction-column height-change text-align"
          [ngClass]="{'bt-beige bb-beige bl-beige br-beige ': !hideMessage}">
       <div class="w-full min-w-150 background-black white" [ngClass]="{'hide': hideMessage, 'show-fadeIn': !hideMessage}">Working Area</div>

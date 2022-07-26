@@ -31,7 +31,7 @@ export class CheckoutComponent implements OnInit {
     }, 1000);
     setTimeout(() => {
       this.showReset = true;
-    }, 2500)
+    }, 1500)
   }
 
   visualizeCheckoutNew(){
@@ -42,7 +42,7 @@ export class CheckoutComponent implements OnInit {
     }, 2000);
     setTimeout(() => {
       this.showReset = true;
-    }, 2900)
+    }, 2400)
   }
 
   public reset(){
