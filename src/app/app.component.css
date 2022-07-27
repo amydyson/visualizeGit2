@@ -14,6 +14,10 @@
     padding-left: 50px;
 }
 
+.pb-change-16-32 {
+ padding-bottom: 32px;
+}
+
 .pchange-branch {
     padding-top: 8px;
     padding-bottom: 16px;
@@ -155,6 +159,9 @@
 .pl-92 {
     padding-left: 92px;
 }
+.pl-109 {
+    padding-left: 109px;
+}
 .pl-350 {
     padding-left: 350px;
 }
@@ -276,6 +283,10 @@
 }
 .min-w-350 {
     min-width: 350px;
+}
+
+.max-w-450 {
+    max-width: 450px;
 }
 .w-150 {
     width: 150px;
@@ -524,7 +535,7 @@
 }
 
 .move-right-merge {
-    animation: move-right-merge 2s linear;
+    animation: move-right-merge 1s linear;
     animation-fill-mode: forwards;
 }
 .move-right-fetch {
@@ -533,7 +544,7 @@
 }
 
 .move-up {
-    animation: move-up 3s linear;
+    animation: move-up 1.5s linear;
     animation-fill-mode: forwards;
 }
 
@@ -865,6 +876,11 @@
             margin-top: -70px;
         }
 
+        .pb-change-16-32 {
+            padding-bottom: 16px;
+            margin-top: -10px;
+           }
+
         .padding-landscape-commit-t{
             padding-top: 32px;
         }
@@ -910,6 +926,25 @@
             margin-top: -10px;
         }
 
+        @keyframes move-right-merge {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(220px);
+            }
+        } 
+        @keyframes move-up {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-37px);
+            }
+        } 
         @keyframes moveAndColor {
             0% {
                 transform: translateX(0);
@@ -965,6 +1000,27 @@
             width: 50px;
             height: 50px;
         }
+
+        @keyframes move-right-merge {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(220px);
+            }
+        } 
+
+        @keyframes move-up {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-37px);
+            }
+        } 
 
         @keyframes move-right-fetch {
             0% {

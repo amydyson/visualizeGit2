@@ -1,5 +1,6 @@
-<div class="flex direction-column align-center">
-  <div class="pb-32 blue w-450 align-center text-center" *ngIf="!hideMessage">Lists the commits for the current branch. Use "git log" without options to see more information such as author and date</div>
+<div class="flex direction-column align-center ">
+  <div class="blue align-center pl-32 pr-32 pb-16 text-center max-w-450" 
+      *ngIf="!hideMessage">Lists the commits for the current branch. Use "git log" without options to see more information such as author and date</div>
   <section class= "flex direction-column align-center" >
     <div class="flex">
       <div class="pr-8"></div>
@@ -10,7 +11,8 @@
   </section>
   <section class="flex align-center direction-column">
     <div *ngIf="!hideMessage" class="flex direction-column align-left pl-50" >
-      <div class="commit flex commit-fadeIn-1 pt-32 pb-8"><div class="w-100 pr-8 khaki bold">da91bc1a</div><div>( <span class="darkblue bold">HEAD -> </span><span class="limegreen bold">main</span>, <span class="red bold pl-2">origin/main</span>)</div><div class="pl-2"> require oauth authentication</div></div>
+      <div class="flex-direction-change"><div class="commit flex commit-fadeIn-1 pt-32 pb-2"><div class="w-100 pr-8 khaki bold">da91bc1a</div><div>( <span class="darkblue bold">HEAD -> </span><span class="limegreen bold">main</span>, <span class="red bold pl-2">origin/main</span>)</div></div>
+      <div class="pl-109 commit flex commit-fadeIn-1 pb-8"> require oauth authentication</div></div>
       <div class="commit flex commit-fadeIn-2 pb-8"><div class="w-100 pr-8 khaki bold">37bce8f6</div><div>add navigation bar</div></div>
       <div class="commit flex commit-fadeIn-3 pb-8"><div class="w-100 pr-8 khaki bold">1dd25ea0</div><div>first commit, lay out app</div></div>
     </div>

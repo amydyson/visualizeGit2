@@ -1,7 +1,7 @@
 <section class= "flex direction-column align-center">
-  <div class="blue h-48">
+  <div class="blue h-48 pl-32 pr-32 pb-16 text-center">
     <span [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: A folder contains 3 files. No git repository exists.</span>
-    <span class="text-center" [ngClass]="{'hide': hideMessage, 'show-fadeIn': !hideMessage}">
+    <span [ngClass]="{'hide': hideMessage, 'show-fadeIn': !hideMessage}">
       A git repository is created (look for a hidden folder call .git).
       Git init only needs to be run once. </span>
    </div>

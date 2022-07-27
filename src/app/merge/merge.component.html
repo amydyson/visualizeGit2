@@ -1,8 +1,8 @@
-<div class="flex direction-column">
+<div class="flex direction-column w-full align-center">
   <div class="flex direction-column align-center justify-center">
-    <div class="blue h-38 pb-32">
+    <div class="blue h-change-28-48 pb-change-16-32">
       <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
-      <div class="flex direction-column w-350" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+      <div class="flex direction-column pl-32 pr-32 max-w-450" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
         The main branch is updated with the latest commits from the feature branch.
         (A merge conflict may need to be resolved.)
       </div>
@@ -13,19 +13,19 @@
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
- <div class="flex pt-32 w-full"> 
+ <div class="flex pt-32 w-full align-center justify-center"> 
     <section class="flex direction-column text-left pr-16"> 
       <div class="pb-8 pl-32 bold">feature branch </div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
             <div class="font-size-32 pt-18 pl-4 mt-4 pr-2">&#10132;</div> <!--arrow right-->
-            <div class="pr-8 pt-32">commit 86b5f</div>
+            <div class="pr-2 pt-32">commit 86b5f</div>
             <div class="pr-8 pull-left pt-32" [ngClass]="{'hide': hideMessage, 'show move-right-merge': !hideMessage}">commit 86b5f</div>
           </div>
           <div class="flex pr-2">
-            <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="mt-8 pl-4 pr-8">commit e34b2</div>
+            <div class="font-size-32 white">&#10132;</div> <!--arrow right-->
+            <div class="mt-8 pl-4">commit e34b2</div>
           </div>
         </div>
       </div>
@@ -35,12 +35,12 @@
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-18 mt-4 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="pr-8 white">commit 86b5f</div>
+            <div class="font-size-32 pt-18 mt-4 white">&#10132;</div> <!--arrow right-->
+            <div class="white">commit 86b5f</div>
           </div>
           <div class="flex">
-            <div class="font-size-32 pr-2" [ngClass]="{'move-up': !hideMessage}">&#10132;</div> <!--arrow right-->
-            <div class="mt-8 pr-8">commit e34b2</div>
+            <div class="font-size-32" [ngClass]="{'move-up': !hideMessage}">&#10132;</div> <!--arrow right-->
+            <div class="pl-2 mt-8">commit e34b2</div>
           </div>
         </div>
       </div>
