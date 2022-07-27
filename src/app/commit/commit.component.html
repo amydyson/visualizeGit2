@@ -7,15 +7,15 @@
     <div class="pr-8"></div>
     <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
   </div>
- <div class="flex pt-32 change-direction">
+ <div class="flex pt-change--commit change-direction">
     <div class="order-switch-2 flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">
   <div class="w-full min-w-150 background-black white">Working Area</div>
-  <div class="pt-change">index.html</div>
+  <div class="pt-change--commit">index.html</div>
     <div class="pt-4 ">index.js</div>
-  <div class="pt-4 pb-change">index.css</div>
+  <div class="pt-4 pb-change padding-landscape-commit-b">index.css</div>
     </div>
     <div class="order-1 height-change bt-beige  bl-change bb-beige br-beige text-align"><div class="w-full min-w-150 background-black white">Index</div>
-    <div class="green index_commit" [ngClass]="{'moveAndColor': !hideMessage}">index.js</div></div>
+    <div class="green index_commit padding-landscape-commit-t" [ngClass]="{'moveAndColor': !hideMessage}">index.js</div></div>
     <div class="order-switch-0 height-change bt-beige  bl-change bb-beige br-beige text-align"><div class="w-full min-w-150 background-black white">Repository</div></div>
   </div>
 </section>

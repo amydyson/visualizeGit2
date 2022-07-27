@@ -12,45 +12,45 @@
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
- <div class="flex pt-32 pl-16 pr-16"> 
-   <section class="flex direction-column text-center pr-64"> 
+ <div class="flex flex-direction-change pt-32 pl-16 pr-16"> 
+   <section class="flex direction-column justify-center text-center pr-64 order-switch-2 pt-fetch"> 
     <div class="pl-36 pb-16">Local Repo User 1</div>
-    <div class="flex pr-48">
+    <div class="flex pr-48 pad-portrait-fetch-1">
       <div class="flex direction-column">
         <div class="flex">
           <div class="pr-8 white">x</div>
         </div>
-        <div class="flex">
+        <div class="flex pull-up-fetch">
           <div class="mt-8 pt-54 pr-8">featureA</div>
         </div>
       </div>
-      <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+      <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
     </div>
   </section>
-    <section class="flex direction-column text-center pr-64"> 
+    <section class="flex direction-column text-center pr-64 order-1 pt-fetch"> 
       <div class="pb-16 pl-36">Remote (Shared) Repo </div>
-      <div class="flex pr-48 test">
-        <div class="flex direction-column">
+      <div class="flex justify-center align-center">
+        <div class="flex direction-column pull-up-fetch">
           <div class="pt-76 pr-8">featureA</div>
           <div class="pull-up pr-8" [ngClass]="{'hide': hideMessage, 'show move-right-fetch': !hideMessage}">featureA</div>
           <div class="pt-8 pr-8">featureB</div>
           <div class="mt-8 pull-up pr-8"  [ngClass]="{'hide': hideMessage, 'show move-right-fetch': !hideMessage}">featureB</div>
         </div>
-        <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+        <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       </div>
     </section>
-    <section class="flex direction-column text-center pr-64"> 
+    <section class="flex direction-column justify-center align-center text-center pr-64 order-switch-0"> 
       <div class="pl-30 pb-16">Local Repo User 2</div>
-      <div class="flex pr-48">
+      <div class="flex pr-48 pad-portrait-fetch-2">
         <div class="flex direction-column">
-          <div class="flex">
+          <div class="flex pull-up-fetch">
             <div class="pt-76 pr-8 white">featureA</div>
           </div>
           <div class="flex">
             <div class="mt-8 pr-8" [ngClass]="{'hide': !hideMessage}">featureB</div>
           </div>
         </div>
-        <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+        <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       </div>
     </section>
   </div>

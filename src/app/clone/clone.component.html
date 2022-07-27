@@ -1,19 +1,19 @@
 <div class="flex direction-column">
   <div class="flex direction-column align-center justify-center">
-    <div class="blue h-48">
+    <div class="blue h-change-28-48">
       <span [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">The git repo is cloned on the user's computer</span>
     </div>
-    <div class="flex">
+    <div class="flex flex-direction-change align-center">
       <button [disabled]="!hideMessage" (click)="visualizeClone()" class="w-250" mat-raised-button color="warn">Visualize "git clone url"</button>
-      <div class="pr-8"></div>
+      <div class="pr-8 pb-8"></div>
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
- <div class="flex pt-32"> 
-    <section class="flex direction-column text-center"> 
-      <div>Repository at url <br>(example: GitHub repo) </div>
-      <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
-      <img  class="image-size pull-up-image" [ngClass]="{'hide': hideMessage, 'show, move-image': !hideMessage}"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+ <div class="flex pt-change--clone"> 
+    <section class="flex direction-column text-center align-center"> 
+      <div class="pb-8">Repository at url <br>(example: GitHub repo) </div>
+      <img  class="image-size--clone"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+      <img  class="image-size--clone pull-up-image" [ngClass]="{'hide': hideMessage, 'show, move-image': !hideMessage}"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
     </section>
     <section class="pl-64">
       <div>User's Computer</div>
