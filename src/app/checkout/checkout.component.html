@@ -1,14 +1,14 @@
 <div class="flex direction-column w-full align-center">
-  <div class="blue pt-8 h-48" >
+  <div class="blue h-change-checkout align-center" >
     <div *ngIf="hideMessage2 && hideMessage3" >Example: The HEAD points to the branch "main"</div>  
     <div *ngIf="!hideMessage2 && !hideMessage" >The HEAD points to the branch "bug/25282"</div>  
-    <div *ngIf="!hideMessage3 && !hideMessage">A new branch is created (a copy of "main") and the HEAD points to it.</div>  
+    <div class="pl-32 pr-32 text-center" *ngIf="!hideMessage3 && !hideMessage">A new branch is created (a copy of "main") and the HEAD points to it.</div>  
   </div>
-  <section class="flex">
+  <section class="flex flex-direction-change align-center">
     <button [disabled]="!hideMessage" (click)="visualizeCheckout()" class="w-300" mat-raised-button color="warn">Visualize "git checkout bug/25282"</button>
-    <div class="pr-8"></div>
+    <div class="pr-8 pb-8"></div>
     <button [disabled]="!hideMessage" (click)="visualizeCheckoutNew()" class="w-300" mat-raised-button color="warn">Visualize "git checkout -b version_2.0"</button>
-    <div class="pr-8"></div>
+    <div class="pr-8 pb-8"></div>
     <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
   </section>
   
