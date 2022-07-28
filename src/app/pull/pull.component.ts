@@ -21,7 +21,7 @@ export class PullComponent implements OnInit {
     this.hideMessage = false;
     setTimeout(() => {
       this.showReset = true;
-    }, 2000)
+    }, 1500)
   }
   public reset(){
     window.location.reload();

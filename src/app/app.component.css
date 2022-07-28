@@ -4,11 +4,11 @@
 }
 
 .pl-92-except-portrait{
-    padding-left: 92px;
+    padding-left: 30px;
 }
 
 .pr-64-except-portrait {
-    padding-right: 64px;
+    padding-right: 0px;
 }
 
 .image-size-icon {
@@ -486,12 +486,11 @@
         }
 
         .mt-in-portrait {
-            border: 2px solid red;
             margin-top: -75px;
         }
 
         .mt-in-portrait-2 {
-            margin-top: -20px;
+            margin-top: -40px;
         }
 
         .hide-in-portrait {
@@ -796,7 +795,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(415px);
+                transform: translateX(352px);
             }
         } 
         @keyframes move-right-fetch {
@@ -920,6 +919,10 @@
     }
 
     @media only screen and (max-device-width: 959px) and (orientation : landscape)  {
+        .hide-in-landscape{
+            display: none;
+        }
+    
         .pv-change {
             padding-bottom: 8px;
             padding-top: 8px;
@@ -1015,7 +1018,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(352px);
+                transform: translateX(250px);
             }
         } 
 
@@ -1083,7 +1086,7 @@
             margin-top: -20px;
         }
         .mt-change-pull-4 {
-            margin-top: -33px;
+            margin-top: -83px;
         }
         .mt-change-pull-2 {
             margin-top: 2px;
@@ -1113,7 +1116,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(252px);
+                transform: translateX(250px);
             }
         } 
         @keyframes move-right-merge {
@@ -1125,6 +1128,7 @@
             }
         } 
 
+
         @keyframes move-up {
             0% {
                 transform: translateY(0);
@@ -1133,7 +1137,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-37px);
+                transform: translateY(-20px);
             }
         } 
 
