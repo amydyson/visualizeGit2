@@ -500,6 +500,11 @@
         .pt-32-in-portrait {
             padding-top: 32px;
         }
+
+        .pt-change-pull-2 {
+            padding-top: 0;
+            padding-bottom: 64px;
+        }
         
         .pr-64-except-portrait {
             padding-right: 0px;
