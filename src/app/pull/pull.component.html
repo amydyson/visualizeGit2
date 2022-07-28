@@ -2,47 +2,57 @@
   <div class="flex direction-column align-center justify-center">
     <div class="blue h-38 pb-16">
       <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
-      <div class="flex direction-column pl-32 pr-32 max-w-600" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+      <div class="flex direction-column pl-32 pr-32 max-w-600 h-change-28-48" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
         The local main branch now points to the latest commit from the repo main branch. 
         git pull = git fetch + git merge. (A merge conflict may need to be resolved.) 
       </div>
     </div>
-    <div class="flex align-center">
+    <div class="flex align-center pt-32-in-portrait">
       <button [disabled]="!hideMessage" (click)="visualizePull()" class="w-250" mat-raised-button color="warn">Visualize "git pull origin main"</button>
       <div class="pr-8"></div>
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
   <div class="flex pt-32 align-center"> 
-    <section class="flex direction-column text-center pr-64"> 
-      <div class="pb-16 pl-92">Remote Repo main branch </div>
+    <section class="flex direction-column text-center pr-64-except-portrait"> 
+      <div class="pl-92-except-portrait flex-direction-change pb-16">
+        <div>Remote Repo</div>
+        <div>main branch</div>
+      </div>
       <div class="flex pr-48">
 
         <div class="flex direction-column">
           <div class="flex">
             <div class="font-size-32 pt-change-pull-2 pl-4 mt-change-pull-2 pr-2">&#10132;</div> <!--arrow right-->
-            <div class="pt-change-pull pr-8">commit 86b5f</div>
-            <div class="pt-change-pull pr-8 pull-left" [ngClass]="{'hide': hideMessage, 'show move-right': !hideMessage}">commit 86b5f</div>
+            <div class="pt-change-pull pr-8"><span class="hide-in-portrait">commit</span> <span>86b5f</span></div>
+            <div class="pt-change-pull pr-8 pull-left" [ngClass]="{'hide': hideMessage, 'show move-right': !hideMessage}">
+              <span class="hide-in-portrait">commit</span> <span>86b5f</span></div>
           </div>
           <div class="flex pr-2">
             <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="mt-change-pull-0 pr-8">commit e34b2</div>
+            <div class="mt-change-pull-0 pr-8 mt-in-portrait">
+              <span class="hide-in-portrait">commit</span> <span>e34b2</span></div>
           </div>
         </div>
         <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       </div>
     </section>
-    <section class="flex direction-column text-center pr-64 margin-in-landscape"> 
-      <div class="pl-92 pb-16">Local Repo main branch</div>
+    <section class="flex direction-column text-center pr-64-except-portrait margin-in-landscape mt-in-portrait-2" style="border: 2px solid green;"> 
+      <div class="pl-92-except-portrait flex-direction-change pb-16">
+        <div>Local Repo</div>
+        <div>main branch</div>
+      </div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
             <div class="font-size-32 pt-change-pull-2 mt-change-pull-2 mt-change-pull-3 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="pt-change-pull pr-8 white ">commit 86b5f</div>
+            <div class="pt-change-pull pr-8 white ">
+              <span class="hide-in-portrait">commit</span> <span>86b5f</span></div>
           </div>
           <div class="flex">
             <div class="font-size-32 pr-2 mt-change-pull-4" [ngClass]="{'move-up': !hideMessage}">&#10132;</div> <!--arrow right-->
-            <div class="mt-change-pull-6 pr-8">commit e34b2</div>
+            <div class="mt-change-pull-6 pr-8 mt-in-portrait">
+              <span class="hide-in-portrait">commit</span> <span>e34b2</span></div>
           </div>
         </div>
         <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
