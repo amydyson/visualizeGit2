@@ -1,13 +1,13 @@
 <div class="flex direction-column w-full align-center">
-  <div class="blue pt-8 h-48" >
-    <div class="blue w-450 text-center pb-8" *ngIf="!hideMessage" [@myTrigger]="fadeIn"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
+  <div class="blue pt-8 h-change-28-48" >
+    <div class="blue w-450 text-center" *ngIf="!hideMessage" [@myTrigger]="fadeIn"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
   </div>
-  <div class="flex">
+  <div class="flex pt-8">
     <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
     <div class="pr-8"></div>
     <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
   </div>
-  <section class= "flex direction-column pl-350 pt-16 w-half align-left" >
+  <section class= "flex direction-column pl-change-status pt-16 w-half align-left" >
     <div [ngClass]="{
                     'green bold pl-16': i == '1',
                     'pl-16': (i == '1' || i == '3'),

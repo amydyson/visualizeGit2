@@ -7,6 +7,10 @@
     font-size: 16px;
 }
 
+.pl-change-status {
+    padding-left: 320px;
+}
+
 .change-direction-stash {
     flex-direction: column;
 }
@@ -991,7 +995,9 @@
             display: none;
         }
 
-
+        .pl-change-status {
+            padding-left: 200px;
+        }
 
         .font-change-14-16 {
             font-size: 14px;
@@ -1210,7 +1216,9 @@
         .image-size--clone {
             width: 50px;
         }
-
+        .pl-change-status {
+            padding-left: 0px;
+        }
 
         .pt-change-pull {
             padding-top: 8px;
