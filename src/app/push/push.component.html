@@ -1,54 +1,58 @@
-<div class="flex direction-column">
+<div class="flex direction-column align-center">
   <div class="flex direction-column align-center justify-center">
-    <div class="blue h-58 pb-16">
-      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked</div>
-      <div class="flex direction-column" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
-        <div class="w-600 text-left">The remote main branch now points to the latest commit from the local main branch.
-          It's advisable to do a pull before a push to a shared repo.
-          When combining code with a push or a pull, merge conflicts may need to be resolved.
-         </div>
+    <div class="blue h-38 pb-16">
+      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
+      <div class="flex direction-column pl-32 pr-32 max-w-600 h-change-28-48 font-change-14-16" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+        The remote main branch now points to the latest commit from the local main branch.
+        It's advisable to do a pull before a push to a shared repo.
+        When combining code with a push or a pull, merge conflicts may need to be resolved.
       </div>
     </div>
-    <div class="flex">
+    <div class="flex align-center pt-32-in-portrait">
       <button [disabled]="!hideMessage" (click)="visualizePush()" class="w-250" mat-raised-button color="warn">Visualize "git push origin main"</button>
       <div class="pr-8"></div>
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
- <div class="flex pt-32"> 
-   <section>
-   </section>
-    <section class="flex direction-column text-center pr-64"> 
-      <div class="pb-16 pl-92">Remote Repo main branch</div>
+  <div class="flex pt-32 align-center"> 
+    <section class="flex direction-column text-center pr-64-except-portrait"> 
+      <div class="pl-92-except-portrait flex-direction-change pb-16 pull-up-in-push">
+        <div>Remote Repo</div>
+        <div>main branch</div>
+      </div>
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-64 mt-4 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="pt-76 pr-8 white">commit 86b5f</div>
+            <div class="font-size-32 pt-change-pull-2 mt-change-pull-2 mt-change-pull-3 pr-2 white">&#10132;</div> <!--arrow right-->
+            <div class="pt-change-pull pr-8 white ">86b5f</div>
           </div>
           <div class="flex">
-            <div class="font-size-32 pr-2" [ngClass]="{'move-up--push': !hideMessage}">&#10132;</div> <!--arrow right-->
-            <div class="mt-8 pr-8">commit e34b2</div>
+            <div class="font-size-32 pr-2 mt-change-pull-4" [ngClass]="{'move-up-pull': !hideMessage}">&#10132;</div> <!--arrow right-->
+            <div class="mt-change-pull-6 pr-8 mt-in-portrait">e34b2</div>
           </div>
         </div>
-        <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+
+        <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       </div>
     </section>
-    <section class="flex direction-column text-center pr-64"> 
-      <div class="pl-92 pb-16">Local Repo main branch</div>
-      <div class="flex pr-48">
+    <section class="flex direction-column align-center text-center pr-64-except-portrait margin-in-landscape mt-in-portrait-2"> 
+      <div class="pl-92-except-portrait flex-direction-change pb-16 pull-up-in-push-2">
+        <div>Local Repo</div>
+        <div>main branch</div>
+      </div>
+      <div class="flex pr-48"  >
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-64 mt-4 pr-2">&#10132;</div> <!--arrow right-->
-            <div class="pt-76 pr-8">commit 86b5f</div>
-            <div class="pt-76 pr-8 pull-left" [ngClass]="{'hide': hideMessage, 'show move-left': !hideMessage}">commit 86b5f</div>
+            <div class="font-size-32 pt-change-pull-2 pl-4 mt-change-pull-2 pr-2">&#10132;</div> <!--arrow right-->
+            <div class="pt-change-pull pr-8">86b5f</div>
+            <div class="pt-change-pull pr-8 pull-left" [ngClass]="{'hide': hideMessage, 'show move-left': !hideMessage}">86b5f</div>
           </div>
-          <div class="flex">
+          <div class="flex pr-2">
             <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="mt-8 pr-8">commit e34b2</div>
+            <div class="mt-change-pull-0 pr-8 mt-in-portrait">e34b2</div>
           </div>
         </div>
-        <img  class="image-size"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+        <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       </div>
     </section>
   </div>

@@ -3,12 +3,20 @@
     font-family: 'Roboto', sans-serif !important;
 }
 
+.font-change-14-16 {
+    font-size: 16px;
+}
+
 .pl-92-except-portrait{
     padding-left: 30px;
 }
 
 .pr-64-except-portrait {
     padding-right: 0px;
+}
+
+.pt-32-in-portrait {
+    padding-top: 32px;
 }
 
 .image-size-icon {
@@ -484,6 +492,20 @@
         .pl-92-except-portrait{
             padding-left: 0px;
         }
+        .font-change-14-16 {
+            font-size: 14px;
+        }
+        
+
+        .pull-up-in-push-2 {
+            margin-top: 80px;
+        }
+        
+
+        .pt-32-desktop-push {
+            padding-top: 32px;
+        }
+        
 
         .mt-in-portrait {
             margin-top: -75px;
@@ -567,7 +589,7 @@
     animation-fill-mode: forwards;
 }
 .move-left {
-    animation: move-left 1s linear;
+    animation: move-left .75s linear;
     animation-fill-mode: forwards;
 }
 
@@ -600,12 +622,12 @@
 }
 
 .move-up {
-    animation: move-up 1.5s linear;
+    animation: move-up 1.3s linear;
     animation-fill-mode: forwards;
 }
 
 .move-up-pull {
-    animation: move-up-pull 1.5s linear;
+    animation: move-up-pull 1s linear;
     animation-fill-mode: forwards;
 }
 
@@ -778,7 +800,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-390px);
+                transform: translateX(-215px);
             }
         } 
         @keyframes move-left-from-working {
@@ -961,6 +983,18 @@
         .hide-in-landscape{
             display: none;
         }
+
+        .font-change-14-16 {
+            font-size: 14px;
+        }
+
+        .pull-up-in-push {
+            margin-top: -45px;
+        }
+
+        .pt-32-in-portrait {
+            padding-top: 0px;
+        }
     
         .pv-change {
             padding-bottom: 8px;
@@ -1052,6 +1086,15 @@
             margin-top: -10px;
         }
 
+        @keyframes move-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translate(-115px, -3px);
+            }
+        } 
+
         @keyframes move-right {
             0% {
                 transform: translateX(0);
@@ -1130,6 +1173,7 @@
             width: 50px;
         }
 
+
         .pt-change-pull {
             padding-top: 8px;
         }
@@ -1162,6 +1206,16 @@
             width: 50px;
             height: 50px;
         }
+
+
+        @keyframes move-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-115px);
+            }
+        } 
 
         @keyframes move-right {
             0% {

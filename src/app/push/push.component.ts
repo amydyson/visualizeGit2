@@ -20,10 +20,9 @@ export class PushComponent implements OnInit {
     this.hideMessage = false;
     setTimeout(() => {
       this.showReset = true;
-    }, 2940)
+    }, 4500)
   }
   public reset(){
     window.location.reload();
   }
-
 }
