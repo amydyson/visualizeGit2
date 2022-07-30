@@ -567,7 +567,7 @@
     animation-fill-mode: forwards;
 }
 .move-left {
-    animation: move-left 2s linear;
+    animation: move-left 1s linear;
     animation-fill-mode: forwards;
 }
 
@@ -595,12 +595,22 @@
     animation-fill-mode: forwards;
 }
 .move-right-fetch {
-    animation: move-right-fetch 2s linear;
+    animation: move-right-fetch 1s linear;
     animation-fill-mode: forwards;
 }
 
 .move-up {
     animation: move-up 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.move-up-pull {
+    animation: move-up-pull 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.move-up--push {
+    animation: move-up--push 1.5s linear;
     animation-fill-mode: forwards;
 }
 
@@ -827,7 +837,31 @@
                 transform: translateY(0);
             }
             100% {
+                transform: translateY(-35px);
+            }
+        } 
+
+        @keyframes move-up-pull {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
                 transform: translateY(-28px);
+            }
+        } 
+
+        @keyframes move-up--push {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-35px);
             }
         } 
 
@@ -1043,20 +1077,33 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-16px);
+                transform: translateY(-36px);
             }
         } 
+
+        @keyframes move-up-pull {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-14px);
+            }
+        } 
+
         @keyframes moveAndColor {
             0% {
                 transform: translateX(0);
                 color: green;
             }
             50% {
-                transform: translateX(82.5px);
+                transform: translateX(77.5px);
                 color: green;
             }
             100% {
-                transform: translateX(165px);
+                transform: translateX(155px);
                 color: black;
             }
         } 
@@ -1142,7 +1189,19 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-20px);
+                transform: translateY(-33px);
+            }
+        } 
+
+        @keyframes move-up-pull {
+            0% {
+                transform: translateY(0);
+            }
+            70% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-18px);
             }
         } 
 
@@ -1151,7 +1210,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateY(-128px);
+                transform: translateY(-118px);
             }
         } 
         @keyframes move {
