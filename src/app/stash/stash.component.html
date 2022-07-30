@@ -1,19 +1,21 @@
 <section class= "flex direction-column align-center">
-  <div class="h-48">
-   <span class="blue align-center text-align pl-16 pr-16 w-500" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">"git stash" stores files in the Stash Area. These files can be retrieved later with "git stash apply".</span>
-  </div>
-  <div class="flex pt-16">
-    <div class="pr-8"></div>
-    <mat-form-field class="w-250" appearance="fill">
-      <mat-label float="never">Choose an option</mat-label>
-      <mat-select [disabled]="completed" (selectionChange)="selectCommand($event.value)">
-        <mat-option *ngFor = "let command of commands" [value]="command.name"
-        >{{command.name}}</mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div class="flex align-center justify-center change-direction-stash">
+    <div class="h-change-28-48 text-center">
+      <span class="blue align-center text-align pl-16 pr-16 font-change-14-16" >"git stash" stores files in the Stash Area. These files can be retrieved later with "git stash apply".</span>
+     </div>
+     <div class="flex pt-16">
+       <div class="pr-8"></div>
+       <mat-form-field class="w-full stash-field" appearance="fill">
+         <mat-label float="never">Choose an option</mat-label>
+         <mat-select [disabled]="completed" (selectionChange)="selectCommand($event.value)">
+           <mat-option *ngFor = "let command of commands" [value]="command.name"
+           >{{command.name}}</mat-option>
+         </mat-select>
+       </mat-form-field>
+     </div>
   </div>
   <div class="flex">
-    <button [disabled]="completed" (click)="visualizeStash()" class="w-350" mat-raised-button color="warn">Visualize "git stash<span *ngIf="chosenCommand !=='no option' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
+    <button [disabled]="completed" (click)="visualizeStash()" class="w-full" mat-raised-button color="warn">Visualize "git stash<span *ngIf="chosenCommand !=='no option' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
     <div class="pr-8"></div>
     <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
   </div>
@@ -23,7 +25,7 @@
       <div class="flex align-center justify-center pt-8 mt-4 pb-32">
       </div>
     </div>
-    <div class="order-switch-2 flex  direction-column height-change bt-beige bb-beige br-beige text-align">
+    <div class="order-switch-2 bl-stash flex  direction-column height-change bt-beige bb-beige br-beige text-align">
       <div class="w-full min-w-150 background-black white">Working Area</div>
       <div class="flex align-center direction-column align-left justify-center pt-8 mt-4 pb-32">
         <div class="pl-8 toMove tracked noOption">sidebar.html</div>

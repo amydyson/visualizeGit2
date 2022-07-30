@@ -119,7 +119,6 @@ export class StashComponent implements OnInit {
   }
 
   visualizeStash(){
-    debugger;
     let group;
     switch(this.chosenCommand) {
       case (''):
