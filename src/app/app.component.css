@@ -1047,6 +1047,10 @@
             display: none;
         }
 
+        .pl-landscape-clone{
+            padding-left: 22px;
+        }
+
         .pl-change-status {
             padding-left: 200px;
         }
@@ -1361,8 +1365,14 @@
             padding-top: 32px;
         }
 
+        .bb-portrait-fetch {
+            padding-bottom: 5px;
+            border-bottom: 1px solid gray;
+        }
+
         .pad-portrait-fetch-1 {
-            padding-left: 85px;
+            justify-content: center;
+            padding-left: 45px;
         }
         .pad-portrait-fetch-2 {
             padding-left: 50px;
@@ -1375,6 +1385,15 @@
             width: 50px;
             height: 50px;
         }
+
+        @keyframes move-image {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform:  translateX(120px);
+            }
+        } 
 
         @keyframes moveToWorkingArea {
             0% {
