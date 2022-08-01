@@ -9,14 +9,14 @@
       <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
     </div>
   </div>
- <div class="flex pt-change--clone"> 
+ <div class="flex pt-change--clone justify-center"> 
     <section class="flex direction-column text-center align-center"> 
-      <div class="pb-8">Repository at url <br>(example: GitHub repo) </div>
+      <div class="pb-8 font-change-14-16">Repository at url <br>(example: GitHub repo) </div>
       <img  class="image-size--clone"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
       <img  class="image-size--clone pull-up-image" [ngClass]="{'hide': hideMessage, 'show, move-image': !hideMessage}"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
     </section>
     <section class="pl-64">
-      <div>User's Computer</div>
+      <div class="font-change-14-16 pl-landscape-clone">User's Computer</div>
     </section>
   </div>
 </div>
