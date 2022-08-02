@@ -1563,7 +1563,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateY(-118px);
+                transform: translateY(-137px);
             }
         } 
         @keyframes move {
