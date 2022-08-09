@@ -52,8 +52,11 @@
     margin-top: .25rem;
 }
 
-.mt-change-pull-4 {
-    margin-top: -0.75rem;
+.mt-change-pull-4-mac {
+    margin-top: -0.45rem;
+}
+.mt-change-pull-4-pc {
+    margin-top: -0.45rem;
 }
 .pl-change {
     padding-left: 3.125rem;
@@ -438,6 +441,9 @@
 .pull-left{
     margin-left: -7.5rem;
 }
+.pull-left-pull{
+    margin-left: -7.5rem;
+}
 
 .pull-left-24{
     margin-left: -1.5rem !important;
@@ -588,6 +594,10 @@
         .pull-up-image{
             margin-top: -3.75rem;
         }
+
+        .pull-left-pull{
+            margin-left: -3rem;
+        }
                 
         @keyframes pull-left-24--reset {
             0% {
@@ -672,6 +682,11 @@
 
 .move-right {
     animation: move-right 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.move-right-pull {
+    animation: move-right-pull 1s linear;
     animation-fill-mode: forwards;
 }
 
@@ -898,6 +913,14 @@
                 transform: translateX(22rem);
             }
         } 
+        @keyframes move-right-pull {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(22rem);
+            }
+        } 
         @keyframes move-right-fetch {
             0% {
                 transform: translateX(0);
@@ -1100,7 +1123,10 @@
         .mt-change-pull-2 {
             margin-top: .125rem;
         }
-        .mt-change-pull-4 {
+        .mt-change-pull-4-mac {
+            margin-top: -1.75rem;
+        }
+        .mt-change-pull-4-pc {
             margin-top: -1.75rem;
         }
 
@@ -1274,6 +1300,14 @@
                 transform: translateX(5.625rem);
             }
         } 
+        @keyframes move-right-pull {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(5.625rem);
+            }
+        } 
 
         @keyframes move-right-merge {
             0% {
@@ -1354,8 +1388,11 @@
         .mt-change-pull {
             margin-top: -1.25rem;
         }
-        .mt-change-pull-4 {
-            margin-top: -5.1875rem
+        .mt-change-pull-4-mac {
+            margin-top: -5.1875rem;
+        }
+        .mt-change-pull-4-pc {
+            margin-top: -5.1875rem;
         }
         .mt-change-pull-2 {
             margin-top: .125rem;
@@ -1522,6 +1559,14 @@
             }
             100% {
                 transform: translateX(5.625rem);
+            }
+        } 
+        @keyframes move-right-pull {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(11.2rem);
             }
         } 
         @keyframes move-right-merge {
@@ -1799,5 +1844,7 @@ li {
     .order-switch-stash {
         order: 3;
     }
+
+
 
  }

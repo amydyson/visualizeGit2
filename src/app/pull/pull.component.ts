@@ -9,10 +9,12 @@ export class PullComponent implements OnInit {
 
   public hideMessage: boolean;
   public showReset: boolean;
+  public isMac: boolean;
 
   constructor() { }
 
   ngOnInit() {
+    navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
     this.showReset = false;
   }
