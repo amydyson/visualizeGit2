@@ -879,7 +879,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translate(-287px, 20px);
+                transform: translate(-17.94rem, 1.25rem);
             }
         } 
         @keyframes move-left-from-index-2 {
@@ -887,7 +887,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translate(-287px, 40px);
+                transform: translate(-17.94rem, 2.5rem);
             }
         } 
         @keyframes move-right {
@@ -911,7 +911,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(220px);
+                transform: translateX(13.75rem);
             }
         } 
         @keyframes move-up {
@@ -922,7 +922,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-35px);
+                transform: translateY(-2.1875rem);
             }
         } 
 
@@ -946,7 +946,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-35px);
+                transform: translateY(-2.1875rem);
             }
         } 
 
@@ -955,7 +955,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-35px);
+                transform: translateY(-2.1875rem);
             }
         } 
 
@@ -976,7 +976,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(40px);
+                transform: translateY(2.5rem);
             }
         } 
 
@@ -1004,7 +1004,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-241px, -3px);
+                transform: translate(-15.0625rem, -3px);
             }
         } 
         @keyframes overwrite-index1 {
@@ -1015,7 +1015,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-237px, -40px);
+                transform: translate(-237px, -2.5rem);
             }
         } 
         @keyframes overwrite-index2 {
@@ -1056,7 +1056,7 @@
         }
 
         .font-change-14-16 {
-            font-size: 14px;
+            font-size: .875rem;
         }
 
         .change-direction-stash {
@@ -1095,10 +1095,10 @@
         }
 
         .mt-change-pull {
-            margin-top: -30px;
+            margin-top: -1.875rem;
         }
         .mt-change-pull-2 {
-            margin-top: 2px;
+            margin-top: .125rem;
         }
         .mt-change-pull-4 {
             margin-top: -28px;
@@ -1117,7 +1117,7 @@
            }
 
         .padding-landscape-commit-t{
-            padding-top: 32px;
+            padding-top: 2rem;
         }
         .padding-landscape-commit-b{
             padding-bottom: 8px;
@@ -1127,13 +1127,13 @@
         }
     
         .pt-change--clone {
-            padding-top: 16px;
+            padding-top: 1rem;
         }
         .pt-change--commit {
-            padding-top: 16px;
+            padding-top: 1rem;
         }
         .image-size {
-            width: 150px;
+            width: 9.357rem;
         }
 
         .pull-up-image{
@@ -1141,19 +1141,19 @@
         }
 
         .image-size--clone {
-            width: 50px;
+            width: 3.125rem;
         }
 
         .image-size--fetch {
-            width: 50px;
-            height: 50px;
+            width: 3.125rem;
+            height: 3.125rem;
         }
 
         .flex-direction-change {
             flex-direction: row;
         }
         .pl-change {
-            padding-left: 50px;
+            padding-left: 3.125rem;
         }
         .pchange-branch {
             padding-top: 0px;
@@ -1167,7 +1167,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(40px);
+                transform: translateY(2.5rem);
             }
         } 
 
@@ -1206,7 +1206,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-237px, -40px);
+                transform: translate(-237px, -2.5rem);
             }
         } 
         @keyframes overwrite-index2 {
@@ -1237,7 +1237,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-135px);
+                transform: translateX(-8.44rem);
             }
         } 
         @keyframes move-left-from-index {
@@ -1245,7 +1245,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-287px, 22px);
+                transform: translate(-17.94, 22px);
             }
 
         } 
@@ -1254,7 +1254,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translate(-287px, 40px);
+                transform: translate(-17.94rem, 2.5rem);
             }
         } 
         @keyframes move-left {
@@ -1262,7 +1262,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translate(-115px, -3px);
+                transform: translate(-7.19rem, -3px);
             }
         } 
 
@@ -1271,7 +1271,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(250px);
+                transform: translateX(5.625rem);
             }
         } 
 
@@ -1280,7 +1280,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(220px);
+                transform: translateX(13.75rem);
             }
         } 
         @keyframes move-up {
@@ -1303,7 +1303,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-14px);
+                transform: translateY(-.875rem);
             }
         } 
 
@@ -1313,11 +1313,11 @@
                 color: green;
             }
             50% {
-                transform: translateX(77.5px);
+                transform: translateX(4.84rem);
                 color: green;
             }
             100% {
-                transform: translateX(155px);
+                transform: translateX(9.69rem);
                 color: black;
             }
         } 
@@ -1326,7 +1326,7 @@
                 transform: translateY(0)
             }
             100% {
-                transform: translate(150px, 5px)
+                transform: translate(9.375rem, 5px)
             }
         }
         @keyframes move-right-fetch {
@@ -1334,14 +1334,14 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(220px);
+                transform: translateX(13.75rem);
             }
         } 
     }
 
     @media only screen and (max-device-width: 959px) and (orientation : portrait)  {
         .image-size--clone {
-            width: 50px;
+            width: 3.125rem;
         }
         .pl-change-status {
             padding-left: 0px;
@@ -1358,16 +1358,16 @@
             margin-top: -83px;
         }
         .mt-change-pull-2 {
-            margin-top: 2px;
+            margin-top: .125rem;
         }
 
         .pt-fetch {
-            padding-top: 32px;
+            padding-top: 2rem;
         }
 
         .bb-portrait-fetch {
-            padding-bottom: 15px;
-            border-bottom: 1px solid gray;
+            padding-bottom: .9375rem;
+            border-bottom: .0625rem solid gray;
         }
 
         .pad-portrait-fetch-1 {
@@ -1375,15 +1375,15 @@
             padding-left: 45px;
         }
         .pad-portrait-fetch-2 {
-            padding-left: 50px;
+            padding-left: 3.125rem;
         }
         .pull-up-fetch {
             margin-top: -70px;
         }
 
         .image-size--fetch {
-            width: 50px;
-            height: 50px;
+            width: 3.125rem;
+            height: 3.125rem;
         }
 
         @keyframes move-image {
@@ -1415,7 +1415,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(40px);
+                transform: translateY(2.5rem);
             }
         } 
 
@@ -1445,7 +1445,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-146px, -1px);
+                transform: translate(-146px, -.0625rem);
             }
         } 
         @keyframes overwrite-index1 {
@@ -1456,7 +1456,7 @@
                 transform: translate(0, 0);
             }
             100% {
-                transform: translate(-150px, -40px);
+                transform: translate(-9.375rem, -2.5rem);
             }
         } 
         @keyframes overwrite-index2 {
@@ -1512,7 +1512,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-115px);
+                transform: translateX(-7.19rem);
             }
         } 
 
@@ -1521,7 +1521,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(250px);
+                transform: translateX(5.625rem);
             }
         } 
         @keyframes move-right-merge {
@@ -1529,7 +1529,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(220px);
+                transform: translateX(13.75rem);
             }
         } 
 
@@ -1542,7 +1542,7 @@
                 transform: translateY(0);
             }
             100% {
-                transform: translateY(-33px);
+                transform: translateY(-2.0625rem);
             }
         } 
 
@@ -1563,7 +1563,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateY(-137px);
+                transform: translateY(-8.56rem);
             }
         } 
         @keyframes move {
@@ -1571,10 +1571,10 @@
                 transform: translateY(0)
             }
             50% {
-                transform: translateY(-50px)
+                transform: translateY(-3.125rem);
             }
             100% {
-                transform: translateY(-108px)
+                transform: translateY(-6.75rem)
             }
         } 
 
@@ -1587,15 +1587,15 @@
 
 ul {
     list-style-type: none;
-    margin: 30px 30px 0 0;
+    margin: 1.875rem 1.875rem 0 0;
     padding: 0;
 }
 
 li {
-    padding: 15px;
+    padding: .9375rem;
     width: 100%;
     background: #f1f1f1;
-    margin-bottom: 2px;
+    margin-bottom: .125rem;
     font-weight: bold;
 }
 
@@ -1618,64 +1618,64 @@ li {
 }
 
 .pb-8 {
-    padding-bottom: 8px;
+    padding-bottom: .5rem;
 }
 .pb-16 {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 }
 .pb-24 {
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
 }
 
 .pb-28 {
-    padding-bottom: 28px;
+    padding-bottom: 1.75rem;
 }
 .pb-32 {
-    padding-bottom: 32px;
+    padding-bottom: 2rem;
 }
 
 .pb-42 {
-    padding-bottom: 42px;
+    padding-bottom: 2.625rem;
 }
 .pt-32 {
-    padding-top: 32px;
+    padding-top: 2rem;
 }
 
 .pt-54 {
-    padding-top: 54px;
+    padding-top: 3.375rem;
 }
 
 .pt-64 {
-    padding-top: 64px;
+    padding-top: 4rem;
 }
 
 .pt-100 {
-    padding-top: 100px;
+    padding-top: 6.25rem;
 }
 
 .pt-4 {
-    padding-top: 4px;
+    padding-top: .25rem;
 }
 
 .pr-8{
-    padding-right: 8px;
+    padding-right: .5rem;
 }
 .pr-16 {
-    padding-right: 16px;
+    padding-right: 1rem;
 }
 
 .pr-24 {
-    padding-right: 24px;
+    padding-right: 1.5rem;
 }
 .pr-32 {
-    padding-right: 32px;
+    padding-right: 2rem;
 }
 
 .pr-48 {
-    padding-right: 48px;
+    padding-right: 3rem;
 }
 .pr-64 {
-    padding-right: 64px;
+    padding-right: 4rem;
 }
 .w-quarter {
     width: 25%;
@@ -1695,29 +1695,29 @@ li {
 
 @media only screen and (min-device-width: 960px) {
     .image-size-icon {
-        width: 50px;
+        width: 3.125rem;
     }
     .image-size {
-        width: 150px;
+        width: 9.357rem;
     }
     .image-size--clone {
-        width: 150px;
+        width: 9.357rem;
     }
 
     .image-size--fetch {
-        width: 150px;
+        width: 9.357rem;
     }
     .pt-change {
-        padding-top: 32px;
+        padding-top: 2rem;
     }
     .pt-change--clone {
-        padding-top: 32px;
+        padding-top: 2rem;
     }
     .pt-change--commit {
-        padding-top: 32px;
+        padding-top: 2rem;
     }
     .pb-change {
-        padding-bottom: 32px;
+        padding-bottom: 2rem;
     }
 
     .index_commit {
@@ -1740,7 +1740,7 @@ li {
 
 @media only screen and (max-device-width: 959px)  and (orientation : portrait) {
     .image-size-icon {
-        width: 30px;
+        width: 1.875rem;
     }
     .image-size {
         width: 100px;
@@ -1782,11 +1782,11 @@ li {
     }
 
     .bl-change {
-        border-left: 2px solid #beaf98;
+        border-left: .125rem solid #beaf98;
     }
 
     .index_commit {
-        padding-top: 30px;
+        padding-top: 1.875rem;
     }
 
     .order-switch-0 {
