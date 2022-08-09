@@ -43,11 +43,13 @@ export class AppComponent implements OnInit {
   ];
   public chosenCommand: string;
   public device: string;
+  public isMac: boolean;
 
   @Output() selectionChange: EventEmitter< MatSelectChange >
 
   ngOnInit(): void {
     this.device = navigator.userAgent;
+    navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     const temp = localStorage.getItem('chosenCommand');
     if (temp){
       this.chosenCommand = temp;
