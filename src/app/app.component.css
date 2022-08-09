@@ -48,15 +48,18 @@
 .mt-change-pull {
     margin-top: 0rem;
 }
-.mt-change-pull-2 {
+.mt-change-pull-2-mac {
     margin-top: .25rem;
+}
+.mt-change-pull-2-pc {
+    margin-top: -.2rem;
 }
 
 .mt-change-pull-4-mac {
     margin-top: -0.45rem;
 }
 .mt-change-pull-4-pc {
-    margin-top: -0.45rem;
+    margin-top: -0.85rem;
 }
 .pl-change {
     padding-left: 3.125rem;
@@ -1121,6 +1124,12 @@
             margin-top: -1.875rem;
         }
         .mt-change-pull-2 {
+            margin-top: .125rem;
+        }
+        .mt-change-pull-2-mac {
+            margin-top: .125rem;
+        }
+        .mt-change-pull-2-pc {
             margin-top: .125rem;
         }
         .mt-change-pull-4-mac {
