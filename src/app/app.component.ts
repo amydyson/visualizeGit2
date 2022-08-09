@@ -42,10 +42,12 @@ export class AppComponent implements OnInit {
     {name: 'status'}
   ];
   public chosenCommand: string;
+  public device: string;
 
   @Output() selectionChange: EventEmitter< MatSelectChange >
 
   ngOnInit(): void {
+    this.device = navigator.userAgent;
     const temp = localStorage.getItem('chosenCommand');
     if (temp){
       this.chosenCommand = temp;
