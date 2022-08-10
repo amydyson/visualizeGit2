@@ -1,0 +1,163 @@
+
+.pt-change-pull-1 {
+    padding-top: 4.75rem;
+}
+.pt-change-pull-2 {
+    padding-top: 4rem;
+}
+
+.mt-change-pull {
+    margin-top: 0rem;
+}
+.mt-change-pull-2-mac {
+    margin-top: .25rem;
+}
+.mt-change-pull-2-pc {
+    margin-top: -.2rem;
+}
+
+.mt-change-pull-4-mac {
+    margin-top: -0.45rem;
+}
+.mt-change-pull-4-pc {
+    margin-top: -0.85rem;
+}
+
+/* desktop only css  */
+@media only screen and (min-device-width: 60rem) {
+
+    @keyframes move-right-pull {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(22rem);
+        }
+    } 
+
+    @keyframes move-up-pull {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.75rem);
+        }
+    } 
+}
+
+/* mobile landscape css  */
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+
+    .mt-change-pull-0 {
+        margin-top: -.625rem;
+    }
+
+    .mt-change-pull {
+        margin-top: -1.875rem;
+    }
+    .mt-change-pull-2 {
+        margin-top: .125rem;
+    }
+    .mt-change-pull-2-mac {
+        margin-top: -3.875rem;
+    }
+    .mt-change-pull-2-pc {
+        margin-top: -3.875rem;
+    }
+    .mt-change-pull-4-mac {
+        margin-top: -1.75rem;
+    }
+    .mt-change-pull-4-pc {
+        margin-top: -1.75rem;
+    }
+
+    .mt-change-pull-5 {
+        margin-top: -1.25rem;
+    }
+    .mt-change-pull-6 {
+        margin-top: -.9rem;
+    }
+
+    .pt-change-pull-1 {
+        padding-top: .75rem;
+    }
+
+    @keyframes move-right-pull {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(15.9rem);
+        }
+    } 
+
+    @keyframes move-up-pull {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-.875rem);
+        }
+    } 
+}
+
+/* mobile portrait css */
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+
+    .pt-change-pull-2 {
+        padding-top: 0;
+        padding-bottom: 4rem;
+    }
+
+    .pull-left-pull{
+        margin-left: -3rem;
+    }
+ 
+
+    .pt-change-pull-1 {
+        padding-top: .9rem;
+    }
+
+    .mt-change-pull {
+        margin-top: -1.25rem;
+    }
+    .mt-change-pull-4-mac {
+        margin-top: -5.1875rem;
+    }
+    .mt-change-pull-4-pc {
+        margin-top: -5.1875rem;
+    }
+    .mt-change-pull-2 {
+        margin-top: .125rem;
+    }
+
+
+    @keyframes move-right-pull {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(11.2rem);
+        }
+    } 
+
+    @keyframes move-up-pull {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.125rem);
+        }
+    } 
+
+}

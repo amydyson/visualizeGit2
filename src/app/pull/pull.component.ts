@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'visualize-pull',
   templateUrl: './pull.component.html',
-  styleUrls: ['../app.component.css']
+  styleUrls: ['../app.component.css', 'pull.component.css']
 })
 export class PullComponent implements OnInit {
 
@@ -21,9 +21,7 @@ export class PullComponent implements OnInit {
 
   visualizePull(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 4500)
+    this.showReset = true;
   }
   public reset(){
     window.location.reload();
