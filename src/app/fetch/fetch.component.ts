@@ -18,9 +18,7 @@ export class FetchComponent implements OnInit {
 
   visualizeFetch(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 2200)
+    this.showReset = true;
   }
   public reset(){
     window.location.reload();

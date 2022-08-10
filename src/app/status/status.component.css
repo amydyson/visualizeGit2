@@ -1,0 +1,6 @@
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .pl-change-status {
+        padding-left: 0rem !important;
+    }
+}

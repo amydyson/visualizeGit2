@@ -20,9 +20,7 @@ export class LogComponent implements OnInit {
 
   visualizeLog(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 3300)
+    this.showReset = true;
   }
 
   public reset(){

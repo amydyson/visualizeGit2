@@ -41,7 +41,7 @@ export class BranchComponent implements OnInit {
     }, 1500);
     setTimeout(() => {
       this.showReset = true;
-    }, 2500)
+    }, 2000)
   }
 
   public reset(){

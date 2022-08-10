@@ -4,7 +4,7 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 @Component({
   selector: 'visualize-status',
   templateUrl: './status.component.html',
-  styleUrls: ['../app.component.css'],
+  styleUrls: ['../app.component.css', 'status.component.css'],
   animations: [ fade, myTrigger, myTrigger2, fade2, ani3 ]
 })
 export class StatusComponent implements OnInit {
@@ -42,7 +42,7 @@ export class StatusComponent implements OnInit {
     }, 2000);
     setTimeout(() => {
       this.showReset = true;
-    }, 2800)
+    }, 2000)
   }
 
   public reset(){

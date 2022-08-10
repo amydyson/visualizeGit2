@@ -475,7 +475,7 @@
 }
 
 .show-slow-fadeIn{
-    animation: show-slow-fadeIn 4s linear;
+    animation: show-slow-fadeIn 2s linear;
     animation-fill-mode: forwards;
 }
 
@@ -1431,7 +1431,7 @@ li {
     }
 
     .height-change {
-        min-height: 59.9375rem
+        min-height: 6rem
     }
 
     .pt-change {

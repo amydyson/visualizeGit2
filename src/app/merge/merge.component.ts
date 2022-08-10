@@ -18,9 +18,7 @@ export class MergeComponent implements OnInit {
 
   visualizeMerge(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 2000)
+    this.showReset = true;
   }
   public reset(){
     window.location.reload();

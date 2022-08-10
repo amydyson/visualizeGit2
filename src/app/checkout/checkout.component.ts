@@ -26,23 +26,19 @@ export class CheckoutComponent implements OnInit {
   visualizeCheckout(){
     this.hideMessage2 = false;
     this.hideMessage = false;
+    this.showReset = true;
     setTimeout(() => {
       this.hideMessage = false;
     }, 1000);
-    setTimeout(() => {
-      this.showReset = true;
-    }, 1500)
   }
 
   visualizeCheckoutNew(){
     this.hideMessage3 = false;
     this.hideMessage = false;
+    this.showReset = true;
     setTimeout(() => {
       this.hideMessage = false;
     }, 2000);
-    setTimeout(() => {
-      this.showReset = true;
-    }, 2400)
   }
 
   public reset(){

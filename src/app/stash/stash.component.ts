@@ -165,9 +165,7 @@ export class StashComponent implements OnInit {
     }
     this.hideMessage = false;
     this.completed = true;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 1500)
+    this.showReset = true;
   }
 
   selectCommand(command){

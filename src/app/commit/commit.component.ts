@@ -16,10 +16,8 @@ export class CommitComponent implements OnInit {
     this.showReset = false;
   }
   visualizeCommit(){
+    this.showReset = true;
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 2200)
   }
 
   public reset(){

@@ -159,9 +159,7 @@ export class ResetComponent implements OnInit {
     }
     this.hideMessage = false;
     this.completed = true;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 3000)
+    this.showReset = true;
   }
 
   selectCommand(command){

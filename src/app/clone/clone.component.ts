@@ -18,9 +18,7 @@ export class CloneComponent implements OnInit {
 
   visualizeClone(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 2000)
+    this.showReset = true;
   }
 
   public reset(){

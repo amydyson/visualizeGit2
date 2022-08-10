@@ -21,9 +21,7 @@ export class PushComponent implements OnInit {
 
   visualizePush(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 4500)
+    this.showReset = true;
   }
   public reset(){
     window.location.reload();

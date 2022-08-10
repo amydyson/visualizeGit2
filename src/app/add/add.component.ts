@@ -20,9 +20,7 @@ export class AddComponent implements OnInit {
 
   visualizeAdd(){
     this.hideMessage = false;
-    setTimeout(() => {
-      this.showReset = true;
-    }, 1500)
+    this.showReset = true;
   }
 
   public reset(){
