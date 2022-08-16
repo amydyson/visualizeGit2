@@ -23,12 +23,13 @@
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-change-push-2 mt-change-push-2 mt-change-push-3 pr-2 white">&#10132;</div> <!--arrow right-->
+            <div class="font-size-32 pt-change-push-2 mt-change-push-3 pr-2 white"
+                  [ngClass]="{'mt-change-push-2-mac': isMac, 'mt-change-push-2-pc': !isMac}">&#10132;</div> <!--arrow right-->
             <div class="pt-change-push pr-8 white ">86b5f</div>
           </div>
           <div class="flex">
-            <div class="font-size-32 pr-2" [ngClass]="{'move-up-pull': !hideMessage, 'mt-change-push-4-mac': isMac, 'mt-change-push-4-pc': !isMac}">&#10132;</div> <!--arrow right-->
-            <div class="mt-change-push-6 pr-8 mt-in-portrait">e34b2</div>
+            <div class="font-size-32 pr-2" [ngClass]="{'move-up-push-mac': !hideMessage && isMac, 'mt-change-push-4-mac': isMac, 'mt-change-push-4-pc': !isMac}">&#10132;</div> <!--arrow right-->
+            <div class="mt-change-push-6 pr-8 mt-in-portrait mt-landscape">e34b2</div>
           </div>
         </div>
 
@@ -43,13 +44,14 @@
       <div class="flex pr-48"  >
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-change-push-2 pl-4 mt-change-push-2 pr-2">&#10132;</div> <!--arrow right-->
+            <div class="font-size-32 pt-change-push-2 pl-4 pr-2"
+                [ngClass]="{'mt-change-push-2-mac': isMac, 'mt-change-push-2-pc': !isMac}">&#10132;</div> <!--arrow right-->
             <div class="pt-change-push pr-8">86b5f</div>
             <div class="pt-change-push pr-8 pull-left-push" [ngClass]="{'hide': hideMessage, 'show move-left-push': !hideMessage}">86b5f</div>
           </div>
           <div class="flex pr-2">
             <div class="font-size-32 pr-2 white">&#10132;</div> <!--arrow right-->
-            <div class="mt-change-push-0 pr-8 mt-in-portrait">e34b2</div>
+            <div class="mt-change-push-0 pr-8 mt-in-portrait mt-landscape">e34b2</div>
           </div>
         </div>
         <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">

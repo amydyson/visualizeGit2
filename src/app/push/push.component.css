@@ -28,18 +28,36 @@
     animation-fill-mode: forwards;
 }
 
+.move-up-push-mac {
+    animation: move-up-push-mac 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
 .pull-left-push {
     margin-left: -7.2rem;
 }
 
 
 @media only screen and (min-device-width: 60rem) {
+/* desktop */
     @keyframes move-left-push {
         0% {
             transform: translateX(0);
         }
         100% {
             transform: translateX(-13.4375rem);
+        }
+    } 
+/* desktop */
+    @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.85rem);
         }
     } 
 }
@@ -50,16 +68,102 @@
         padding-bottom: 4rem;
     }
 
-    .pull-left-push{
-        margin-left: -3rem;
+    .mt-change-push-2-mac {
+        margin-top: -.5rem;
+
+    }
+    .mt-change-push-2-pc {
+        margin-top: -.5rem;
     }
 
+    .pull-left-push{
+        margin-left: -2.6rem;
+    }
+
+    .pt-change-push {
+        padding-top: 0;
+    }
+    .mt-change-push-4-mac {
+        margin-top: -5.4rem;
+    }
+    .mt-change-push-4-pc {
+        margin-top: -5.4rem;
+    }
+/* portrait */
     @keyframes move-left-push {
         0% {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(-11rem);
+            transform: translateX(-12rem);
+        }
+    } 
+
+    /* portrait */
+    @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-.875rem);
+        }
+    } 
+}
+
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+
+    .mt-landscape {
+        margin-top: -4.5rem;
+    }
+
+    .pt-change-push-2 {
+        padding-top: 0;
+        padding-bottom: 4rem;
+    }
+    .mt-change-push-2-mac {
+        margin-top: -.5rem;
+
+    }
+    .mt-change-push-2-pc {
+        margin-top: -.5rem;
+    }
+
+    .pull-left-push{
+        margin-left: -2.6rem;
+    }
+
+    .pt-change-push {
+        padding-top: 0;
+    }
+    .mt-change-push-4-mac {
+        margin-top: -5.1rem;
+    }
+    .mt-change-push-4-pc {
+        margin-top: -5.4rem;
+    }
+    /* landscape */
+    @keyframes move-left-push {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-11.7rem);
+        }
+    } 
+    /* landscape */
+    @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.5rem);
         }
     } 
 }
