@@ -14,6 +14,7 @@ export class PushComponent implements OnInit {
 
   ngOnInit() {
     navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
+    // this.isMac = false; //TODO remove;
     this.hideMessage = true;
     this.hideMessage = true;
     this.showReset = false;

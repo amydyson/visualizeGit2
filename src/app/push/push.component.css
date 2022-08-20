@@ -33,8 +33,16 @@
     animation-fill-mode: forwards;
 }
 
-.pull-left-push {
+.move-up-push-pc {
+    animation: move-up-push-pc 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.pull-left-push-mac {
     margin-left: -7.2rem;
+}
+.pull-left-push-pc {
+    margin-left: -7.7rem;
 }
 
 
@@ -50,6 +58,17 @@
     } 
 /* desktop */
     @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.85rem);
+        }
+    } 
+    @keyframes move-up-push-pc {
         0% {
             transform: translateY(0);
         }
@@ -76,9 +95,13 @@
         margin-top: -.5rem;
     }
 
-    .pull-left-push{
+    .pull-left-push-mac{
         margin-left: -2.6rem;
     }
+    .pull-left-push-pc{
+        margin-left: -2.6rem;
+    }
+
 
     .pt-change-push {
         padding-top: 0;
@@ -87,7 +110,7 @@
         margin-top: -5.4rem;
     }
     .mt-change-push-4-pc {
-        margin-top: -5.4rem;
+        margin-top: -5.7rem;
     }
 /* portrait */
     @keyframes move-left-push {
@@ -101,6 +124,17 @@
 
     /* portrait */
     @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-.875rem);
+        }
+    } 
+    @keyframes move-up-push-pc {
         0% {
             transform: translateY(0);
         }
@@ -132,7 +166,10 @@
         margin-top: -.5rem;
     }
 
-    .pull-left-push{
+    .pull-left-push-mac{
+        margin-left: -2.6rem;
+    }
+    .pull-left-push-pc{
         margin-left: -2.6rem;
     }
 
@@ -143,7 +180,7 @@
         margin-top: -5.1rem;
     }
     .mt-change-push-4-pc {
-        margin-top: -5.4rem;
+        margin-top: -5.7rem;
     }
     /* landscape */
     @keyframes move-left-push {
@@ -156,6 +193,17 @@
     } 
     /* landscape */
     @keyframes move-up-push-mac {
+        0% {
+            transform: translateY(0);
+        }
+        70% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-1.5rem);
+        }
+    } 
+    @keyframes move-up-push-pc {
         0% {
             transform: translateY(0);
         }
