@@ -31,7 +31,7 @@
   <div class="flex">
     <button [disabled]="completed" (click)="visualizeReset()" class="w-350--reset" mat-raised-button color="warn">Visualize "git reset<span *ngIf="chosenCommit !=='no parameter'"> {{chosenCommit}}</span><span *ngIf="chosenCommand !=='no parameter' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
     <div class="pr-8"></div>
-    <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button>
+    <!-- <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button> -->
   </div>
   <div class="flex pt-32 change-directionx">
     <div class="order-switch-2x flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">

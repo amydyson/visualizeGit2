@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { fade, fade2, myTrigger2, ani3 } from '../animations';
 
 @Component({
@@ -10,6 +10,7 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
 export class AddComponent implements OnInit {
   hideMessage: boolean;
   showReset: boolean;
+  @Input() someData;
 
   constructor() { }
 

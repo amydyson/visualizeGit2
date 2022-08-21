@@ -10,7 +10,10 @@
       >{{command.name}}</mat-option>
     </mat-select>
   </mat-form-field>
-  <visualize-add @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
+  <button *ngIf="chosenCommand !== '' && reset" (click)="reset()" mat-raised-button color="warn"><span>See {{chosenCommand}} Again</span></button>
+
+  
+  <visualize-add [someData]="chosenCommand" @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
   <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
   <visualize-checkout @fade *ngIf="chosenCommand === 'checkout'" class="flex w-full justify-center change-direction"></visualize-checkout>
   <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
