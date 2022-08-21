@@ -4,13 +4,24 @@
     <div *ngIf="!hideMessage2 && !hideMessage" >The HEAD points to the branch "bug/25282"</div>  
     <div class="pl-32 pr-32 text-center" *ngIf="!hideMessage3 && !hideMessage">A new branch is created (a copy of "main") and the HEAD points to it.</div>  
   </div>
+  <div class="flex pt-16">
+    <div class="pr-8"></div>
+    <mat-form-field class="w-full stash-field" appearance="fill">
+      <mat-label float="never">Choose an option</mat-label>
+      <mat-select [disabled]="disableOption" (selectionChange)="selectCommand($event.value)">
+        <mat-option *ngFor = "let command of commands" [value]="command.name"
+        >{{command.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <section class="flex flex-direction-change align-center">
-    <button [disabled]="!hideMessage" (click)="visualizeCheckout()" class="w-300" mat-raised-button color="warn">Visualize "git checkout bug/25282"</button>
+    <button *ngIf="chosenCommand === 'checkout an existing branch'" [disabled]="!hideMessage" (click)="visualizeCheckout()" class="w-300" mat-raised-button color="warn">Visualize "git checkout bug/25282"</button>
     <div class="pr-8 pb-8"></div>
-    <button [disabled]="!hideMessage" (click)="visualizeCheckoutNew()" class="w-300" mat-raised-button color="warn">Visualize "git checkout -b version_2.0"</button>
+    <button *ngIf="chosenCommand === 'create and checkout a new branch'" [disabled]="!hideMessage" (click)="visualizeCheckoutNew()" class="w-300" mat-raised-button color="warn">Visualize "git checkout -b version_2.0"</button>
     <div class="pr-8 pb-8"></div>
     <!-- <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button> -->
   </section>
+
   
   <div class="flex direction-column">
     <div class="flex pr-2">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { storeCleanupWithContext } from '@angular/core/src/render3/instructions';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 
 @Component({
@@ -12,7 +13,12 @@ export class CheckoutComponent implements OnInit {
   public hideMessage: boolean;
   public hideMessage2: boolean;
   public hideMessage3: boolean;
-  public showReset: boolean;
+  public disableOption: boolean;
+  public chosenCommand: string;
+  public commands = [
+    {name: 'checkout an existing branch'},
+    {name: 'create and checkout a new branch'},
+  ];
 
   constructor() { }
 
@@ -20,13 +26,17 @@ export class CheckoutComponent implements OnInit {
     this.hideMessage = true;
     this.hideMessage2 = true;
     this.hideMessage3 = true;
-    this.showReset = false;
+    this.disableOption = false;
+  }
+
+  selectCommand(command){
+    this.chosenCommand = command;
   }
 
   visualizeCheckout(){
     this.hideMessage2 = false;
     this.hideMessage = false;
-    this.showReset = true;
+    this.disableOption = true;
     setTimeout(() => {
       this.hideMessage = false;
     }, 1000);
@@ -35,7 +45,7 @@ export class CheckoutComponent implements OnInit {
   visualizeCheckoutNew(){
     this.hideMessage3 = false;
     this.hideMessage = false;
-    this.showReset = true;
+    this.disableOption = true;
     setTimeout(() => {
       this.hideMessage = false;
     }, 2000);
