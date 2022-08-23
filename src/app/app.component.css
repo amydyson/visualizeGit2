@@ -602,7 +602,7 @@
 
 .headColorGreen {
     background-color: darkseagreen;
-    animation: moveToWorkingArea 2s linear;
+    animation: moveToWorkingArea 1.5s linear;
     animation-fill-mode: forwards;
 }
 
@@ -743,7 +743,7 @@ li {
         opacity: 0;
         transform: translateX(0);
     }
-    70% {
+    60% {
         opacity: 0.3;
         transform: translateX(0rem);
     }

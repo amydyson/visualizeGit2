@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'visualize-reset',
   templateUrl: './reset.component.html',
-  styleUrls: ['../app.component.css']
+  styleUrls: ['../app.component.css', 'reset.component.css']
 })
 export class ResetComponent implements OnInit {
   public hideMessage: boolean;
   public completed: boolean;
   public showReset: boolean;
+  public isMac: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -31,6 +32,7 @@ export class ResetComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
     this.showReset = false;
     this.chosenCommand = '';

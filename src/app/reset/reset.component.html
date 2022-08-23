@@ -59,22 +59,27 @@
       <div class="flex align-center pt-8 pb-8 pr-8">
         <div class="toMove pl-20 pr-8">HEAD</div>
         <div class="toMove toMove--arrow font-size-32 pr-8">&#10132;</div> <!--arrow right-->
-        <div class="head dot seaGreen" [ngClass]="{'hide': !copyHead(), 'show overwrite-index': copyHead()}"></div>
-        <div class="dot seaGreen " [ngClass]="{'pull-left-24--reset': copyHead()}"></div>
+        <div class="head dot seaGreen adjust2-mac-pc" [ngClass]="{'hide': !copyHead(), 
+        'show overwrite-index-mac': copyHead() && isMac, 'show overwrite-index-pc': copyHead() && !isMac}"></div>
+        <div class="dot seaGreen green-left-mac-pc" [ngClass]="{'adjust-mac-pc': copyHead()}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset pl-64--reset pb-8 pr-8">
-        <div class="head1 dot indianRed" [ngClass]="{'hide': !copyHead1(), 'show overwrite-index1': copyHead1()}"></div>
+        <div class="head1 dot indianRed" 
+        [ngClass]="{'hide': !copyHead1(), 
+        'show overwrite-index1-mac': copyHead1() && isMac, 'show overwrite-index1-pc': copyHead1() && !isMac}"></div>
         <div class="dot indianRed " [ngClass]="{'pull-left-24--reset': copyHead1()}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset pt-8 pl-64--reset pb-8 pr-8">
-        <div class="head2 dot mediumPurple" [ngClass]="{'hide': !copyHead2(), 'show overwrite-index2': copyHead2()}"></div>
+        <div class="head2 dot mediumPurple" [ngClass]="{'hide': !copyHead2(), 
+        'show overwrite-index2-mac': copyHead2() && isMac, 'show overwrite-index2-pc': copyHead2() && !isMac}"></div>
         <div class="dot mediumPurple " [ngClass]="{'pull-left-24--reset': copyHead2()}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset  pt-8 pl-64--reset pb-8 pr-8">
-        <div class="head3 dot background-gray" [ngClass]="{'hide': !copyHead3(), 'show overwrite-index3': copyHead3()}"></div>
+        <div class="head3 dot background-gray" [ngClass]="{'hide': !copyHead3(), 
+        'show overwrite-index3-mac': copyHead3() && isMac, 'show overwrite-index3-pc': copyHead3() && !isMac}"></div>
         <div class="dot background-gray " [ngClass]="{'pull-left-24--reset': copyHead3()}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
