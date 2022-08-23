@@ -138,4 +138,13 @@
 }
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    @keyframes overwrite-index-mac {
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-9.3rem, -.17rem);
+        }
+    }
+
 }
