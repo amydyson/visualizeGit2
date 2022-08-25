@@ -25,28 +25,48 @@ import { fade, myTrigger2 } from './animations';
 export class AppComponent implements OnInit {
   state: string = 'small';
   public title = 'visualize-git';
-  public commands = [
-    {name: 'add'},
-    {name: 'branch'},
-    {name: 'checkout'},
-    {name: 'clone'},
-    {name: 'commit'},
-    {name: 'fetch'},
-    {name: 'init'},
-    {name: 'log'},
-    {name: 'merge'},
-    {name: 'pull'},
-    {name: 'push'},
-    {name: 'reset'},
-    {name: 'stash'},
-    {name: 'status'}
-  ];
+  public commands = [];
   public chosenCommand: string;
   public isMac: boolean;
 
   @Output() selectionChange: EventEmitter< MatSelectChange >
 
   ngOnInit(): void {
+    if (window.innerWidth > 960){
+      this.commands = [
+        {name: 'add'},
+        {name: 'branch'},
+        {name: 'checkout'},
+        {name: 'clone'},
+        {name: 'commit'},
+        {name: 'fetch'},
+        {name: 'init'},
+        {name: 'log'},
+        {name: 'merge'},
+        {name: 'pull'},
+        {name: 'push'},
+        {name: 'reset'},
+        {name: 'stash'},
+        {name: 'status'}
+      ];
+    } else {
+      this.commands = [
+        {name: 'add'},
+        {name: 'branch'},
+        {name: 'checkout'},
+        {name: 'clone'},
+        {name: 'commit'},
+        {name: 'fetch'},
+        {name: 'init'},
+        {name: 'log'},
+        {name: 'merge'},
+        {name: 'pull'},
+        {name: 'push'},
+        {name: 'stash'},
+        {name: 'status'}
+      ];
+    }
+  
     this.chosenCommand = '';
     // const temp = localStorage.getItem('chosenCommand');
     // if (temp){
