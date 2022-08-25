@@ -3,6 +3,7 @@
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
+
 .font-change-14-16 {
     font-size: 1rem;
 }
@@ -431,9 +432,9 @@
     margin-left: -1.5rem !important;
 }
 
-.pull-left-24--reset{
+/* .pull-left-24--reset{
     margin-left: -1.5rem !important;
-}
+} */
 
 .moveAndColor {
     animation: moveAndColor 1s linear;
@@ -580,7 +581,7 @@
     animation: move-down-three .5s linear;
     animation-fill-mode: forwards;
 }
-
+/* 
 .overwrite-index {
     animation: overwrite-index 1s linear;
     animation-fill-mode: forwards;
@@ -598,8 +599,8 @@
 .overwrite-index3 {
     animation: overwrite-index3 1.5s linear;
     animation-fill-mode: forwards;
-}
-
+} */
+/* 
 .headColorGreen {
     background-color: darkseagreen;
     animation: moveToWorkingArea 1.5s linear;
@@ -623,7 +624,7 @@
     background-color: #BEBEBE;
     animation: moveToWorkingArea 2.5s linear;
     animation-fill-mode: forwards;
-}
+} */
 
 
 .hide{
@@ -737,7 +738,7 @@ li {
 .order-1 {
     order: 1;
 }
-
+/* 
 @keyframes moveToWorkingArea {
     0% {
         opacity: 0;
@@ -751,7 +752,7 @@ li {
         opacity: 1;
         transform: translateX(-9.5rem);
     }
-} 
+}  */
 
 @keyframes commit-fadeIn-1 {
     0% {
@@ -1028,7 +1029,7 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    @keyframes overwrite-index {
+    /* @keyframes overwrite-index {
         0% {
             transform: translate(0, 0);
         }
@@ -1071,7 +1072,7 @@ li {
         100% {
             transform: translate(-4.81rem, -.69rem);
         }
-    } 
+    }  */
     @keyframes moveAndColor {
         0% {
             transform: translateX(0);
@@ -1244,7 +1245,7 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    @keyframes overwrite-index {
+    /* @keyframes overwrite-index {
         0% {
             transform: translate(0, 0);
         }
@@ -1287,7 +1288,7 @@ li {
         100% {
             transform: translate(-4.81rem, -7.69rem);
         }
-    } 
+    }  */
 
     @keyframes move-left-from-working {
         0% {
@@ -1473,10 +1474,10 @@ li {
     }
 
 
-    .pull-left-24--reset {
+    /* .pull-left-24--reset {
         animation: pull-left-24--reset 1s linear;
         animation-fill-mode: forwards;
-    }
+    } */
 
     .pl-64 {
         padding-left: 0rem;
@@ -1545,7 +1546,7 @@ li {
         height: 3.125rem;
     }
             
-    @keyframes pull-left-24--reset {
+    /* @keyframes pull-left-24--reset {
         0% {
             opacity: 0;
         }
@@ -1555,7 +1556,8 @@ li {
         100% {
             opacity: 1;
         }
-    } 
+
+    }  */
 
     @keyframes moveAndColor {
         0% {
@@ -1626,7 +1628,7 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    @keyframes overwrite-index {
+    /* @keyframes overwrite-index {
         0% {
             opacity: 0;
             transform: translate(0, 0);
@@ -1671,7 +1673,7 @@ li {
         100% {
             transform: translate(-9.1875rem, -.69rem);
         }
-    } 
+    }  */
 
     @keyframes move-left-from-working {
         0% {

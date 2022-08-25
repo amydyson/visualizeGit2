@@ -47,10 +47,10 @@
         <div class="dot gold"></div>
         <div class="" 
         [ngClass]="{'hide': !hardOverwrite() , 'dot pull-left-24--reset show' : !hideMessage, 
-        'headColorGreen': (chosenCommand === 'hard' && headPointer() === 'head'),
-        'headColorRed': (chosenCommand === 'hard' && headPointer() === 'head1'),
-        'headColorPurple': (chosenCommand === 'hard' && headPointer() === 'head2'),
-        'headColorGray': (chosenCommand === 'hard' && headPointer() === 'head3')}"></div>
+        'headColorGreen-mac': (chosenCommand === 'hard' && headPointer() === 'head'),
+        'headColorRed-mac': (chosenCommand === 'hard' && headPointer() === 'head1'),
+        'headColorPurple-mac': (chosenCommand === 'hard' && headPointer() === 'head2'),
+        'headColorGray-mac': (chosenCommand === 'hard' && headPointer() === 'head3')}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
     </div>
@@ -60,7 +60,7 @@
         <div class="toMove pl-20 pr-8">HEAD</div>
         <div class="toMove toMove--arrow font-size-32 pr-8">&#10132;</div> <!--arrow right-->
         <div class="head dot seaGreen adjust2-mac-pc" [ngClass]="{'hide': !copyHead(), 
-        'show overwrite-index-mac': copyHead() && isMac, 'show overwrite-index-pc': copyHead() && !isMac}"></div>
+        'show overwrite-index-mac': isMac && copyHead(), 'show overwrite-index-pc': !isMac && copyHead()}"></div>
         <div class="dot seaGreen green-left-mac-pc" [ngClass]="{'adjust-mac-pc': copyHead()}"></div>
         <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>

@@ -8,6 +8,10 @@
     margin-left: -.1rem !important;
 }
 
+.pull-left-24--reset{
+    margin-left: -1.5rem !important;
+}
+
 .overwrite-index-mac {
     animation: overwrite-index-mac .6s linear;
     animation-fill-mode: forwards;
@@ -46,6 +50,51 @@
     animation: overwrite-index3-pc 1.5s linear;
     animation-fill-mode: forwards;
 }
+
+
+.headColorGreen-mac {
+    background-color: darkseagreen;
+    animation: moveToWorkingArea-mac 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+
+.headColorRed-mac {
+    background-color: indianred;
+    animation: moveToWorkingArea-mac 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.headColorPurple-mac {
+    background-color: mediumpurple;
+    animation: moveToWorkingArea-mac 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.headColorGray-mac {
+    background-color: #BEBEBE;
+    animation: moveToWorkingArea-mac 2.5s linear;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes moveToWorkingArea-mac {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    60% {
+        opacity: 0.3;
+        transform: translateX(0rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-9.5rem);
+    }
+} 
+
+
+
 
 @keyframes overwrite-index-mac {
     0% {
@@ -135,9 +184,57 @@
 } 
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+
+@keyframes moveToWorkingArea-mac {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    60% {
+        opacity: 0.3;
+        transform: translateX(0rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-9.5rem);
+    }
+} 
 }
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    /* .pull-left-24--reset {
+        animation: pull-left-24--reset 1s linear;
+        animation-fill-mode: forwards;
+    } */
+
+
+@keyframes moveToWorkingArea-mac {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    60% {
+        opacity: 0.3;
+        transform: translateX(0rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-5.1rem);
+    }
+} 
+    @keyframes pull-left-24--reset {
+        0% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+
+    } 
+
     @keyframes overwrite-index-mac {
         0% {
             transform: translate(0, 0);

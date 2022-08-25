@@ -24,7 +24,7 @@
   <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
   <visualize-pull @fade *ngIf="chosenCommand === 'pull'" class="flex w-full align-center justify-center change-direction"></visualize-pull>
   <visualize-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-push>
-  <visualize-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-reset>
+  <visualize-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction hide-in-portrait hide-in-landscape"></visualize-reset>
   <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
   <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>
 
