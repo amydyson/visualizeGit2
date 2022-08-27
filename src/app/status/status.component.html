@@ -5,11 +5,10 @@
   <div class="flex pt-8">
     <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
     <div class="pr-8"></div>
-    <!-- <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button> -->
   </div>
   <section class= "flex direction-column pl-change-status pt-16 w-half align-left" >
     <div [ngClass]="{
-                    'green bold pl-16': i == '1',
+                    'green-bold pl-16': i == '1',
                     'pl-16': (i == '1' || i == '3'),
                     'red bold': i == '3'
                   }" 

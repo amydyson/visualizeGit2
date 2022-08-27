@@ -31,14 +31,12 @@
   <div class="flex">
     <button [disabled]="completed || chosenCommand === '' || chosenCommit === ''" (click)="visualizeReset()" class="w-350--reset" mat-raised-button color="warn">Visualize "git reset<span *ngIf="chosenCommit !=='no parameter'"> {{chosenCommit}}</span><span *ngIf="chosenCommand !=='no parameter' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
     <div class="pr-8"></div>
-    <!-- <button mat-fab [disabled]="!showReset" (click)="reset()" mat-raised-button color="warn"><span>Reset</span></button> -->
   </div>
   <div class="flex pt-32 change-directionx">
     <div class="order-switch-2x flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align">
       <div class="w-full min-w-150--reset background-black white">Working Area</div>
       <div class="flex align-center justify-center pt-8 mt-4 pb-32">
         <div class="dot gold"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
     </div>
     <div class="order-1x height-change bt-beige bl-change bb-beige br-beige text-align">
@@ -51,7 +49,6 @@
         'headColorRed-mac': (chosenCommand === 'hard' && headPointer() === 'head1'),
         'headColorPurple-mac': (chosenCommand === 'hard' && headPointer() === 'head2'),
         'headColorGray-mac': (chosenCommand === 'hard' && headPointer() === 'head3')}"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
     </div>
     <div class="order-switch-0x height-change bt-beige bl-change bb-beige br-beige text-align">
@@ -62,26 +59,22 @@
         <div class="head dot seaGreen adjust2-mac-pc" [ngClass]="{'hide': !copyHead(), 
         'show overwrite-index-mac': isMac && copyHead(), 'show overwrite-index-pc': !isMac && copyHead()}"></div>
         <div class="dot seaGreen green-left-mac-pc" [ngClass]="{'adjust-mac-pc': copyHead()}"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset pl-64--reset pb-8 pr-8">
         <div class="head1 dot indianRed" 
         [ngClass]="{'hide': !copyHead1(), 
         'show overwrite-index1-mac': copyHead1() && isMac, 'show overwrite-index1-pc': copyHead1() && !isMac}"></div>
         <div class="dot indianRed " [ngClass]="{'pull-left-24--reset': copyHead1()}"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset pt-8 pl-64--reset pb-8 pr-8">
         <div class="head2 dot mediumPurple" [ngClass]="{'hide': !copyHead2(), 
         'show overwrite-index2-mac': copyHead2() && isMac, 'show overwrite-index2-pc': copyHead2() && !isMac}"></div>
         <div class="dot mediumPurple " [ngClass]="{'pull-left-24--reset': copyHead2()}"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
       <div class="flex align-center justify-center ml-switch--reset  pt-8 pl-64--reset pb-8 pr-8">
         <div class="head3 dot background-gray" [ngClass]="{'hide': !copyHead3(), 
         'show overwrite-index3-mac': copyHead3() && isMac, 'show overwrite-index3-pc': copyHead3() && !isMac}"></div>
         <div class="dot background-gray " [ngClass]="{'pull-left-24--reset': copyHead3()}"></div>
-        <!-- <div class="pl-8 pr-8 hide-in-portrait">index.html</div> -->
       </div>
     </div>
   </div>
