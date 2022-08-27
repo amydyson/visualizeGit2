@@ -49,10 +49,6 @@
  padding-bottom: 2rem;
 }
 
-.pchange-branch {
-    padding-top: .5rem;
-    padding-bottom: 1rem;
-}
 .h-change-28-48 {
     height: 1.75rem;
 }
@@ -837,9 +833,9 @@ li {
     .image-size {
         width: 9.357rem;
     }
-    .image-size--clone {
+    /* .image-size--clone {
         width: 9.357rem;
-    }
+    } */
 
     .image-size--fetch {
         width: 9.357rem;
@@ -1101,7 +1097,7 @@ li {
     }
 
     .pl-change-status {
-        padding-left: 12.5rem;
+        padding-left: 8rem;
     }
 
     .font-change-14-16 {
@@ -1198,9 +1194,9 @@ li {
         margin-top: -3.625rem;
     }
 
-    .image-size--clone {
+    /* .image-size--clone {
         width: 3.125rem;
-    }
+    } */
 
     .image-size--fetch {
         width: 3.125rem;
@@ -1213,12 +1209,6 @@ li {
     .pl-change {
         padding-left: 3.125rem;
     }
-    .pchange-branch {
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-        margin-top: -.625rem;
-    }
-
     
     @keyframes move-down-one {
         0% {

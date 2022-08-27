@@ -1,0 +1,29 @@
+.image-size--clone {
+    width: 128px;
+}
+
+.pull-up-image--clone {
+    margin-top: -9.5rem;
+}
+
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+    .image-size--clone {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+    .pull-up-image--clone {
+        margin-top: -3.3rem;
+    }
+    
+}
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .image-size--clone {
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+    .pull-up-image--clone {
+        margin-top: -3.1rem;
+    }
+}

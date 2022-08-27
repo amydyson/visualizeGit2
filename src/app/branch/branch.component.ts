@@ -4,7 +4,7 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 @Component({
   selector: 'visualize-branch',
   templateUrl: './branch.component.html',
-  styleUrls: ['../app.component.css'],
+  styleUrls: ['../app.component.css', 'branch.component.css'],
   animations: [ fade, myTrigger, myTrigger2, fade2, ani3 ]
 })
 export class BranchComponent implements OnInit {

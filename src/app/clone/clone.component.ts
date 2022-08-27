@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'visualize-clone',
   templateUrl: './clone.component.html',
-  styleUrls: ['../app.component.css']
+  styleUrls: ['../app.component.css', 'clone.component.css']
 })
 export class CloneComponent implements OnInit {
   public hideMessage: boolean;

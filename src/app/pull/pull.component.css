@@ -156,7 +156,7 @@
             transform: translateY(0);
         }
         100% {
-            transform: translateY(-1.125rem);
+            transform: translateY(-1rem);
         }
     } 
 

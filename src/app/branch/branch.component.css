@@ -1,0 +1,22 @@
+
+
+.pchange-branch {
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+}
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+    .pchange-branch {
+        padding-top: .5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .pchange-branch {
+        padding-top: 8px;
+        padding-bottom: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
