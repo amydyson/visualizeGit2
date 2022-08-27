@@ -1,6 +1,6 @@
 <div class="flex direction-column w-full align-center">
   <div class="blue pchange-branch h-28" >
-    <div *ngIf="!hideMessage" [@myTrigger]="fadeIn">"git branch" lists the branches. The asterisk (*) indicates the current branch</div>  
+    <div *ngIf="!hideMessage" [@myTrigger]="fadeIn">"git branch" lists the branches. The asterisk (*) indicates the current branch.</div>  
   </div>
   <div class="flex">
     <button [disabled]="!hideMessage" (click)="visualizeBranch()" class="w-250" mat-raised-button color="warn">Visualize "git branch"</button>

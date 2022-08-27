@@ -1,6 +1,16 @@
 .green-bold {
     color: green;
     font-weight: bold;
+    padding-left: 16px;
+}
+
+.red-bold {
+    color: red;
+    font-weight: bold;
+}
+
+.ml-neg {
+    margin-left: -40px;
 }
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {

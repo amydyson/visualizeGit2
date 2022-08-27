@@ -13,7 +13,9 @@
 }
 
 .pl-change-status {
-    padding-left: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .change-direction-stash {
@@ -428,10 +430,6 @@
     margin-left: -1.5rem !important;
 }
 
-/* .pull-left-24--reset{
-    margin-left: -1.5rem !important;
-} */
-
 .moveAndColor {
     animation: moveAndColor 1s linear;
     animation-fill-mode: forwards;
@@ -577,51 +575,6 @@
     animation: move-down-three .5s linear;
     animation-fill-mode: forwards;
 }
-/* 
-.overwrite-index {
-    animation: overwrite-index 1s linear;
-    animation-fill-mode: forwards;
-}
-
-.overwrite-index1 {
-    animation: overwrite-index1 1.5s linear;
-    animation-fill-mode: forwards;
-}
-
-.overwrite-index2 {
-    animation: overwrite-index2 1.5s linear;
-    animation-fill-mode: forwards;
-}
-.overwrite-index3 {
-    animation: overwrite-index3 1.5s linear;
-    animation-fill-mode: forwards;
-} */
-/* 
-.headColorGreen {
-    background-color: darkseagreen;
-    animation: moveToWorkingArea 1.5s linear;
-    animation-fill-mode: forwards;
-}
-
-
-.headColorRed {
-    background-color: indianred;
-    animation: moveToWorkingArea 2.5s linear;
-    animation-fill-mode: forwards;
-}
-
-.headColorPurple {
-    background-color: mediumpurple;
-    animation: moveToWorkingArea 2.5s linear;
-    animation-fill-mode: forwards;
-}
-
-.headColorGray {
-    background-color: #BEBEBE;
-    animation: moveToWorkingArea 2.5s linear;
-    animation-fill-mode: forwards;
-} */
-
 
 .hide{
     display: none;
@@ -734,21 +687,6 @@ li {
 .order-1 {
     order: 1;
 }
-/* 
-@keyframes moveToWorkingArea {
-    0% {
-        opacity: 0;
-        transform: translateX(0);
-    }
-    60% {
-        opacity: 0.3;
-        transform: translateX(0rem);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(-9.5rem);
-    }
-}  */
 
 @keyframes commit-fadeIn-1 {
     0% {
@@ -833,9 +771,6 @@ li {
     .image-size {
         width: 9.357rem;
     }
-    /* .image-size--clone {
-        width: 9.357rem;
-    } */
 
     .image-size--fetch {
         width: 9.357rem;
@@ -1025,50 +960,7 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    /* @keyframes overwrite-index {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-15.0625rem, -.1875rem);
-        }
-    } 
-    @keyframes overwrite-index1 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -2.5rem);
-        }
-    } 
-    @keyframes overwrite-index2 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -5.1875rem);
-        }
-    } 
-    @keyframes overwrite-index3 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -.69rem);
-        }
-    }  */
+
     @keyframes moveAndColor {
         0% {
             transform: translateX(0);
@@ -1097,7 +989,7 @@ li {
     }
 
     .pl-change-status {
-        padding-left: 8rem;
+        padding-left: 6rem;
     }
 
     .font-change-14-16 {
@@ -1194,10 +1086,6 @@ li {
         margin-top: -3.625rem;
     }
 
-    /* .image-size--clone {
-        width: 3.125rem;
-    } */
-
     .image-size--fetch {
         width: 3.125rem;
         height: 3.125rem;
@@ -1235,50 +1123,6 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    /* @keyframes overwrite-index {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -.1875rem);
-        }
-    } 
-    @keyframes overwrite-index1 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -2.5rem);
-        }
-    } 
-    @keyframes overwrite-index2 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -5.1875rem);
-        }
-    } 
-    @keyframes overwrite-index3 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-4.81rem, -7.69rem);
-        }
-    }  */
 
     @keyframes move-left-from-working {
         0% {
@@ -1463,12 +1307,6 @@ li {
         flex-direction: column;
     }
 
-
-    /* .pull-left-24--reset {
-        animation: pull-left-24--reset 1s linear;
-        animation-fill-mode: forwards;
-    } */
-
     .pl-64 {
         padding-left: 0rem;
     }
@@ -1535,19 +1373,6 @@ li {
         width: 3.125rem;
         height: 3.125rem;
     }
-            
-    /* @keyframes pull-left-24--reset {
-        0% {
-            opacity: 0;
-        }
-        70% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-
-    }  */
 
     @keyframes moveAndColor {
         0% {
@@ -1618,52 +1443,6 @@ li {
             transform: translateY(7.5rem);
         }
     } 
-    /* @keyframes overwrite-index {
-        0% {
-            opacity: 0;
-            transform: translate(0, 0);
-        }
-        70% {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-9.125rem, -.0625rem);
-        }
-    } 
-    @keyframes overwrite-index1 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-9.375rem, -2.5rem);
-        }
-    } 
-    @keyframes overwrite-index2 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-9.1875rem, -5.1875rem);
-        }
-    } 
-    @keyframes overwrite-index3 {
-        0% {
-            transform: translate(0, 0);
-        }
-        50% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(-9.1875rem, -.69rem);
-        }
-    }  */
 
     @keyframes move-left-from-working {
         0% {
