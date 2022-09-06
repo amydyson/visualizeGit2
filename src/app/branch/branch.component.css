@@ -9,14 +9,15 @@
     .pchange-branch {
         padding-top: .5rem;
         padding-bottom: 1rem;
+        text-align: center;
     }
 }
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
     .pchange-branch {
+        align-items: center;
         padding-top: 8px;
         padding-bottom: 32px;
-        padding-left: 16px;
-        padding-right: 16px;
+        text-align: center;
     }
 }
