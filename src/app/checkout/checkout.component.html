@@ -34,7 +34,12 @@
     </div>
     <div class="flex pr-2">
       <div class="font-size-32 pr-4"
-        [ngClass]="{'move-up-fast': !hideMessage2, 'move-down-fast': !hideMessage3, 'pull-up-pc': !sharedService.isMac }">
+        [ngClass]=
+        "{'move-up-fast': !hideMessage2 && sharedService.isMac, 
+        'move-down-fast': !hideMessage3 && sharedService.isMac, 
+        'move-up-fast-pc': !hideMessage2 && !sharedService.isMac, 
+        'move-down-fast-pc': !hideMessage3 && !sharedService.isMac, 
+        'pull-up-pc': !sharedService.isMac }">
         &#10132;</div>
       <!--arrow right-->
       <div class="mt-8 pr-8">main</div>

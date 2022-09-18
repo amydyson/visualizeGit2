@@ -2,3 +2,34 @@
 .pull-up-pc {
     margin-top: -5px;
 }
+
+.move-up-fast-pc {
+    animation: move-up-fast-pc .5s linear;
+    animation-fill-mode: forwards;
+}
+
+.move-down-fast-pc {
+    animation: move-down-fast-pc 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-up-fast-pc {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2.8rem);
+    }
+} 
+
+@keyframes move-down-fast-pc {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(5.2rem);
+    }
+} 

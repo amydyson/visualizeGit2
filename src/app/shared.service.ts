@@ -7,10 +7,18 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 export class SharedService {
   isMac: boolean;
+  notificationsOn: boolean;
   constructor(private snackBar: MatSnackBar) { }
 
   showSnackbar(){
-    this.showSnackbarCssStyles('Animation complete. Choose another command.','','4000');
+    if (this.notificationsOn){
+      const message = 'Animation complete. Choose another command.';
+      const action = 'Disable this Notification Bar';
+      let snackbarRef = this.snackBar.open(message, action);
+      snackbarRef.onAction().subscribe(() => {
+        this.notificationsOn = false;
+      })
+    }
   }
 
   showSnackbarCssStyles(content, action, duration) {

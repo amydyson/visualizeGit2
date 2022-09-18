@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.sharedService.notificationsOn = true;
     navigator.userAgent.includes('Mac') ? this.sharedService.isMac = true : this.sharedService.isMac = false;
     if (window.innerWidth > 960){
       this.commands = [
