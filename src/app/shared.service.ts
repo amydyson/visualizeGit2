@@ -14,7 +14,7 @@ export class SharedService {
     if (this.notificationsOn){
       const message = 'Animation complete. Choose another command.';
       const action = 'Disable this Notification Bar';
-      let snackbarRef = this.snackBar.open(message, action);
+      let snackbarRef = this.snackBar.open(message, action, {duration: 2700});
       snackbarRef.onAction().subscribe(() => {
         this.notificationsOn = false;
       })

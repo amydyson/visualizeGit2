@@ -18,7 +18,7 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-2.8rem);
+        transform: translateY(-2.6rem);
     }
 } 
 
@@ -30,6 +30,6 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(5.2rem);
+        transform: translateY(5rem);
     }
 } 
