@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-reset',
@@ -8,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 export class ResetComponent implements OnInit {
   public hideMessage: boolean;
   public completed: boolean;
-  public showReset: boolean;
   public isMac: boolean;
   
   public commands = [
@@ -29,12 +29,11 @@ export class ResetComponent implements OnInit {
   public chosenCommand: string;
   public chosenCommit: string;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
-    this.showReset = false;
     this.chosenCommand = '';
     this.chosenCommit = '';
     this.completed = false;
@@ -159,9 +158,11 @@ export class ResetComponent implements OnInit {
         break;
       default:
     }
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 3000)
     this.hideMessage = false;
     this.completed = true;
-    this.showReset = true;
   }
 
   selectCommand(command){
@@ -170,7 +171,5 @@ export class ResetComponent implements OnInit {
   selectCommit(commit){
     this.chosenCommit = commit;
   }
-  public reset(){
-    window.location.reload();
-  }
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-stash',
@@ -9,7 +10,6 @@ export class StashComponent implements OnInit {
 
   public hideMessage: boolean;
   public completed: boolean;
-  public showReset: boolean;
   public optionSelected: boolean;
   
   public commands = [
@@ -21,13 +21,12 @@ export class StashComponent implements OnInit {
   public chosenCommand: string;
   public chosenCommit: string;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
     this.chosenCommand = '';
     this.completed = false;
-    this.showReset = false;
     this.optionSelected = false;
   }
 
@@ -165,16 +164,15 @@ export class StashComponent implements OnInit {
         break;
       default:
     }
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 2000)
     this.hideMessage = false;
     this.completed = true;
-    this.showReset = true;
   }
 
   selectCommand(command){
     this.chosenCommand = command;
-  }
-  public reset(){
-    window.location.reload();
   }
 
 }

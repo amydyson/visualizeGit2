@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-branch',
@@ -10,9 +11,8 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 export class BranchComponent implements OnInit {
   public hideMessage: boolean;
   public branches: Array<string>;
-  public showReset: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
@@ -40,8 +40,8 @@ export class BranchComponent implements OnInit {
       this.hideMessage = false;
     }, 1500);
     setTimeout(() => {
-      this.showReset = true;
-    }, 2000)
+      this.sharedService.showSnackbar();
+    }, 3000)
   }
 
   public reset(){

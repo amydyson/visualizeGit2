@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-pull',
@@ -8,22 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class PullComponent implements OnInit {
 
   public hideMessage: boolean;
-  public showReset: boolean;
   public isMac: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
-    this.showReset = false;
   }
 
   visualizePull(){
     this.hideMessage = false;
-    this.showReset = true;
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 3400);
   }
-  public reset(){
-    window.location.reload();
-  }
+
 }

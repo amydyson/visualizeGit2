@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-push',
@@ -7,24 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PushComponent implements OnInit {
   public hideMessage: boolean;
-  public showReset: boolean;
   public isMac: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
-    // this.isMac = false; //TODO remove;
     this.hideMessage = true;
     this.hideMessage = true;
-    this.showReset = false;
   }
 
   visualizePush(){
     this.hideMessage = false;
-    this.showReset = true;
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 3000)
   }
-  public reset(){
-    window.location.reload();
-  }
+
 }

@@ -1,8 +1,8 @@
 import { animate, trigger, state, style, transition, keyframes } from '@angular/animations';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import { MatSelectChange } from '@angular/material';
 import { fade, myTrigger2 } from './animations';
+import { SharedService } from './shared.service';
+
 
 @Component({
   selector: 'app-root',
@@ -28,10 +28,12 @@ export class AppComponent implements OnInit {
   public commands = [];
   public chosenCommand: string;
   public isMac: boolean;
+  showBanner: boolean;
 
-  @Output() selectionChange: EventEmitter< MatSelectChange >
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
+    this.sharedService.showBanner = false;
     if (window.innerWidth > 960){
       this.commands = [
         {name: 'add'},
@@ -67,17 +69,14 @@ export class AppComponent implements OnInit {
     }
   
     this.chosenCommand = '';
-    // const temp = localStorage.getItem('chosenCommand');
-    // if (temp){
-    //   this.chosenCommand = temp;
-    // } else {
-    //   this.chosenCommand = '';
-    // }
+    
   }
 
   selectCommand(command){
     this.chosenCommand = command;
-    localStorage.setItem('chosenCommand', this.chosenCommand);
   }
+
+
+
 
 }

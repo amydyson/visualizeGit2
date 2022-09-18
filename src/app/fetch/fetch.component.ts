@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-fetch',
@@ -7,20 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FetchComponent implements OnInit {
   public hideMessage: boolean;
-  public showReset: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
-    this.showReset = false;
   }
 
   visualizeFetch(){
     this.hideMessage = false;
-    this.showReset = true;
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 3500);
   }
-  public reset(){
-    window.location.reload();
-  }
+
 }

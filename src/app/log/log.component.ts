@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger2, ani3 } from '../animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-log',
@@ -9,22 +10,18 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
 })
 export class LogComponent implements OnInit {
   public hideMessage: boolean;
-  public showReset: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
-    this.showReset = false;
   }
 
   visualizeLog(){
     this.hideMessage = false;
-    this.showReset = true;
-  }
-
-  public reset(){
-    window.location.reload();
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 3500);
   }
 
 }

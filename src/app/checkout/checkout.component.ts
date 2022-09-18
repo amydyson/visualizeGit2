@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { storeCleanupWithContext } from '@angular/core/src/render3/instructions';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-checkout',
@@ -20,7 +20,7 @@ export class CheckoutComponent implements OnInit {
     {name: 'create and checkout a new branch'},
   ];
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
@@ -40,6 +40,9 @@ export class CheckoutComponent implements OnInit {
     setTimeout(() => {
       this.hideMessage = false;
     }, 1000);
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 2000);
   }
 
   visualizeCheckoutNew(){
@@ -49,10 +52,9 @@ export class CheckoutComponent implements OnInit {
     setTimeout(() => {
       this.hideMessage = false;
     }, 2000);
-  }
-
-  public reset(){
-    window.location.reload();
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 2500);
   }
 
 }

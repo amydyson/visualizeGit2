@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-status',
@@ -10,14 +11,12 @@ import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
 export class StatusComponent implements OnInit {
   public hideMessage: boolean;
   public messages: Array<string>;
-  public showReset: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
     this.messages = [];
-    this.showReset = false;
   }
 
   push(message){
@@ -41,11 +40,8 @@ export class StatusComponent implements OnInit {
       this.hideMessage = false;
     }, 2000);
     setTimeout(() => {
-      this.showReset = true;
-    }, 2000)
+      this.sharedService.showSnackbar();
+    }, 3500)
   }
 
-  public reset(){
-    window.location.reload();
-  }
 }

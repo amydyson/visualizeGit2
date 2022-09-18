@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { fade, fade2, myTrigger2, ani3 } from '../animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-add',
@@ -9,23 +10,19 @@ import { fade, fade2, myTrigger2, ani3 } from '../animations';
 })
 export class AddComponent implements OnInit {
   hideMessage: boolean;
-  showReset: boolean;
-  @Input() someData;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
-    this.showReset = false;
   }
 
   visualizeAdd(){
     this.hideMessage = false;
-    this.showReset = true;
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 2000)
   }
 
-  public reset(){
-    window.location.reload();
-  }
 
 }

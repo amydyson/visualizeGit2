@@ -3,7 +3,7 @@
     <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
     <div class="font-size-change bold pl-16">Visualize Git</div>
   </div>
-  <mat-form-field class="w-250" appearance="fill">
+  <mat-form-field class="w-250 pt-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
     <mat-select (selectionChange)="selectCommand($event.value)">
       <mat-option *ngFor = "let command of commands" [value]="command.name"
@@ -11,9 +11,8 @@
     </mat-select>
   </mat-form-field>
   <button *ngIf="chosenCommand !== '' && reset" (click)="reset()" mat-raised-button color="warn"><span>See {{chosenCommand}} Again</span></button>
-
   
-  <visualize-add [someData]="chosenCommand" @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
+  <visualize-add  @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
   <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
   <visualize-checkout @fade *ngIf="chosenCommand === 'checkout'" class="flex w-full justify-center change-direction"></visualize-checkout>
   <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>

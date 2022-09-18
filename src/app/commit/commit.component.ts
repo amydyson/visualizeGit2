@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-commit',
@@ -7,21 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommitComponent implements OnInit {
   hideMessage: boolean;
-  public showReset: boolean;
 
-  constructor() { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
-    this.showReset = false;
   }
   visualizeCommit(){
-    this.showReset = true;
     this.hideMessage = false;
-  }
-
-  public reset(){
-    window.location.reload();
+    setTimeout(() => {
+      this.sharedService.showSnackbar();
+    }, 2000);
   }
 
 }
