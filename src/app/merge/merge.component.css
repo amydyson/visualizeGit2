@@ -1,8 +1,25 @@
 .pull-up-pc {
-    /* margin-top: -10px; */
+    margin-top: -5px;
     border: 1px solid hotpink;
 }
 .pull-up-pc-2 {
     margin-top: -10px !important;
     border: 2px solid orange;
 }
+
+.move-up-pc {
+    animation: move-up-pc 1.3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-up-pc {
+    0% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2.8rem);
+    }
+} 
