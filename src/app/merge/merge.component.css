@@ -1,8 +1,8 @@
 .pull-up-pc {
-    margin-top: -10px;
+    /* margin-top: -10px; */
     border: 1px solid hotpink;
 }
 .pull-up-pc-2 {
-    margin-top: -8px;
-    border: 1px solid orange;
+    margin-top: -10px !important;
+    border: 2px solid orange;
 }
