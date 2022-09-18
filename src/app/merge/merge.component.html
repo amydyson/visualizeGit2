@@ -18,7 +18,7 @@
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-18 pl-4 mt-4 pr-2">&#10132;</div> <!--arrow right-->
+            <div class="font-size-32 pt-18 pl-4 mt-4 pr-2" [ngClass]="{'pull-up-pc': !sharedService.isMac}">&#10132;</div> <!--arrow right-->
             <div class="pr-2 pt-32">commit 86b5f</div>
             <div class="pr-8 pull-left pt-32" [ngClass]="{'hide': hideMessage, 'show move-right-merge': !hideMessage}">commit 86b5f</div>
           </div>
@@ -34,7 +34,7 @@
       <div class="flex pr-48">
         <div class="flex direction-column">
           <div class="flex">
-            <div class="font-size-32 pt-18 mt-4 white">&#10132;</div> <!--arrow right-->
+            <div class="font-size-32 pt-18 mt-4 white" [ngClass]="{'pull-up-pc': !sharedService.isMac}">&#10132;</div> <!--arrow right-->
             <div class="white">commit 86b5f</div>
           </div>
           <div class="flex">

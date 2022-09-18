@@ -5,7 +5,7 @@ import { SharedService } from '../shared.service';
 @Component({
   selector: 'visualize-checkout',
   templateUrl: './checkout.component.html',
-  styleUrls: ['../app.component.css'],
+  styleUrls: ['../app.component.css', 'checkout.component.css'],
   animations: [ fade, myTrigger, myTrigger2, fade2, ani3 ]
 })
 export class CheckoutComponent implements OnInit {

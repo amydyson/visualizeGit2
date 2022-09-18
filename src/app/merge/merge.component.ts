@@ -4,7 +4,7 @@ import { SharedService } from '../shared.service';
 @Component({
   selector: 'visualize-merge',
   templateUrl: './merge.component.html',
-  styleUrls: ['../app.component.css']
+  styleUrls: ['../app.component.css', 'merge.component.css']
 })
 export class MergeComponent implements OnInit {
   public hideMessage: boolean;
