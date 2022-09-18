@@ -1,10 +1,10 @@
 .pull-up-pc {
     margin-top: -5px;
-    border: 1px solid hotpink;
+    /* border: 1px solid hotpink; */
 }
 .pull-up-pc-2 {
     margin-top: -10px !important;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
 }
 
 .move-up-pc {
@@ -20,6 +20,6 @@
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-3.2rem);
+        transform: translateY(-3.5rem);
     }
 } 
