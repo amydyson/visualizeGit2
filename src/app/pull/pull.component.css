@@ -20,7 +20,7 @@
     margin-top: -0.75rem;
 }
 .mt-change-pull-4-pc {
-    margin-top: -1rem;
+    margin-top: -0.85rem;
 }
 
 /* desktop only css  */
@@ -132,7 +132,8 @@
         margin-top: -5.3rem;
     }
     .mt-change-pull-4-pc {
-        margin-top: -5.3rem;
+        margin-top: -6rem;
+        border: 1px solid hotpink;
     }
     .mt-change-pull-2 {
         margin-top: .125rem;
