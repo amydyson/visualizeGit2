@@ -9,12 +9,10 @@ import { SharedService } from '../shared.service';
 export class PullComponent implements OnInit {
 
   public hideMessage: boolean;
-  public isMac: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
-    navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
   }
 

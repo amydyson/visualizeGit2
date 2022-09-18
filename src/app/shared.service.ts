@@ -6,7 +6,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   providedIn: 'root'
 })
 export class SharedService {
-  showBanner: boolean;
+  isMac: boolean;
   constructor(private snackBar: MatSnackBar) { }
 
   showSnackbar(){

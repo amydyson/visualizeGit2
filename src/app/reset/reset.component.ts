@@ -9,7 +9,6 @@ import { SharedService } from '../shared.service';
 export class ResetComponent implements OnInit {
   public hideMessage: boolean;
   public completed: boolean;
-  public isMac: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -32,7 +31,6 @@ export class ResetComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
-    navigator.userAgent.includes('Mac') ? this.isMac = true : this.isMac = false;
     this.hideMessage = true;
     this.chosenCommand = '';
     this.chosenCommit = '';
