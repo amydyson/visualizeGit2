@@ -57,7 +57,7 @@ export class CheckoutComponent implements OnInit {
     }, 2000);
     setTimeout(() => {
       this.sharedService.showSnackbar();
-    }, 6500);
+    }, 3500);
   }
 
 }

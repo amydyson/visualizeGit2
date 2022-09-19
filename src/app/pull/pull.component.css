@@ -6,6 +6,23 @@
     padding-top: 4rem;
 }
 
+.pull-up-pull {
+    margin-top: -6px;
+}
+
+.pt-4-5 {
+    padding-top: 4.5rem;
+}
+
+.fade-out-arrow-2 {
+    animation: fade-out-arrow-2 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-arrow-2 {
+    animation: fade-in-arrow-2 3s linear;
+    animation-fill-mode: forwards;
+}
 .mt-change-pull {
     margin-top: 0rem;
 }
@@ -23,6 +40,32 @@
     margin-top: -0.85rem;
 }
 
+
+
+@keyframes fade-out-arrow-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+@keyframes fade-in-arrow-2 {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+    50% {
+        opacity: 0;
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        color: black;
+    }
+} 
 /* desktop only css  */
 @media only screen and (min-device-width: 60rem) {
 
