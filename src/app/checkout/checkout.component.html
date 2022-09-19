@@ -27,24 +27,25 @@
 
 
   <div class="flex direction-column">
-    <div class="flex pr-2 pt-32">
-      <div class="font-size-32 pr-4 white mt-up"
-          [ngClass]="{'fade-in-arrow': !hideMessage2}">&#10132;</div>
-      <div class="pr-8" id="bug">bug/25282</div>
+    <div class="flex pr-2 pt-32 h-25 align-center">
+        <div class="pr-4" [ngClass]="{'hide': hideMessage2, 'fade-in-arrow-2': !hideMessage2}">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+        </div>
+      <div class="pr-8" [ngClass]="{'pl-28': hideMessage2}">bug/25282</div>
     </div>
-    <div class="flex pr-2 pt-16">
-      <div class="font-size-32 pr-4 mt-up"
-        [ngClass]="{'fade-out-arrow': !hideMessage2, 'fade-out-arrow-2': !hideMessage3}">
-        &#10132;</div>
+    <div class="flex h-25 align-center">
+      <div class="pr-4" [ngClass]="{ 'fade-out-arrow ': !hideMessage2, 'fade-out-arrow-2': !hideMessage3}">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+      </div>
       <div class="pr-8">main</div>
     </div>
-    <div class="flex pr-2 pt-16">
-      <div class="font-size-32 pr-2 white">&#10132;</div>
+    <div class="flex pr-2 pl-20 h-27 align-center justify-center">
       <div class="pr-8">pbi/25391</div>
     </div>
-    <div class="flex pr-2 pt-8">
-      <div class="font-size-32 pr-2 white mt-up"
-          [ngClass]="{'fade-in-arrow-2': !hideMessage3}">&#10132;</div>
+    <div class="flex pr-2 h-25 align-center justify-center">
+      <div class="pr-4" [ngClass]="{'hide': hideMessage3, 'fade-in-arrow-2': !hideMessage3}">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+      </div>
       <div class="pr-8" [ngClass]="{'hide': hideMessage3, 'fade-in-version': !hideMessage3 }">version_2.0</div>
     </div>
   </div>

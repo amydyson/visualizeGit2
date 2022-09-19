@@ -4,6 +4,35 @@
     margin-top: -10px;
 }
 
+.h-25 {
+    height: 25px;
+}
+
+.h-27 {
+    height: 27px;
+}
+
+.border-red {
+    border: 1px solid red;
+}
+
+.pt-14 {
+    padding-top: 14px;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-28 {
+    padding-left: 28px;
+}
+
+.image-size-arrow {
+    width: 10px;
+    height: 10px;
+}
+
 .opacity-zero {
     color: white;
 }
