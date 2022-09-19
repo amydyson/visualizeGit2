@@ -12,34 +12,37 @@
       <div class="pr-8"></div>
     </div>
   </div>
- <div class="flex pt-32 w-full align-center justify-center"> 
-    <section class="flex direction-column text-left pr-16"> 
-      <div class="pb-8 pl-32 bold">feature branch </div>
-      <div class="flex pr-48">
-        <div class="flex direction-column">
-          <div class="flex">
-            <div class="font-size-32 pt-18 pl-4 mt-4 pr-2" [ngClass]="{'pull-up-pc': !sharedService.isMac}">&#10132;</div> <!--arrow right-->
-            <div class="pr-2 pt-32">commit 86b5f</div>
-            <div class="pr-8 pull-left pt-32" [ngClass]="{'hide': hideMessage, 'show move-right-merge': !hideMessage}">commit 86b5f</div>
+ <div class="flex pt-32 w-full justify-center"> 
+    <section class="flex direction-column pr-16"> 
+      <div class="pb-8 pl-16 bold text-center">feature branch </div>
+      <div class="flex">
+        <div class="flex direction-column pt-32">
+          <div class="flex align-center">
+            <div class="h-30"></div>     
+            <div class="pr-2 pl-28">commit 86b5f</div>
+            <div class="pr-8 pull-left" [ngClass]="{'hide': hideMessage, 'show move-right-merge': !hideMessage}">commit 86b5f</div>
           </div>
           <div class="flex pr-2">
-            <div class="font-size-32 white">&#10132;</div> <!--arrow right-->
-            <div class="mt-8 pl-4">commit e34b2</div>
+            <div class="pl-28">commit e34b2</div>
           </div>
         </div>
       </div>
     </section>
-    <section class="flex direction-column text-left"> 
-      <div class="pb-8 bold pl-32 ml-4">main branch</div>
-      <div class="flex pr-48">
-        <div class="flex direction-column">
-          <div class="flex">
-            <div class="font-size-32 pt-18 mt-4 white" [ngClass]="{'pull-up-pc': !sharedService.isMac}">&#10132;</div> <!--arrow right-->
-            <div class="white">commit 86b5f</div>
+    <section class="flex direction-column text-left pr-16"> 
+      <div class="pb-8 pl-16 bold text-center">main branch </div>
+      <div class="flex">
+        <div class="flex direction-column pt-32">
+          <div class="flex align-center h-20">
+            <div class="pr-4 pt-14" [ngClass]="{'hide': hideMessage, 'fade-in-arrow-2': !hideMessage}">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            </div>         
+            <div class="pr-2"></div>
           </div>
-          <div class="flex">
-            <div class="font-size-32" [ngClass]="{'move-up': !hideMessage, 'pull-up-pc-2': !sharedService.isMac}">&#10132;</div> <!--arrow right-->
-            <div class="pl-2 mt-8">commit e34b2</div>
+          <div class="flex pr-2 mt-8 align-center justify-center">
+            <div class="pr-4" [ngClass]="{'fade-out-arrow-2': !hideMessage}">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            </div>    
+            <div class="">commit e34b2</div>
           </div>
         </div>
       </div>

@@ -543,10 +543,7 @@ ul.custom {
     animation-fill-mode: forwards;
 }
 
-.move-right-merge {
-    animation: move-right-merge 1s linear;
-    animation-fill-mode: forwards;
-}
+
 .move-right-fetch {
     animation: move-right-fetch 1s linear;
     animation-fill-mode: forwards;
@@ -886,14 +883,7 @@ li {
             transform: translateX(17.8125rem);
         }
     } 
-    @keyframes move-right-merge {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(13.75rem);
-        }
-    } 
+
     @keyframes move-up {
         0% {
             transform: translateY(0);
@@ -1191,14 +1181,7 @@ li {
         }
     } 
 
-    @keyframes move-right-merge {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(13.75rem);
-        }
-    } 
+
     @keyframes move-up {
         0% {
             transform: translateY(0);
@@ -1510,15 +1493,6 @@ li {
             transform: translateX(11.2rem);
         }
     } 
-    @keyframes move-right-merge {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(13.75rem);
-        }
-    } 
-
 
     @keyframes move-up {
         0% {

@@ -7,10 +7,80 @@
     /* border: 2px solid orange; */
 }
 
+.h-20 {
+    height: 20px;
+}
+.h-30 {
+    height: 30px;
+}
+
+.pl-28 {
+    padding-left: 28px;
+}
+.pt-14 {
+    padding-top: 14px;
+}
 .move-up-pc {
     animation: move-up-pc 1.3s linear;
     animation-fill-mode: forwards;
 }
+
+.move-right-merge {
+    animation: move-right-merge 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.pl-20 {
+    padding-left: 20px;
+}
+
+.pl-28 {
+    padding-left: 28px;
+}
+
+.fade-out-arrow-2 {
+    animation: fade-out-arrow-2 1.5s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-arrow-2 {
+    animation: fade-in-arrow-2 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-right-merge {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10.5rem);
+    }
+} 
+
+@keyframes fade-out-arrow-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+@keyframes fade-in-arrow-2 {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+    50% {
+        opacity: 0;
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        color: black;
+    }
+} 
 
 @keyframes move-up-pc {
     0% {
