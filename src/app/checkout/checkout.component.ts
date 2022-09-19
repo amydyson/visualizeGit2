@@ -34,6 +34,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   visualizeCheckout(){
+    let bugDiv = document.getElementById('bug');
+    let arrowDiv = document.getElementById('arrow');
+
     this.hideMessage2 = false;
     this.hideMessage = false;
     this.disableOption = true;
@@ -42,7 +45,7 @@ export class CheckoutComponent implements OnInit {
     }, 1000);
     setTimeout(() => {
       this.sharedService.showSnackbar();
-    }, 2000);
+    }, 3300);
   }
 
   visualizeCheckoutNew(){
@@ -54,7 +57,7 @@ export class CheckoutComponent implements OnInit {
     }, 2000);
     setTimeout(() => {
       this.sharedService.showSnackbar();
-    }, 2500);
+    }, 6500);
   }
 
 }
