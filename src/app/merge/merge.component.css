@@ -17,8 +17,11 @@
 .pl-28 {
     padding-left: 28px;
 }
-.pt-14 {
-    padding-top: 14px;
+.pt-25 {
+    padding-top: 25px;
+}
+.pt-36 {
+    padding-top: 36px;
 }
 .move-up-pc {
     animation: move-up-pc 1.3s linear;
