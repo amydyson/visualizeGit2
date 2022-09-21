@@ -12,8 +12,6 @@ import { AddComponent } from './add/add.component';
 import { CommitComponent } from './commit/commit.component';
 import { InitComponent } from './init/init.component';
 import { CloneComponent } from './clone/clone.component';
-import { PushComponent } from './push/push.component';
-import { PullComponent } from './pull/pull.component';
 import { ResetComponent } from './reset/reset.component';
 import { LogComponent } from './log/log.component';
 import { BranchComponent } from './branch/branch.component';
@@ -21,9 +19,9 @@ import { StatusComponent } from './status/status.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { StashComponent } from './stash/stash.component';
 import { MergeComponent } from './merge/merge.component';
-import { FetchComponent } from './fetch/fetch.component';
 import { GitPullComponent } from './git-pull/git-pull.component';
 import { GitPushComponent } from './git-push/git-push.component';
+import { GitFetchComponent } from './git-fetch/git-fetch.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +30,6 @@ import { GitPushComponent } from './git-push/git-push.component';
     CommitComponent,
     InitComponent,
     CloneComponent,
-    PushComponent,
-    PullComponent,
     ResetComponent,
     LogComponent,
     BranchComponent,
@@ -41,9 +37,9 @@ import { GitPushComponent } from './git-push/git-push.component';
     CheckoutComponent,
     StashComponent,
     MergeComponent,
-    FetchComponent,
     GitPullComponent,
-    GitPushComponent
+    GitPushComponent,
+    GitFetchComponent
   ],
   imports: [
     BrowserModule,

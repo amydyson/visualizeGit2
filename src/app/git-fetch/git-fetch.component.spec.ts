@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PullComponent } from './pull.component';
+import { GitFetchComponent } from './git-fetch.component';
 
-describe('PullComponent', () => {
-  let component: PullComponent;
-  let fixture: ComponentFixture<PullComponent>;
+describe('GitFetchComponent', () => {
+  let component: GitFetchComponent;
+  let fixture: ComponentFixture<GitFetchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PullComponent ]
+      declarations: [ GitFetchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PullComponent);
+    fixture = TestBed.createComponent(GitFetchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

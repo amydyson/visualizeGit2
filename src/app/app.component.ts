@@ -34,8 +34,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.sharedService.notificationsOn = true;
-    navigator.userAgent.includes('Mac') ? this.sharedService.isMac = true : this.sharedService.isMac = false;
-    if (window.innerWidth > 960){
+    // navigator.userAgent.includes('Mac') ? this.sharedService.isMac = true : this.sharedService.isMac = false;
       this.commands = [
         {name: 'add'},
         {name: 'branch'},
@@ -52,23 +51,7 @@ export class AppComponent implements OnInit {
         {name: 'stash'},
         {name: 'status'}
       ];
-    } else {
-      this.commands = [
-        {name: 'add'},
-        {name: 'branch'},
-        {name: 'checkout'},
-        {name: 'clone'},
-        {name: 'commit'},
-        {name: 'init'},
-        {name: 'log'},
-        {name: 'merge'},
-        {name: 'pull'},
-        {name: 'push'},
-        {name: 'stash'},
-        {name: 'status'}
-      ];
-    }
-  
+ 
     this.chosenCommand = '';
     
   }

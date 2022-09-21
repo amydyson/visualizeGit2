@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
 
 @Component({
-  selector: 'visualize-fetch',
-  templateUrl: './fetch.component.html',
-  styleUrls: ['../app.component.css']
+  selector: 'visualize-git-fetch',
+  templateUrl: './git-fetch.component.html',
+  styleUrls: ['../app.component.css', './git-fetch.component.css']
 })
-export class FetchComponent implements OnInit {
+export class GitFetchComponent implements OnInit {
+
   public hideMessage: boolean;
 
   constructor(private sharedService: SharedService) { }

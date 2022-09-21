@@ -544,11 +544,6 @@ ul.custom {
 }
 
 
-.move-right-fetch {
-    animation: move-right-fetch 1s linear;
-    animation-fill-mode: forwards;
-}
-
 .move-up {
     animation: move-up 1.3s linear;
     animation-fill-mode: forwards;
@@ -875,14 +870,7 @@ li {
             transform: translateX(22rem);
         }
     } 
-    @keyframes move-right-fetch {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(17.8125rem);
-        }
-    } 
+
 
     @keyframes move-up {
         0% {
@@ -1228,14 +1216,6 @@ li {
             transform: translate(9.375rem, .3125rem)
         }
     }
-    @keyframes move-right-fetch {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(13.75rem);
-        }
-    } 
 }
 
 /* mobile portrait css */
@@ -1518,14 +1498,6 @@ li {
         }
     } 
 
-    @keyframes move-right-fetch {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateY(-8.56rem);
-        }
-    } 
     @keyframes move {
         0% {
             transform: translateY(0)

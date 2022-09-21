@@ -1,7 +1,7 @@
 <section class="visGitApp flex direction-column align-center"> 
   <div class="flex align-center justify-center pl-8 pv-change">
     <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
-    <div class="font-size-change bold pl-16">*Visualize Git*</div>
+    <div class="font-size-change bold pl-16">**Visualize Git**</div>
   </div>
   <mat-form-field class="w-250 pt-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
@@ -10,14 +10,13 @@
       >{{command.name}}</mat-option>
     </mat-select>
   </mat-form-field>
-  <button *ngIf="chosenCommand !== '' && reset" (click)="reset()" mat-raised-button color="warn"><span>See {{chosenCommand}} Again</span></button>
   
   <visualize-add  @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
   <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
   <visualize-checkout @fade *ngIf="chosenCommand === 'checkout'" class="flex w-full justify-center change-direction"></visualize-checkout>
   <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
   <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
-  <visualize-fetch @fade *ngIf="chosenCommand === 'fetch'" class="flex w-full justify-center change-direction"></visualize-fetch>
+  <visualize-git-fetch @fade *ngIf="chosenCommand === 'fetch'" class="flex w-full justify-center change-direction"></visualize-git-fetch>
   <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>
   <visualize-log @fade *ngIf="chosenCommand === 'log'" class="flex w-full justify-center change-direction"></visualize-log>
   <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
