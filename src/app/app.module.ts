@@ -22,6 +22,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { StashComponent } from './stash/stash.component';
 import { MergeComponent } from './merge/merge.component';
 import { FetchComponent } from './fetch/fetch.component';
+import { GitPullComponent } from './git-pull/git-pull.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FetchComponent } from './fetch/fetch.component';
     CheckoutComponent,
     StashComponent,
     MergeComponent,
-    FetchComponent
+    FetchComponent,
+    GitPullComponent
   ],
   imports: [
     BrowserModule,

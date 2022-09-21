@@ -1,0 +1,103 @@
+.overlay-left {
+    margin-left: -48px;
+}
+
+.h-24 {
+    height: 24px;
+}
+
+.pt-change {
+    padding-top: 64px;
+}
+
+.image-size--pull {
+    width: 9.357rem;
+}
+
+.move-right-git-pull {
+    animation: move-right-git-pull 1s linear;
+    animation-fill-mode: forwards;
+}
+.fade-out-arrow-2 {
+    animation: fade-out-arrow-2 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-arrow-2 {
+    animation: fade-in-arrow-2 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move-right-git-pull {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(17.5rem);
+    }
+} 
+
+@keyframes fade-out-arrow-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+@keyframes fade-in-arrow-2 {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+    50% {
+        opacity: 0;
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        color: black;
+    }
+} 
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+    .pt-change {
+        padding-top: 10px !important;
+    }
+    .image-size--pull {
+        width: 9.357rem;
+    }
+
+    .image-size--pull {
+        width: 3.125rem !important;
+        height: 4.125rem !important;
+    }
+    @keyframes move-right-git-pull {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(11.2rem);
+        }
+    } 
+}
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .pt-change {
+        padding-top: 20px !important;
+    }
+    .image-size--pull {
+        width: 3.125rem !important;
+        height: 5.125rem !important;
+    }
+    @keyframes move-right-git-pull {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(11.2rem);
+        }
+    } 
+}

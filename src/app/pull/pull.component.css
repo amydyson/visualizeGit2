@@ -6,8 +6,27 @@
     padding-top: 4rem;
 }
 
+.pt-adjust {
+    padding-top: 20px;
+}
+
+.pt-24 {
+    padding-top: 24px;
+}
+
+.b-red {
+    border: 1px solid red;
+}
+.b-blue {
+    border: 1px solid blue;
+}
+
 .pull-up-pull {
     margin-top: -6px;
+}
+
+.mt-up {
+    margin-top: -5px;
 }
 
 .pt-4-5 {
@@ -95,8 +114,29 @@
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
 
+    .mt-in-portrait-2-pull {
+        margin-top: -4.7rem;
+    }
+    .mt-in-portrait-pull {
+        margin-top: -4.7rem;
+    }
+
+    .mt-up {
+        margin-top: -21px !important;
+    }
+
+    .pt-adjust {
+        padding-top: 20px;
+    }
+
+    .pt-4-5 {
+        padding-top: .5rem;
+    }
+    .mt-in-portrait-2-pull-none {
+        margin-top: 0;
+    }
     .mt-change-pull-0 {
-        margin-top: -.625rem;
+        margin-top: .15rem;
     }
 
     .mt-change-pull {
@@ -122,7 +162,7 @@
         margin-top: -1.25rem;
     }
     .mt-change-pull-6 {
-        margin-top: -.9rem;
+        margin-top: -6px;
     }
 
     .pt-change-pull-1 {
@@ -134,7 +174,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(15.9rem);
+            transform: translateX(15.7rem);
         }
     } 
 
@@ -154,9 +194,32 @@
 /* mobile portrait css */
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
 
-    .pt-change-pull-2 {
+    .mobile-adjust {
+        padding-top: 0px;
+        margin-top: -3px;
+    }
+
+    .pt-adjust {
+        padding-top: 20px;
+    }
+    .mt-in-portrait-2-pull {
+        margin-top: -5.6rem;
+    }
+    .mt-in-portrait-2-pull-none {
+        margin-top: 0;
+    }
+    .pt-change-pull {
         padding-top: 0;
-        padding-bottom: 4rem;
+        padding-bottom: 0;
+    }
+
+    .mt-up {
+        margin-top: -12px;
+    }
+
+    .pt-4-5 {
+        padding-top: 0px;
+        margin-top: 0px;
     }
 
     .pull-left-pull{
@@ -165,7 +228,7 @@
  
 
     .pt-change-pull-1 {
-        padding-top: .9rem;
+        padding-top: .5rem;
     }
 
     .mt-change-pull {
@@ -200,7 +263,7 @@
             transform: translateY(0);
         }
         100% {
-            transform: translateY(-1rem);
+            transform: translateY(-1.5rem);
         }
     } 
 

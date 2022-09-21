@@ -1,7 +1,7 @@
 <section class="visGitApp flex direction-column align-center"> 
   <div class="flex align-center justify-center pl-8 pv-change">
     <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
-    <div class="font-size-change bold pl-16">Visualize Git</div>
+    <div class="font-size-change bold pl-16">*Visualize Git*</div>
   </div>
   <mat-form-field class="w-250 pt-32" appearance="fill">
     <mat-label float="never">Choose a git command</mat-label>
@@ -21,7 +21,7 @@
   <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>
   <visualize-log @fade *ngIf="chosenCommand === 'log'" class="flex w-full justify-center change-direction"></visualize-log>
   <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
-  <visualize-pull @fade *ngIf="chosenCommand === 'pull'" class="flex w-full align-center justify-center change-direction"></visualize-pull>
+ <visualize-git-pull  *ngIf="chosenCommand === 'pull'"class="flex w-full justify-center change-direction" ></visualize-git-pull>
   <visualize-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-push>
   <visualize-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-reset>
   <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
