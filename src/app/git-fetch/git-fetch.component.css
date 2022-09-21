@@ -6,6 +6,16 @@
     align-items: center;
 }
 
+.z-1 {
+    z-index: 1;
+}
+.z-2 {
+    z-index: 2;
+}
+
+.pr-special {
+    padding-right: 8px;
+}
 .pull-left-fetch {
     margin-left: -72px;
 }
@@ -28,11 +38,11 @@
 }
 
 .pr-16-landscape {
-    padding-right: 0;
+    padding-right: 8px;
 }
 
 .pt-feature {
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .padding-repo {
@@ -41,7 +51,15 @@
 }
 
 .font-switch {
-    font-size: 2;
+    font-size: 14px;
+}
+
+.font-16-12 {
+    font-size: 16px;
+}
+
+.featureInfo {
+    margin-right: 0;
 }
 
 .move-right-fetch {
@@ -53,7 +71,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(16rem);
+        transform: translateX(15rem);
     }
 } 
 
@@ -66,11 +84,22 @@
     .hide-portrait {
         display: flex;
     }
+
+    .pr-special {
+        padding-right: 8px;
+    }
+    .featureInfo {
+        margin-right: 5px;
+    }
+
+    .font-16-12 {
+        font-size: 12px;
+    }
     .pr-16-landscape {
         padding-right: 16px;
     }
     .pt-feature {
-        padding-top: 50px;
+        padding-top: 70px;
     }
     .font-switch {
         font-size: 12px;
@@ -81,7 +110,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(15.2rem);
+            transform: translateX(8.8rem);
         }
     } 
     
@@ -91,15 +120,25 @@
         padding-left: 2px;
         padding-right: 2px;
     }
+    .pr-special {
+        padding-right: 60px;
+    }
+    .featureInfo {
+        margin-right: -5px;
+    }
+
+    .font-16-12 {
+        font-size: 12px;
+    }
     .hide-portrait {
         display: none;
     }
     .pr-16-landscape {
-        padding-right: 50px;
+        padding-right: 55px;
     }
     
     .pt-feature {
-        padding-top: 70px;
+        padding-top: 50px;
     }
     .font-switch {
         font-size: 12px;
@@ -109,7 +148,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(9.2rem);
+            transform: translateX(4.5rem);
         }
     } 
 }

@@ -18,41 +18,41 @@
   <div class="flex justify-center pt-32">
     <section class="flex direction-column padding-repo">
       <div class="flex">
-        <div class="flex direction-column font-switch">
+        <div class="flex direction-column font-switch featureInfo">
           <div class="pt-feature flex pr-8"><span class="hide-portrait pr-2">feature </span><span>A</span></div>
           <div class="flex white pr-8"><span class="hide-portrait pr-2">feature </span><span>B</span></div>
         </div>
         <div class="flex direction-column align-center">
-        <div class="pb-16">Local Repo User 1</div>
+          <div class="pb-16 font-16-12 flex direction-column align-center"><div>Local <span class="hide-portrait">Repo</span>  </div><div>User 1</div></div>
           <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
         </div>
       </div>
     </section>
     <section class="flex direction-column padding-repo" >
       <div class="flex">
-        <div class="flex direction-column font-switch" [ngClass]="{'pr-16-landscape': !hideMessage}">
+        <div class="flex direction-column font-switch featureInfo z-2 pr-special" [ngClass]="{'pr-16-landscape': !hideMessage}">
           <div class="pt-feature flex pr-8"><div class="hide-portrait pr-2">feature </div><div>A</div></div>
           <div class="flex pr-8"><div class="hide-portrait pr-2">feature </div><div>B</div></div>
         </div>
-        <div class="flex direction-column font-switch pull-left-fetch" [ngClass]="{'hide': hideMessage, 'show move-right-fetch': !hideMessage}">
+        <div class="flex direction-column font-switch pull-left-fetch z-1" [ngClass]="{'white': hideMessage, 'show move-right-fetch': !hideMessage}">
           <div class="pt-feature flex pr-8"><span class="hide-portrait pr-2">feature </span><span>A</span></div>
           <div class="flex pr-8"><span class="hide-portrait pr-2">feature </span><span>B</span></div>
         </div>
         <div class="flex direction-column align-center">
-        <div class="pb-16">Remote Shared Repo</div>
+          <div class="pb-16 font-16-12 flex direction-column align-center"><div>Remote</div><div>Shared <div class="white hide-portrait">Repo</div> </div></div>
           <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
         </div>
       </div>
     </section>
     <section class="flex direction-column padding-repo">
       <div class="flex">
-        <div class="flex direction-column font-switch">
+        <div class="flex direction-column font-switch featureInfo">
           <div class="pt-feature flex white pr-8"><span class="hide-portrait pr-2">feature </span><span>A</span></div>
           <div class="pr-8 flex" [ngClass]="{'white': !hideMessage}">
             <span class="hide-portrait pr-2">feature </span><span>B</span></div>
         </div>
         <div class="flex direction-column align-center">
-        <div class="pb-16">Local Repo User 2</div>
+        <div class="pb-16 font-16-12 flex direction-column align-center"><div>Local <span class="hide-portrait">Repo</span>  </div><div>User 2</div></div>
           <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
         </div>
       </div>
