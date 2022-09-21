@@ -1,0 +1,56 @@
+<div class="flex direction-column align-center">
+  <div class="flex direction-column align-center justify-center">
+    <div class="blue h-38 pb-16">
+      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
+      <div class="flex direction-column pl-32 pr-32 max-w-600 h-change-28-48 font-14-12" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+        The remote main branch now points to the latest commit from the local main branch.
+        It's advisable to do a pull before a push to a shared repo.
+        When combining code with a push or a pull, merge conflicts may need to be resolved.
+      </div>
+    </div>
+    <div class="flex align-center pt-32-in-portrait">
+      <button [disabled]="!hideMessage" (click)="visualizePull()" class="w-250" mat-raised-button color="warn">Visualize "git pull origin main"</button>
+      <div class="pr-8"></div>
+    </div>
+  </div>
+  <div class="flex pt-32 align-center"> 
+    <section class="flex direction-column align-center text-center"> 
+      <div class="pb-8">
+        <div>Remote Repo</div>
+        <div>main branch</div>
+      </div>
+      <div class="flex pr-48">
+        <div class="flex direction-column pt-change">
+          <div class="flex">
+            <div class="pr-8 white h-24">86b5f</div>
+          </div>
+          <div class="flex pr-2">
+            <div class="pr-8 h-24">e34b2</div>
+          </div>
+        </div>
+        <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+      </div>
+    </section>
+    <section class="flex direction-column align-center text-center"> 
+      <div class="pb-8">
+        <div>Local Repo</div>
+        <div>main branch</div>
+      </div>
+      <div class="flex pr-48">
+        <div class="flex direction-column pt-change">
+          <div class="flex align-center h-24">
+            <div class="">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            </div> 
+            <div class="pr-8 h-24">86b5f</div>  
+            <div class= "pr-8 overlay-left" [ngClass]="{'hide': hideMessage, 'show move-left-git-push': !hideMessage}">86b5f</div>
+          </div>
+          <div class="flex justify-end h-24" >  
+            <div class="pr-8 h-24">e34b2</div>
+          </div>
+        </div>
+        <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+      </div>
+    </section>
+  </div>
+</div>

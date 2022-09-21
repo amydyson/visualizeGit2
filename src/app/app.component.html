@@ -22,7 +22,7 @@
   <visualize-log @fade *ngIf="chosenCommand === 'log'" class="flex w-full justify-center change-direction"></visualize-log>
   <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
  <visualize-git-pull  *ngIf="chosenCommand === 'pull'"class="flex w-full justify-center change-direction" ></visualize-git-pull>
-  <visualize-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-push>
+  <visualize-git-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-git-push>
   <visualize-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-reset>
   <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
   <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>

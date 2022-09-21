@@ -23,6 +23,7 @@ import { StashComponent } from './stash/stash.component';
 import { MergeComponent } from './merge/merge.component';
 import { FetchComponent } from './fetch/fetch.component';
 import { GitPullComponent } from './git-pull/git-pull.component';
+import { GitPushComponent } from './git-push/git-push.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { GitPullComponent } from './git-pull/git-pull.component';
     StashComponent,
     MergeComponent,
     FetchComponent,
-    GitPullComponent
+    GitPullComponent,
+    GitPushComponent
   ],
   imports: [
     BrowserModule,
