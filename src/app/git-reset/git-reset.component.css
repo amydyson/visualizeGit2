@@ -43,6 +43,9 @@
     animation: fade-to-gray 2s linear;
     animation-fill-mode: forwards;
 }
+.stay-gold{
+    background-color: gold;
+}
 
 .fade-in-index {
     animation: fade-in-arrow-2 5s linear;

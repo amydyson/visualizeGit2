@@ -38,7 +38,13 @@
       <div class="flex direction-column text-align">
         <div class="w-full min-w-150--reset background-black white">Working Area</div>
         <div class="flex align-center justify-center pt-8 mt-4 pb-32">
-          <div class="dot gold"></div>
+          <div class="dot " 
+              [ngClass]="{'gold': initArrow || (!initArrow && overWriteType !== 'hard'),
+                          'fade-to-green': !initArrow && copyHead() && overwriteType() === 'hard',
+                          'fade-to-red': !initArrow && copyHead1() && overwriteType() === 'hard',
+                          'fade-to-purple': !initArrow && copyHead2() && overwriteType() === 'hard',
+                          'fade-to-gray': !initArrow && copyHead3() && overwriteType() === 'hard'}">
+          </div>
         </div>
       </div>
     </section>
@@ -47,11 +53,11 @@
         <div class="w-full min-w-150--reset background-black white">Index</div>
         <div class="flex align-center justify-center pt-8 mt-4">
           <div class="dot " 
-              [ngClass]="{'gold': initArrow,
-                          'fade-to-green': !initArrow && copyHead(),
-                          'fade-to-red': !initArrow && copyHead1(),
-                          'fade-to-purple': !initArrow && copyHead2(),
-                          'fade-to-gray': !initArrow && copyHead3()}">
+              [ngClass]="{'gold': initArrow || softOverwrite(),
+                          'fade-to-green': !initArrow && copyHead() && overwriteType() !== 'soft',
+                          'fade-to-red': !initArrow && copyHead1() && overwriteType()  !== 'soft',
+                          'fade-to-purple': !initArrow && copyHead2() && overwriteType()  !== 'soft',
+                          'fade-to-gray': !initArrow && copyHead3() && overwriteType()  !== 'soft'}">
           </div>
         </div>
       </div>

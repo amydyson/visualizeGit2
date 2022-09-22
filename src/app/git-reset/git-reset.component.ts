@@ -137,6 +137,14 @@ export class GitResetComponent implements OnInit {
     }
   }
 
+  softOverwrite(){
+    if (!this.hideMessage && this.overwriteType()=== 'soft'){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   visualizeReset(){
     this.initArrow = false;
     switch(this.chosenCommit) {
