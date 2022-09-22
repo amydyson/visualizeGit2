@@ -26,6 +26,10 @@
     width: 24px;
 }
 
+.h-28 {
+    height: 28px;;
+}
+
 .fade-to-green {
     animation: fade-to-green 2s linear;
     animation-fill-mode: forwards;

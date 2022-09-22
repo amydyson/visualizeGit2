@@ -12,7 +12,6 @@ import { AddComponent } from './add/add.component';
 import { CommitComponent } from './commit/commit.component';
 import { InitComponent } from './init/init.component';
 import { CloneComponent } from './clone/clone.component';
-import { ResetComponent } from './reset/reset.component';
 import { LogComponent } from './log/log.component';
 import { BranchComponent } from './branch/branch.component';
 import { StatusComponent } from './status/status.component';
@@ -31,7 +30,6 @@ import { GitResetComponent } from './git-reset/git-reset.component';
     CommitComponent,
     InitComponent,
     CloneComponent,
-    ResetComponent,
     LogComponent,
     BranchComponent,
     StatusComponent,
