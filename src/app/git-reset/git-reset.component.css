@@ -1,0 +1,66 @@
+.h-full {
+    height: 100%;
+}
+
+.border-beige{
+    border: 2px solid #beaf98;
+}
+
+.br-beige{
+    border-right: 2px solid #beaf98;
+}
+
+.pb-8-portrait {
+    padding-bottom: 0; 
+}
+
+.w-24 {
+    width: 24px;
+}
+
+.fade-out-arrow-2 {
+    animation: fade-out-arrow-2 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-arrow-2 {
+    animation: fade-in-arrow-2 3s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-out-arrow-2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+} 
+
+@keyframes fade-in-arrow-2 {
+    0% {
+        opacity: 0;
+        color: white;
+    }
+    50% {
+        opacity: 0;
+        color: white;
+    }
+
+    100% {
+        opacity: 1;
+        color: black;
+    }
+} 
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
+    .pb-8-portrait {
+        padding-bottom: 0;
+    }
+}
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .pb-8-portrait {
+        padding-bottom: 8px;;
+    }
+}
+

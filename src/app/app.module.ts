@@ -22,6 +22,7 @@ import { MergeComponent } from './merge/merge.component';
 import { GitPullComponent } from './git-pull/git-pull.component';
 import { GitPushComponent } from './git-push/git-push.component';
 import { GitFetchComponent } from './git-fetch/git-fetch.component';
+import { GitResetComponent } from './git-reset/git-reset.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { GitFetchComponent } from './git-fetch/git-fetch.component';
     MergeComponent,
     GitPullComponent,
     GitPushComponent,
-    GitFetchComponent
+    GitFetchComponent,
+    GitResetComponent
   ],
   imports: [
     BrowserModule,
