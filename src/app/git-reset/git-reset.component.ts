@@ -10,6 +10,7 @@ export class GitResetComponent implements OnInit {
 
   public hideMessage: boolean;
   public completed: boolean;
+  initArrow: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -32,6 +33,7 @@ export class GitResetComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.initArrow = true;
     this.hideMessage = true;
     this.chosenCommand = '';
     this.chosenCommit = '';
@@ -49,8 +51,10 @@ export class GitResetComponent implements OnInit {
         this.headPointer() === 'head' && 
         (this.overwriteType() === 'mixed' ||
         this.overwriteType() === 'hard' )){
+          console.log('true');
       return true;
     } else {
+      console.log('false');
       return false;
     }
   }
@@ -134,6 +138,7 @@ export class GitResetComponent implements OnInit {
   }
 
   visualizeReset(){
+    this.initArrow = false;
     switch(this.chosenCommit) {
       case ('HEAD' || 'no parameter'):
         break;
@@ -159,7 +164,7 @@ export class GitResetComponent implements OnInit {
     }
     setTimeout(() => {
       this.sharedService.showSnackbar();
-    }, 3000)
+    }, 5000)
     this.hideMessage = false;
     this.completed = true;
   }

@@ -1,7 +1,7 @@
 <section class= "flex direction-column align-center">
   <div class="h-48">
    <span class="blue font-change-14-16 pl-16 pr-16 text-center" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">git reset optionally moves the HEAD in the Repository and optionally overwrites the Index and Working Area</span>
-  <div class="flex direction-column">
+  <div class="flex direction-column blue">
     <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head1' }">Points to commit one place before HEAD</span>
     <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head' }">Points to HEAD (default)</span>
     <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head2' }">Points to commit two places before HEAD</span>
@@ -46,7 +46,13 @@
       <div class="flex direction-column text-align">
         <div class="w-full min-w-150--reset background-black white">Index</div>
         <div class="flex align-center justify-center pt-8 mt-4">
-          <div class="dot gold"></div>
+          <div class="dot " 
+              [ngClass]="{'gold': initArrow,
+                          'fade-to-green': !initArrow && copyHead(),
+                          'fade-to-red': !initArrow && copyHead1(),
+                          'fade-to-purple': !initArrow && copyHead2(),
+                          'fade-to-gray': !initArrow && copyHead3()}">
+          </div>
         </div>
       </div>
     </section>
@@ -56,28 +62,29 @@
         <div class="flex align-center justify-center pt-8 mt-4 ">
           <div class="pr-8" >
             <div class="w-24"></div>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            <img *ngIf="initArrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            <img [ngClass]="{'hide': (initArrow || headPointer() !== 'head'),'fade-in-arrow-2': (!initArrow && headPointer() === 'head')}"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
           </div> 
           <div class="head dot seaGreen"></div>
         </div>
         <div class="flex align-center justify-center pt-8 mt-4 ">
           <div class="pr-8">
             <div class="w-24"></div>
-            <img *ngIf="!hideMessage"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            <img [ngClass]="{'hide': (initArrow || headPointer() !== 'head1'),'fade-in-arrow-2': (!initArrow && headPointer() === 'head1')}"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
           </div> 
           <div class="head1 dot indianRed"></div>
         </div>
         <div class="flex align-center justify-center pt-8 mt-4 ">
           <div class="pr-8">
             <div class="w-24"></div>
-            <img *ngIf="!hideMessage"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            <img [ngClass]="{'hide': (initArrow || headPointer() !== 'head2'),'fade-in-arrow-2': (!initArrow && headPointer() === 'head2')}"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
           </div> 
           <div class="head2 dot mediumPurple"></div>
         </div>
-        <div class="flex align-center justify-center pt-8 pb-8-portrait mt-4 ">
+        <div class="flex align-center justify-center pt-8 pb-8 mt-4 ">
           <div class="pr-8">
             <div class="w-24"></div>
-            <img *ngIf="!hideMessage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            <img [ngClass]="{'hide': (initArrow || headPointer() !== 'head3'),'fade-in-arrow-2': (!initArrow && headPointer() === 'head3')}"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
           </div> 
           <div class="head3 dot background-gray"></div>
         </div>

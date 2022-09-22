@@ -1,6 +1,14 @@
 .h-full {
     height: 100%;
 }
+.gold {
+    background-color: gold;
+}
+
+.h-48 {
+    height: 48px;
+    min-height: 48px;
+}
 
 .border-beige{
     border: 2px solid #beaf98;
@@ -18,15 +26,90 @@
     width: 24px;
 }
 
+.fade-to-green {
+    animation: fade-to-green 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-to-red {
+    animation: fade-to-red 2s linear;
+    animation-fill-mode: forwards;
+}
+.fade-to-purple {
+    animation: fade-to-purple 2s linear;
+    animation-fill-mode: forwards;
+}
+.fade-to-gray {
+    animation: fade-to-gray 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-in-index {
+    animation: fade-in-arrow-2 5s linear;
+    animation-fill-mode: forwards;
+}
+.fade-out-index {
+    animation: fade-out-arrow-2 4s linear;
+    animation-fill-mode: forwards;
+}
+
 .fade-out-arrow-2 {
     animation: fade-out-arrow-2 2s linear;
     animation-fill-mode: forwards;
 }
 
 .fade-in-arrow-2 {
-    animation: fade-in-arrow-2 3s linear;
+    animation: fade-in-arrow-2 1s linear;
     animation-fill-mode: forwards;
 }
+
+@keyframes fade-to-green{
+    0% {
+        background-color: gold;
+    }
+    60% {
+        background-color: gold;
+    }
+    100% {
+        background-color: darkseagreen;
+    }
+} 
+
+@keyframes fade-to-red{
+    0% {
+        background-color: gold;
+    }
+    60% {
+        background-color: gold;
+    }
+    100% {
+        background-color: indianred;
+    }
+} 
+
+@keyframes fade-to-purple{
+    0% {
+        background-color: gold;
+    }
+    60% {
+        background-color: gold;
+    }
+    100% {
+        background-color: mediumpurple;
+    }
+} 
+
+@keyframes fade-to-gray{
+    0% {
+        background-color: gold;
+    }
+    60% {
+        background-color: gold;
+    }
+    100% {
+        background-color: #BEBEBE;
+    }
+} 
 
 @keyframes fade-out-arrow-2 {
     0% {
