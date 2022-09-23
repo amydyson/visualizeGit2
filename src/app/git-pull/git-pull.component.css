@@ -8,6 +8,7 @@
 
 .pt-change {
     padding-top: 64px;
+    align-items: flex-end;
 }
 
 .image-size--pull {
@@ -33,7 +34,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(17.5rem);
+        transform: translate(17.1rem, -.125rem);
     }
 } 
 
@@ -79,7 +80,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(11.2rem);
+            transform: translate(11rem, -.125rem);
         }
     } 
 }
@@ -97,7 +98,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(11.2rem);
+            transform: translate(11rem, -.125rem);
         }
     } 
 }
