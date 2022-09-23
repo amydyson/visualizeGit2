@@ -5,6 +5,11 @@
     background-color: gold;
 }
 
+.h-36 {
+    height: 36px;
+    min-height: 36px;
+}
+
 .h-48 {
     height: 48px;
     min-height: 48px;

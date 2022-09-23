@@ -85,6 +85,11 @@
         display: flex;
     }
 
+    .fetch-section--middle {
+        width: 100px;
+    }
+
+    
     .pr-special {
         padding-right: 8px;
     }
@@ -110,12 +115,21 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(8.8rem);
+            transform: translateX(8.3rem);
         }
     } 
     
 }
 @media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+
+    .fetch-section {
+        width: 90px;
+    }
+
+    .portrait-A-top {
+        padding-right: 2px;
+    }
+
     .padding-repo {
         padding-left: 2px;
         padding-right: 2px;
@@ -134,7 +148,7 @@
         display: none;
     }
     .pr-16-landscape {
-        padding-right: 55px;
+        padding-right: 60px;
     }
     
     .pt-feature {
@@ -148,7 +162,7 @@
             transform: translateX(0);
         }
         100% {
-            transform: translateX(4.5rem);
+            transform: translateX(5.9rem);
         }
     } 
 }
