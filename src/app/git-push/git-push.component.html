@@ -22,10 +22,16 @@
       <div class="flex pr-48">
         <div class="flex direction-column pt-change">
           <div class="flex">
-            <div class="pr-8 white h-24">86b5f</div>
+            <div class="pr-4" [ngClass]="{'hide': hideMessage, 'fade-in-arrow-2': !hideMessage}">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            </div> 
+            <div class="pr-8 white h-28">86b5f</div>
           </div>
           <div class="flex pr-2">
-            <div class="pr-8 h-24">e34b2</div>
+            <div class="pr-4" [ngClass]="{'fade-out-arrow-2': !hideMessage}">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
+            </div>   
+            <div class="pr-8 h-28">e34b2</div>
           </div>
         </div>
         <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
@@ -38,15 +44,15 @@
       </div>
       <div class="flex pr-48">
         <div class="flex direction-column pt-change">
-          <div class="flex align-center h-24">
+          <div class="flex align-center h-28">
             <div class="">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
             </div> 
-            <div class="pr-8 h-24">86b5f</div>  
+            <div class="pr-8 h-28">86b5f</div>  
             <div class= "pr-8 overlay-left" [ngClass]="{'hide': hideMessage, 'show move-left-git-push': !hideMessage}">86b5f</div>
           </div>
-          <div class="flex justify-end h-24" >  
-            <div class="pr-8 h-24">e34b2</div>
+          <div class="flex justify-end h-28" >  
+            <div class="pr-8 h-28">e34b2</div>
           </div>
         </div>
         <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
