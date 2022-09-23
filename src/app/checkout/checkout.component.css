@@ -43,7 +43,7 @@
 }
 
 .fade-out-arrow-2 {
-    animation: fade-out-arrow-2 1.5s linear;
+    animation: fade-out-arrow-2 1s linear;
     animation-fill-mode: forwards;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .fade-in-arrow-2 {
-    animation: fade-in-arrow-2 3s linear;
+    animation: fade-in-arrow-2 1.5s linear;
     animation-fill-mode: forwards;
 }
 .fade-in-version{

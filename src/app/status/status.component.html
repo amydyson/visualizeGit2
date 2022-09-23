@@ -1,5 +1,6 @@
 <div class="flex direction-column w-full align-center">
   <div class="blue pt-8 h-change-28-48" >
+    <div class="blue w-550 text-center" *ngIf="hideMessage">Git status displays the state of the working directory and the staging area.</div>
     <div class="blue w-450 text-center" *ngIf="!hideMessage" [@myTrigger]="fadeIn"><span class="red bold pr-8">Red: <span class="black regular">in Working Area.</span> </span><span class="green bold">Green:<span class="black regular">  in Index.</span></span></div>
   </div>
   <div class="flex pt-8">
