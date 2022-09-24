@@ -1,6 +1,6 @@
 <section class= "flex direction-column align-center">
   <div class="h-48">
-   <span class="blue font-change-14-16 pl-16 pr-16 text-center" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">git reset optionally moves the HEAD in the Repository and optionally overwrites the Index and Working Area</span>
+   <span class="blue font-16-14 pl-16 pr-16 text-center" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">git reset optionally moves the HEAD in the Repository and optionally overwrites the Index and Working Area</span>
   <div class="flex direction-column blue">
     <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head1' }">Points to commit one place before HEAD</span>
     <span [ngClass]="{'hide': hideMessage || headPointer() !== 'head' }">Points to HEAD (default)</span>

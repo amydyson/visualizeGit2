@@ -9,7 +9,7 @@
     font-weight: bold;
 }
 
-.font-16-12 {
+.font-16-14 {
     font-size: 16px;
 }
 
@@ -18,8 +18,8 @@
 }
 
 @media only screen and (max-device-width: 59.9375rem) and (orientation : landscape)  {
-    .font-16-12 {
-        font-size: 12px;
+    .font-16-14 {
+        font-size: 14px;
     }
 }
 
@@ -27,7 +27,7 @@
     .pl-change-status {
         padding-left: 0rem !important;
     }
-    .font-16-12 {
-        font-size: 12px;
+    .font-16-14 {
+        font-size: 14px;
     }
 }

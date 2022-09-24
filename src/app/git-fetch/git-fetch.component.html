@@ -2,11 +2,11 @@
   <div class="flex direction-column align-center" >
     <div class="blue w-message">
         <div class="flex direction-column text-center" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">
-          <div> Example: User 2 executes "get fetch"</div>
+          <div class="font-16-14"> Example: User 2 executes "get fetch"</div>
           <div class="white">All remote branches are fetched to the local repo and are now available for checkout. </div>
         </div>
         <div class="flex text-center" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn': !hideMessage}">
-          <div>All remote branches are fetched to the local repo and are now available for checkout. </div>
+          <div class="pl-16 pr-16 font-16-14">All remote branches are fetched to the local repo and are now available for checkout. </div>
         </div>
     </div>
     <div class="flex">

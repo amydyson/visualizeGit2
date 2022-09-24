@@ -24,6 +24,10 @@ ul.custom {
     font-size: 1rem;
 }
 
+.font-16-14 {
+    font-size: 16px;
+}
+
 .w-40--reset {
     width: 15.625rem;
 }
@@ -982,6 +986,10 @@ li {
         padding-left: 1.375rem;
     }
 
+    .font-16-14 {
+        font-size: 14px;
+    }
+
     .pl-change-status {
         padding-left: 6rem;
     }
@@ -1225,6 +1233,10 @@ li {
     }
     .image-size {
         width: 6.2rem;
+    }
+
+    .font-16-14 {
+        font-size: 14px;
     }
     .font-size-change {
         font-size: 1.375rem;
