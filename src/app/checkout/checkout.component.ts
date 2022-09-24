@@ -47,7 +47,7 @@ export class CheckoutComponent implements OnInit {
     }, 1000);
     setTimeout(() => {
       this.enableReload = true;
-    }, 2500);
+    }, 2000);
   }
 
   visualizeCheckoutNew(){
@@ -59,7 +59,7 @@ export class CheckoutComponent implements OnInit {
     }, 2000);
     setTimeout(() => {
       this.enableReload = true;
-    }, 2500);
+    }, 2000);
   }
 
 }

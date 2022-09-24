@@ -21,7 +21,7 @@ export class InitComponent implements OnInit {
     this.hideMessage = false;
     setTimeout(() => {
       this.enableReload = true;
-    }, 2200);
+    }, 1800);
   }
 
 }

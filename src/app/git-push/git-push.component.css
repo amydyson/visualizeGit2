@@ -6,6 +6,10 @@
     height: 24px;
 }
 
+.max-w-700 {
+    max-width: 700px;
+}
+
 .pt-change {
     padding-top: 64px;
     align-items: flex-end;
@@ -71,6 +75,7 @@
         width: 9.357rem;
     }
 
+
     .image-size--pull {
         width: 3.125rem !important;
         height: 4.125rem !important;
@@ -93,6 +98,8 @@
         width: 3.125rem !important;
         height: 5.125rem !important;
     }
+
+
     @keyframes move-right-git-pull {
         0% {
             transform: translateX(0);

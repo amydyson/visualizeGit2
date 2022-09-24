@@ -44,7 +44,7 @@
                           'fade-to-green': !initArrow && copyHead() && overwriteType() === 'hard',
                           'fade-to-red': !initArrow && copyHead1() && overwriteType() === 'hard',
                           'fade-to-purple': !initArrow && copyHead2() && overwriteType() === 'hard',
-                          'fade-to-orange': !initArrow && copyHead3() && overwriteType() === 'hard'}">
+                          'fade-to-gray': !initArrow && copyHead3() && overwriteType() === 'hard'}">
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
                           'fade-to-green': !initArrow && copyHead() && overwriteType() !== 'soft',
                           'fade-to-red': !initArrow && copyHead1() && overwriteType()  !== 'soft',
                           'fade-to-purple': !initArrow && copyHead2() && overwriteType()  !== 'soft',
-                          'fade-to-orange': !initArrow && copyHead3() && overwriteType()  !== 'soft'}">
+                          'fade-to-gray': !initArrow && copyHead3() && overwriteType()  !== 'soft'}">
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
             <div class="w-24"></div>
             <img [ngClass]="{'hide': (initArrow || headPointer() !== 'head3'),'fade-in-arrow-2': (!initArrow && headPointer() === 'head3')}"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
           </div> 
-          <div class="head3 dot background-orange"></div>
+          <div class="head3 dot background-gray"></div>
         </div>
       </div>
     </section>

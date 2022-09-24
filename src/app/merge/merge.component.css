@@ -51,6 +51,27 @@
     animation-fill-mode: forwards;
 }
 
+.max-width-550{
+    max-width: 550px;
+}
+.w-550{
+    width: 550px;
+}
+
+@media only screen and (max-device-width: 59.9375rem) and (orientation : portrait) {
+    .max-width-550{
+        max-width: 300px;
+    }
+    .w-550{
+        width: 300px;
+    }
+
+    .bold {
+        font-weight: 300;
+    }
+    
+}
+
 @keyframes move-right-merge {
     0% {
         transform: translateX(0);

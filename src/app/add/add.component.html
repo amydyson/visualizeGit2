@@ -1,6 +1,6 @@
 <section class= "flex direction-column align-center">
   <div class="blue h-48">
-   <div class="green bold" [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">A snapshot of index.js is staged in the Index</div>
+   <div class="green" [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">A snapshot of index.js is staged in the Index</div>
   </div>
   <div class="flex">
     <button [disabled]="!hideMessage" (click)="visualizeAdd()" class="w-250" mat-raised-button color="warn">Visualize "git add index.js"</button>

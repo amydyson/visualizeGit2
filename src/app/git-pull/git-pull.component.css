@@ -6,6 +6,10 @@
     height: 24px;
 }
 
+.max-w-700 {
+    /* width: 700px; */
+    max-width: 700px;
+}
 .pt-change {
     padding-top: 64px;
     align-items: flex-end;
