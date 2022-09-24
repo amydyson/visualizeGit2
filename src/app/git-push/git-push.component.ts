@@ -17,11 +17,12 @@ export class GitPushComponent implements OnInit {
     this.enableReload = false;
   }
 
-  visualizePull(){
+  visualizePush(){
     this.hideMessage = false;
     setTimeout(() => {
       this.enableReload = true;
-    }, 2800);
+    }, 2700);
   }
 
 }
+
