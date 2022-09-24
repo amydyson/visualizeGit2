@@ -1,8 +1,8 @@
 <div class="flex direction-column w-full align-center">
-  <div class="blue h-change-28-48 align-center">
-    <div *ngIf="hideMessage2 && hideMessage3">Example: The HEAD points to the branch "main"</div>
-    <div *ngIf="!hideMessage2 && !hideMessage">The HEAD points to the branch "bug/25282"</div>
-    <div class="pl-32 pr-32 text-center" *ngIf="!hideMessage3 && !hideMessage">A new branch is created (a copy of
+  <div class="h-change-28-48 align-center">
+    <div class="blue" *ngIf="hideMessage2 && hideMessage3">Example: The HEAD points to the branch "main"</div>
+    <div class="green" *ngIf="!hideMessage2 && !hideMessage">The HEAD points to the branch "bug/25282"</div>
+    <div class="green pl-32 pr-32 text-center" *ngIf="!hideMessage3 && !hideMessage">A new branch is created (a copy of
       "main") and the HEAD points to it.</div>
   </div>
   <div class="flex pt-16">
@@ -13,6 +13,8 @@
         <mat-option *ngFor="let command of commands" [value]="command.name">{{command.name}}</mat-option>
       </mat-select>
     </mat-form-field>
+    <div class="pr-16"></div>
+    <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
   </div>
   <section class="flex flex-direction-change align-center">
     <button *ngIf="chosenCommand === 'checkout an existing branch'" [disabled]="!hideMessage"

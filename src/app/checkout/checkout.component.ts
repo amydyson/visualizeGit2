@@ -15,6 +15,7 @@ export class CheckoutComponent implements OnInit {
   public hideMessage3: boolean;
   public disableOption: boolean;
   public chosenCommand: string;
+  public enableReload: boolean;
   public commands = [
     {name: 'checkout an existing branch'},
     {name: 'create and checkout a new branch'},
@@ -27,6 +28,7 @@ export class CheckoutComponent implements OnInit {
     this.hideMessage2 = true;
     this.hideMessage3 = true;
     this.disableOption = false;
+    this.enableReload = false;
   }
 
   selectCommand(command){
@@ -44,8 +46,8 @@ export class CheckoutComponent implements OnInit {
       this.hideMessage = false;
     }, 1000);
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 3300);
+      this.enableReload = true;
+    }, 2500);
   }
 
   visualizeCheckoutNew(){
@@ -56,8 +58,8 @@ export class CheckoutComponent implements OnInit {
       this.hideMessage = false;
     }, 2000);
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 3500);
+      this.enableReload = true;
+    }, 2500);
   }
 
 }

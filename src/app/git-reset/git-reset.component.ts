@@ -10,7 +10,8 @@ export class GitResetComponent implements OnInit {
 
   public hideMessage: boolean;
   public completed: boolean;
-  initArrow: boolean;
+  public initArrow: boolean;
+  public enableReload: boolean;
   
   public commands = [
     {name: 'hard'},
@@ -33,6 +34,7 @@ export class GitResetComponent implements OnInit {
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.enableReload = false;
     this.initArrow = true;
     this.hideMessage = true;
     this.chosenCommand = '';
@@ -171,8 +173,8 @@ export class GitResetComponent implements OnInit {
       default:
     }
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 5000)
+      this.enableReload = true;
+    }, 3200)
     this.hideMessage = false;
     this.completed = true;
   }

@@ -11,12 +11,14 @@ import { SharedService } from '../shared.service';
 export class StatusComponent implements OnInit {
   public hideMessage: boolean;
   public messages: Array<string>;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
     this.messages = [];
+    this.enableReload = false;
   }
 
   push(message){
@@ -40,7 +42,7 @@ export class StatusComponent implements OnInit {
       this.hideMessage = false;
     }, 2000);
     setTimeout(() => {
-      this.sharedService.showSnackbar();
+      this.enableReload = true;
     }, 3500)
   }
 

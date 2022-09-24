@@ -10,18 +10,20 @@ import { SharedService } from '../shared.service';
 })
 export class LogComponent implements OnInit {
   public hideMessage: boolean;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.enableReload = false;
   }
 
   visualizeLog(){
     this.hideMessage = false;
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 3500);
+      this.enableReload = true;
+    }, 3300);
   }
 
 }

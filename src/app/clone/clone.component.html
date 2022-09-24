@@ -5,6 +5,8 @@
     </div>
     <div class="flex flex-direction-change align-center">
       <button [disabled]="!hideMessage" (click)="visualizeClone()" class="w-250" mat-raised-button color="warn">Visualize "git clone url"</button>
+      <div class="pr-16"></div>
+      <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
       <div class="pr-8 pb-8"></div>
     </div>
   </div>

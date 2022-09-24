@@ -1,14 +1,16 @@
 <div class="flex direction-column align-center">
   <div class="flex direction-column align-center justify-center">
-    <div class="blue h-38 pb-16 font-16-14">
-      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
-      <div class="flex direction-column pl-32 pr-32 max-w-600 h-change-28-48 font-14-12 " [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+    <div class="h-38 pb-16 font-16-14">
+      <div class=blue [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
+      <div class="green flex direction-column pl-32 pr-32 max-w-600 h-change-28-48 font-14-12 " [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
         The local main branch now points to the latest commit from the repo main branch. 
         git pull = git fetch + git merge. (A merge conflict may need to be resolved.) 
       </div>
     </div>
     <div class="flex align-center pt-32-in-portrait">
       <button [disabled]="!hideMessage" (click)="visualizePull()" class="w-250" mat-raised-button color="warn">Visualize "git pull origin main"</button>
+      <div class="pr-16"></div>
+      <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
       <div class="pr-8"></div>
     </div>
   </div>

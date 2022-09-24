@@ -1,14 +1,16 @@
 <div class="flex direction-column w-full align-center">
   <div class="flex direction-column align-center justify-center">
-    <div class="blue h-change-28-48 pb-change-16-32">
-      <div [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
-      <div class="flex direction-column pl-32 pr-32 max-w-450" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
+    <div class=" h-change-28-48 pb-change-16-32">
+      <div class="blue" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
+      <div class="green flex direction-column pl-32 pr-32 max-w-450" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
         The main branch is updated with the latest commits from the feature branch.
         (A merge conflict may need to be resolved.)
       </div>
     </div>
     <div class="flex">
       <button [disabled]="!hideMessage" (click)="visualizeMerge()" class="w-250" mat-raised-button color="warn">Visualize "git merge feature"</button>
+      <div class="pr-16"></div>
+      <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
       <div class="pr-8"></div>
     </div>
   </div>

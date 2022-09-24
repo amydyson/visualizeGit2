@@ -7,20 +7,21 @@ import { SharedService } from '../shared.service';
   styleUrls: ['../app.component.css', './git-fetch.component.css']
 })
 export class GitFetchComponent implements OnInit {
-
   public hideMessage: boolean;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.enableReload = false;
   }
 
   visualizeFetch(){
     this.hideMessage = false;
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 3500);
+      this.enableReload = true;
+    }, 3000);
   }
 
 }

@@ -9,18 +9,20 @@ import { SharedService } from '../shared.service';
   animations: [ fade, myTrigger2, fade2, ani3 ]
 })
 export class AddComponent implements OnInit {
-  hideMessage: boolean;
+  public hideMessage: boolean;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.enableReload = false;
   }
 
   visualizeAdd(){
     this.hideMessage = false;
     setTimeout(() => {
-      this.sharedService.showSnackbar();
+      this.enableReload = true;
     }, 2000)
   }
 

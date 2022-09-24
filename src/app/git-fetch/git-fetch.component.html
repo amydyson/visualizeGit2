@@ -1,16 +1,18 @@
 <div class="flex direction-column">
   <div class="flex direction-column align-center" >
-    <div class="blue w-message">
+    <div class=" w-message">
         <div class="flex direction-column text-center" [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">
-          <div class="font-16-14"> Example: User 2 executes "get fetch"</div>
+          <div class="blue font-16-14"> Example: User 2 executes "get fetch"</div>
           <div class="white">All remote branches are fetched to the local repo and are now available for checkout. </div>
         </div>
         <div class="flex text-center" [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn': !hideMessage}">
-          <div class="pl-16 pr-16 font-16-14">All remote branches are fetched to the local repo and are now available for checkout. </div>
+          <div class="green pl-16 pr-16 font-16-14">All remote branches are fetched to the local repo and are now available for checkout. </div>
         </div>
     </div>
     <div class="flex">
       <button [disabled]="!hideMessage" (click)="visualizeFetch()" class="w-250" mat-raised-button color="warn">Visualize "git fetch"</button>
+      <div class="pr-16"></div>
+      <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
       <div class="pr-8"></div>
     </div>
   </div>
@@ -23,7 +25,7 @@
           <div class="flex white pr-8"><span class="hide-portrait pr-2">feature </span><span>B</span></div>
         </div>
         <div class="flex direction-column align-center">
-          <div class="pb-16 font-16-12 flex direction-column align-center"><div>Local <span class="hide-portrait">Repo</span>  </div><div>User 1</div></div>
+          <div class="pb-16 font-16-12 flex direction-column align-center"><div>User 1</div><div>Local <span class="hide-portrait">Repo</span>  </div></div>
           <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
         </div>
       </div>
@@ -52,7 +54,7 @@
             <span class="hide-portrait pr-2">feature </span><span>B</span></div>
         </div>
         <div class="flex direction-column align-center">
-        <div class="pb-16 font-16-12 flex direction-column align-center"><div>Local <span class="hide-portrait">Repo</span>  </div><div>User 2</div></div>
+        <div class="pb-16 font-16-12 flex direction-column align-center"><div>User 1</div><div>Local <span class="hide-portrait">Repo</span>  </div></div>
           <img  class="image-size--fetch"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
         </div>
       </div>

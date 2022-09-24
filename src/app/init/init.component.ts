@@ -7,19 +7,21 @@ import { SharedService } from '../shared.service';
   styleUrls: ['../app.component.css']
 })
 export class InitComponent implements OnInit {
-  hideMessage: boolean;
+  public hideMessage: boolean;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.enableReload = false;
   }
 
   visualizeInit(){
     this.hideMessage = false;
     setTimeout(() => {
-      this.sharedService.showSnackbar();
-    }, 2500);
+      this.enableReload = true;
+    }, 2200);
   }
 
 }

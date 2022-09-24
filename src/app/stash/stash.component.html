@@ -16,6 +16,8 @@
   </div>
   <div class="flex">
     <button [disabled]="completed || chosenCommand === ''" (click)="visualizeStash()" class="w-full" mat-raised-button color="warn">Visualize "git stash<span *ngIf="chosenCommand !=='no option' && chosenCommand !==''"> --{{chosenCommand}}</span>"</button>
+    <div class="pr-16"></div>
+    <button mat-fab [disabled]="!enableReload" (click)="reload()" mat-raised-button color="warn"><span>Reload</span></button><div class="pr-8"></div>
     <div class="pr-8"></div>
   </div>
   <div class="flex pt-32 change-direction">

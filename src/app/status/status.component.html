@@ -5,6 +5,8 @@
   </div>
   <div class="flex pt-8">
     <button [disabled]="!hideMessage" (click)="visualizeStatus()" class="w-250" mat-raised-button color="warn">Visualize "git status"</button>
+    <div class="pr-16"></div>
+    <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button><div class="pr-8"></div>
     <div class="pr-8"></div>
   </div>
   <section class= "flex direction-column pl-change-status pt-16 text-left" >

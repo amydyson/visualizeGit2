@@ -7,10 +7,10 @@ import { SharedService } from '../shared.service';
   styleUrls: ['../app.component.css']
 })
 export class StashComponent implements OnInit {
-
   public hideMessage: boolean;
   public completed: boolean;
   public optionSelected: boolean;
+  public enableReload: boolean;
   
   public commands = [
     {name: 'no option'},
@@ -28,6 +28,11 @@ export class StashComponent implements OnInit {
     this.chosenCommand = '';
     this.completed = false;
     this.optionSelected = false;
+    this.enableReload = false;
+  }
+
+  reload(){
+    // TODO: undo classes;
   }
 
   copyHead(){
@@ -165,7 +170,7 @@ export class StashComponent implements OnInit {
       default:
     }
     setTimeout(() => {
-      this.sharedService.showSnackbar();
+      this.enableReload = true;
     }, 2000)
     this.hideMessage = false;
     this.completed = true;

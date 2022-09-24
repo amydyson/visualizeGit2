@@ -11,12 +11,14 @@ import { SharedService } from '../shared.service';
 export class BranchComponent implements OnInit {
   public hideMessage: boolean;
   public branches: Array<string>;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
     this.branches = [];
+    this.enableReload = false;
   }
 
   push(message){
@@ -40,7 +42,7 @@ export class BranchComponent implements OnInit {
       this.hideMessage = false;
     }, 1500);
     setTimeout(() => {
-      this.sharedService.showSnackbar();
+      this.enableReload = true;
     }, 3000)
   }
 

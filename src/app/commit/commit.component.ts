@@ -7,17 +7,19 @@ import { SharedService } from '../shared.service';
   styleUrls: ['../app.component.css']
 })
 export class CommitComponent implements OnInit {
-  hideMessage: boolean;
+  public hideMessage: boolean;
+  public enableReload: boolean;
 
   constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;
+    this.enableReload = false;
   }
   visualizeCommit(){
     this.hideMessage = false;
     setTimeout(() => {
-      this.sharedService.showSnackbar();
+      this.enableReload = true;
     }, 2000);
   }
 
