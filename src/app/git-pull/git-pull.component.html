@@ -1,6 +1,6 @@
 <div class="flex direction-column align-center">
   <div class="flex direction-column align-center justify-center">
-    <div class="h-38 pb-16 font-16-14">
+    <div class="bold h-38 pb-16 font-16-14">
       <div class=blue [ngClass]="{'hide': !hideMessage, 'show': hideMessage}">Example: the user has main branch checked out</div>
       <div class="green flex direction-column pl-32 pr-32 max-w-600 h-change-28-48 font-14-12 " [ngClass]="{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}">
         The local main branch now points to the latest commit from the repo main branch. 
@@ -16,8 +16,8 @@
   </div>
   <div class="flex pt-32 align-center"> 
     <section class="flex direction-column align-center text-center"> 
-      <div class="pb-8">
-        <div>Remote Repo</div>
+      <div class="pl-32 pb-8">
+        <div class="green bold">Remote Repo</div>
         <div>main branch</div>
       </div>
       <div class="flex pr-48">
@@ -33,12 +33,12 @@
             <div class="pr-8 h-24">e34b2</div>
           </div>
         </div>
-        <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+        <img  class="image-size--pull"  src="assets/gitRepoGreen.jpeg" alt="repository on GitHub">
       </div>
     </section>
     <section class="flex direction-column align-center text-center"> 
-      <div class="pb-8">
-        <div>Local Repo</div>
+      <div class="pl-32 pb-8">
+        <div class="blue bold">Local Repo</div>
         <div>main branch</div>
       </div>
       <div class="flex pr-48">
@@ -49,14 +49,14 @@
             </div>   
             <div class="pr-8 white h-24">86b5f</div>
           </div>
-          <div class="flex align-center h-24" >
+          <div class="flex align-center justify-center h-24" >
             <div class="pr-2" [ngClass]="{'fade-out-arrow-2': !hideMessage}">
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=">
             </div>            
             <div class="pr-8 h-24">e34b2</div>
           </div>
         </div>
-        <img  class="image-size--pull"  src="assets/gitRepoGrayCropped.jpeg" alt="repository on GitHub">
+        <img  class="image-size--pull"  src="assets/gitRepoBlue.jpeg" alt="repository on GitHub">
       </div>
     </section>
   </div>
