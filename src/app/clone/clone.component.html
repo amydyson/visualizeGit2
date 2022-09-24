@@ -3,7 +3,7 @@
     <div class="blue  h-change-28-48">
       <span [ngClass]="{'hide': hideMessage, 'show': !hideMessage}">The git repo is cloned on the user's computer</span>
     </div>
-    <div class="flex flex-direction-change align-center">
+    <div class="flex align-center">
       <button [disabled]="!hideMessage" (click)="visualizeClone()" class="w-250" mat-raised-button color="warn">Visualize "git clone url"</button>
       <div class="pr-16"></div>
       <button mat-fab [disabled]="!enableReload" (click)="ngOnInit()" mat-raised-button color="warn"><span>Reload</span></button>
