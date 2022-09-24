@@ -32,7 +32,24 @@ export class StashComponent implements OnInit {
   }
 
   reload(){
-    // TODO: undo classes;
+    let group;
+    this.ngOnInit();
+    group = document.getElementsByClassName('move-left-from-working');
+    for (let i = 0; i < group.length; i++){
+      group[i].classList.remove('move-left-from-working');
+    }
+    group = document.getElementsByClassName('untracked');
+    for (let i = 0; i < group.length; i++){
+      group[i].classList.remove('move-left-from-working');
+    }
+    group = document.getElementsByClassName('move-left-from-index');
+    for (let i = 0; i < group.length; i++){
+      group[i].classList.remove('move-left-from-index');
+    }
+    group = document.getElementsByClassName('move-left-from-index-2');
+    for (let i = 0; i < group.length; i++){
+      group[i].classList.remove('move-left-from-index-2');
+    }
   }
 
   copyHead(){

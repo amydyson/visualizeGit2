@@ -5,6 +5,10 @@
     background-color: gold;
 }
 
+.background-orange {
+    background-color: orange;
+}
+
 .h-36 {
     height: 36px;
     min-height: 36px;
@@ -37,6 +41,11 @@
 
 .fade-to-green {
     animation: fade-to-green 2s linear;
+    animation-fill-mode: forwards;
+}
+
+.fade-to-orange {
+    animation: fade-to-orange 2s linear;
     animation-fill-mode: forwards;
 }
 
@@ -120,6 +129,17 @@
     }
     100% {
         background-color: #BEBEBE;
+    }
+} 
+@keyframes fade-to-orange{
+    0% {
+        background-color: gold;
+    }
+    60% {
+        background-color: gold;
+    }
+    100% {
+        background-color: orange;
     }
 } 
 
