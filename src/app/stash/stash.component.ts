@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-stash',
@@ -20,8 +19,6 @@ export class StashComponent implements OnInit {
 
   public chosenCommand: string;
   public chosenCommit: string;
-
-  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;

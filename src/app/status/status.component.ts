@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-status',
@@ -12,8 +11,6 @@ export class StatusComponent implements OnInit {
   public hideMessage: boolean;
   public messages: Array<string>;
   public enableReload: boolean;
-
-  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;

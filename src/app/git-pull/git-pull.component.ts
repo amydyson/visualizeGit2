@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-git-pull',
@@ -9,8 +8,6 @@ import { SharedService } from '../shared.service';
 export class GitPullComponent implements OnInit {
   public hideMessage: boolean;
   public enableReload: boolean;
-
-  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.hideMessage = true;

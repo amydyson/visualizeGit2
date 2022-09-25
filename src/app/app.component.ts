@@ -1,7 +1,6 @@
 import { animate, trigger, state, style, transition, keyframes } from '@angular/animations';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { fade, myTrigger2 } from './animations';
-import { SharedService } from './shared.service';
 
 
 @Component({
@@ -30,11 +29,9 @@ export class AppComponent implements OnInit {
   public isMac: boolean;
   showBanner: boolean;
 
-  constructor(private sharedService: SharedService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.sharedService.notificationsOn = true;
-    // navigator.userAgent.includes('Mac') ? this.sharedService.isMac = true : this.sharedService.isMac = false;
       this.commands = [
         {name: 'add'},
         {name: 'branch'},

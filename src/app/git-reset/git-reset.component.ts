@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-git-reset',
@@ -30,8 +29,6 @@ export class GitResetComponent implements OnInit {
   public commits2 = ['HEAD', 'HEAD~1', 'HEAD~2','HEAD~3', 'no parameter'];
   public chosenCommand: string;
   public chosenCommit: string;
-
-  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
     this.enableReload = false;

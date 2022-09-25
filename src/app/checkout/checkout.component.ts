@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { fade, fade2, myTrigger, myTrigger2, ani3 } from '../animations';
-import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'visualize-checkout',
@@ -21,7 +20,7 @@ export class CheckoutComponent implements OnInit {
     {name: 'create and checkout a new branch'},
   ];
 
-  constructor(private sharedService: SharedService) { }
+  constructor() { }
 
   ngOnInit() {
     this.hideMessage = true;
@@ -36,9 +35,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   visualizeCheckout(){
-    let bugDiv = document.getElementById('bug');
-    let arrowDiv = document.getElementById('arrow');
-
     this.hideMessage2 = false;
     this.hideMessage = false;
     this.disableOption = true;
