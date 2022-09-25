@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class= \"flex direction-column align-center\">\n  <div class=\"blue h-48\">\n   <div class=\"green\" [ngClass]=\"{'hide': hideMessage, 'show': !hideMessage}\">A snapshot of index.js is staged in the Index</div>\n  </div>\n  <div class=\"flex\">\n    <button [disabled]=\"!hideMessage\" (click)=\"visualizeAdd()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git add index.js\"</button>\n    <div class=\"pr-16\"></div>\n    <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button>\n    <div class=\"pr-8\"></div>\n  </div>\n  <div class=\"flex pt-32 change-direction\">\n    <div class=\"order-switch-2 flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align\">\n  <div class=\"w-full min-w-150 background-black white\">Working Area</div>\n  <div class=\"pt-change\">index.html</div>\n    <div class=\"pt-4 \">index.js</div>\n    <div class=\"pull-up green\" [ngClass]=\"{'hide': hideMessage, 'show, move': !hideMessage}\">index.js</div>\n  <div class=\"pt-4 pb-change\">index.css</div>\n    </div>\n    <div class=\"order-1 height-change bt-beige  bl-change bb-beige br-beige text-align\"><div class=\"w-full min-w-150 background-black white\">Index</div></div>\n    <div class=\"order-switch-0 height-change bt-beige  bl-change bb-beige br-beige text-align\"><div class=\"w-full min-w-150 background-black white\">Repository</div></div>\n  </div>\n</section>"
+module.exports = "<section class= \"flex direction-column align-center\">\n  <div class=\"blue h-48\">\n   <div class=\"green\" [ngClass]=\"{'hide': hideMessage, 'show': !hideMessage}\">A snapshot of index.js is staged in the Index (staging area).</div>\n  </div>\n  <div class=\"flex\">\n    <button [disabled]=\"!hideMessage\" (click)=\"visualizeAdd()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git add index.js\"</button>\n    <div class=\"pr-16\"></div>\n    <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button>\n    <div class=\"pr-8\"></div>\n  </div>\n  <div class=\"flex pt-32 change-direction\">\n    <div class=\"order-switch-2 flex  direction-column height-change bt-beige bb-beige bl-beige br-beige text-align\">\n  <div class=\"w-full min-w-150 background-black white\">Working Area</div>\n  <div class=\"pt-change\">index.html</div>\n    <div class=\"pt-4 \">index.js</div>\n    <div class=\"pull-up green\" [ngClass]=\"{'hide': hideMessage, 'show, move': !hideMessage}\">index.js</div>\n  <div class=\"pt-4 pb-change\">index.css</div>\n    </div>\n    <div class=\"order-1 height-change bt-beige  bl-change bb-beige br-beige text-align\"><div class=\"w-full min-w-150 background-black white\">Index</div></div>\n    <div class=\"order-switch-0 height-change bt-beige  bl-change bb-beige br-beige text-align\"><div class=\"w-full min-w-150 background-black white\">Repository</div></div>\n  </div>\n</section>"
 
 /***/ }),
 
@@ -47,14 +47,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 var AddComponent = /** @class */ (function () {
-    function AddComponent(sharedService) {
-        this.sharedService = sharedService;
+    function AddComponent() {
     }
     AddComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -73,8 +70,7 @@ var AddComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add.component.html */ "./src/app/add/add.component.html"),
             animations: [_animations__WEBPACK_IMPORTED_MODULE_2__["fade"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger2"], _animations__WEBPACK_IMPORTED_MODULE_2__["fade2"], _animations__WEBPACK_IMPORTED_MODULE_2__["ani3"]],
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"]])
+        })
     ], AddComponent);
     return AddComponent;
 }());
@@ -199,7 +195,7 @@ module.exports = "\n.visGitApp {\n    font-family: Arial, Helvetica, sans-serif 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"visGitApp flex direction-column align-center\"> \n  <div class=\"flex align-center justify-center pl-8 pv-change\">\n    <img class=\"image-size-icon\" alt=\"Visual Git Logo\" src=\"favicon.ico\"/>\n    <div class=\"font-size-change bold pl-16\">Visualize Git</div>\n  </div>\n  <mat-form-field class=\"w-250 pt-32\" appearance=\"fill\">\n    <mat-label float=\"never\">Choose a git command</mat-label>\n    <mat-select (selectionChange)=\"selectCommand($event.value)\">\n      <mat-option *ngFor = \"let command of commands\" [value]=\"command.name\"\n      >{{command.name}}</mat-option>\n    </mat-select>\n  </mat-form-field>\n  \n  <visualize-add  @fade *ngIf=\"chosenCommand === 'add'\" class=\"flex w-full justify-center change-direction\"></visualize-add>\n  <visualize-branch @fade *ngIf=\"chosenCommand === 'branch'\" class=\"flex w-full justify-center change-direction\"></visualize-branch>\n  <visualize-checkout @fade *ngIf=\"chosenCommand === 'checkout'\" class=\"flex w-full justify-center change-direction\"></visualize-checkout>\n  <visualize-clone @fade *ngIf=\"chosenCommand === 'clone'\" class=\"flex w-full justify-center change-direction\"></visualize-clone>\n  <visualize-commit @fade *ngIf=\"chosenCommand === 'commit'\" class=\"flex w-full justify-center change-direction\"></visualize-commit>\n  <visualize-git-fetch @fade *ngIf=\"chosenCommand === 'fetch'\" class=\"flex w-full justify-center change-direction\"></visualize-git-fetch>\n  <visualize-init @fade *ngIf=\"chosenCommand === 'init'\" class=\"flex w-full justify-center change-direction\"></visualize-init>\n  <visualize-log @fade *ngIf=\"chosenCommand === 'log'\" class=\"flex w-full justify-center change-direction\"></visualize-log>\n  <visualize-merge @fade *ngIf=\"chosenCommand === 'merge'\" class=\"flex w-full justify-center change-direction\"></visualize-merge>\n <visualize-git-pull  *ngIf=\"chosenCommand === 'pull'\"class=\"flex w-full justify-center change-direction\" ></visualize-git-pull>\n  <visualize-git-push @fade *ngIf=\"chosenCommand === 'push'\" class=\"flex w-full justify-center change-direction\"></visualize-git-push>\n  <visualize-git-reset @fade *ngIf=\"chosenCommand === 'reset'\" class=\"flex w-full justify-center change-direction\"></visualize-git-reset>\n  <visualize-stash @fade *ngIf=\"chosenCommand === 'stash'\" class=\"flex w-full justify-center change-direction\"></visualize-stash>\n  <visualize-status @fade *ngIf=\"chosenCommand === 'status'\" class=\"flex w-full justify-center change-direction\"></visualize-status>\n\n</section>\n"
+module.exports = "\n<section class=\"visGitApp flex direction-column align-center\"> \n  <div class=\"flex align-center justify-center pl-8 pv-change\">\n    <img class=\"image-size-icon\" alt=\"Visual Git Logo\" src=\"favicon.ico\"/>\n    <div class=\"font-size-change bold pl-16\">Visualize Git</div>\n  </div>\n  <mat-form-field class=\"w-250 pt-32\" appearance=\"fill\">\n    <mat-label float=\"never\">Choose a git command</mat-label>\n    <mat-select (selectionChange)=\"selectCommand($event.value)\">\n      <mat-option *ngFor = \"let command of commands\" [value]=\"command.name\"\n      >{{command.name}}</mat-option>\n    </mat-select>\n  </mat-form-field>\n  \n  <visualize-add  @fade *ngIf=\"chosenCommand === 'add'\" class=\"flex w-full justify-center change-direction\"></visualize-add>\n  <visualize-branch @fade *ngIf=\"chosenCommand === 'branch'\" class=\"flex w-full justify-center change-direction\"></visualize-branch>\n  <visualize-checkout @fade *ngIf=\"chosenCommand === 'checkout'\" class=\"flex w-full justify-center change-direction\"></visualize-checkout>\n  <visualize-clone @fade *ngIf=\"chosenCommand === 'clone'\" class=\"flex w-full justify-center change-direction\"></visualize-clone>\n  <visualize-commit @fade *ngIf=\"chosenCommand === 'commit'\" class=\"flex w-full justify-center change-direction\"></visualize-commit>\n  <visualize-git-fetch @fade *ngIf=\"chosenCommand === 'fetch'\" class=\"flex w-full justify-center change-direction\"></visualize-git-fetch>\n  <visualize-init @fade *ngIf=\"chosenCommand === 'init'\" class=\"flex w-full justify-center change-direction\"></visualize-init>\n  <visualize-log @fade *ngIf=\"chosenCommand === 'log'\" class=\"flex w-full justify-center change-direction\"></visualize-log>\n  <visualize-merge @fade *ngIf=\"chosenCommand === 'merge'\" class=\"flex w-full justify-center change-direction\"></visualize-merge>\n <visualize-git-pull  *ngIf=\"chosenCommand === 'pull'\"class=\"flex w-full justify-center change-direction\" ></visualize-git-pull>\n  <visualize-git-push @fade *ngIf=\"chosenCommand === 'push'\" class=\"flex w-full justify-center change-direction\"></visualize-git-push>\n  <visualize-git-reset @fade *ngIf=\"chosenCommand === 'reset'\" class=\"flex w-full justify-center change-direction\"></visualize-git-reset>\n  <visualize-stash @fade *ngIf=\"chosenCommand === 'stash'\" class=\"flex w-full justify-center change-direction\"></visualize-stash>\n  <visualize-status @fade *ngIf=\"chosenCommand === 'status'\" class=\"flex w-full justify-center change-direction\"></visualize-status>\n\n</section>\n"
 
 /***/ }),
 
@@ -217,22 +213,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(sharedService) {
-        this.sharedService = sharedService;
+    function AppComponent() {
         this.state = 'small';
         this.title = 'visualize-git';
         this.commands = [];
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.sharedService.notificationsOn = true;
-        // navigator.userAgent.includes('Mac') ? this.sharedService.isMac = true : this.sharedService.isMac = false;
         this.commands = [
             { name: 'add' },
             { name: 'branch' },
@@ -273,7 +264,7 @@ var AppComponent = /** @class */ (function () {
             ],
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_4__["SharedService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());
@@ -416,14 +407,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 var BranchComponent = /** @class */ (function () {
-    function BranchComponent(sharedService) {
-        this.sharedService = sharedService;
+    function BranchComponent() {
     }
     BranchComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -463,8 +451,7 @@ var BranchComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./branch.component.html */ "./src/app/branch/branch.component.html"),
             animations: [_animations__WEBPACK_IMPORTED_MODULE_2__["fade"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger2"], _animations__WEBPACK_IMPORTED_MODULE_2__["fade2"], _animations__WEBPACK_IMPORTED_MODULE_2__["ani3"]],
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./branch.component.css */ "./src/app/branch/branch.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"]])
+        })
     ], BranchComponent);
     return BranchComponent;
 }());
@@ -508,14 +495,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 var CheckoutComponent = /** @class */ (function () {
-    function CheckoutComponent(sharedService) {
-        this.sharedService = sharedService;
+    function CheckoutComponent() {
         this.commands = [
             { name: 'checkout an existing branch' },
             { name: 'create and checkout a new branch' },
@@ -533,8 +517,6 @@ var CheckoutComponent = /** @class */ (function () {
     };
     CheckoutComponent.prototype.visualizeCheckout = function () {
         var _this = this;
-        var bugDiv = document.getElementById('bug');
-        var arrowDiv = document.getElementById('arrow');
         this.hideMessage2 = false;
         this.hideMessage = false;
         this.disableOption = true;
@@ -564,7 +546,7 @@ var CheckoutComponent = /** @class */ (function () {
             animations: [_animations__WEBPACK_IMPORTED_MODULE_2__["fade"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger2"], _animations__WEBPACK_IMPORTED_MODULE_2__["fade2"], _animations__WEBPACK_IMPORTED_MODULE_2__["ani3"]],
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./checkout.component.css */ "./src/app/checkout/checkout.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], CheckoutComponent);
     return CheckoutComponent;
 }());
@@ -607,13 +589,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CloneComponent", function() { return CloneComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var CloneComponent = /** @class */ (function () {
-    function CloneComponent(sharedService) {
-        this.sharedService = sharedService;
+    function CloneComponent() {
     }
     CloneComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -631,8 +610,7 @@ var CloneComponent = /** @class */ (function () {
             selector: 'visualize-clone',
             template: __webpack_require__(/*! ./clone.component.html */ "./src/app/clone/clone.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./clone.component.css */ "./src/app/clone/clone.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], CloneComponent);
     return CloneComponent;
 }());
@@ -664,13 +642,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CommitComponent", function() { return CommitComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var CommitComponent = /** @class */ (function () {
-    function CommitComponent(sharedService) {
-        this.sharedService = sharedService;
+    function CommitComponent() {
     }
     CommitComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -688,8 +663,7 @@ var CommitComponent = /** @class */ (function () {
             selector: 'visualize-commit',
             template: __webpack_require__(/*! ./commit.component.html */ "./src/app/commit/commit.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], CommitComponent);
     return CommitComponent;
 }());
@@ -732,13 +706,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GitFetchComponent", function() { return GitFetchComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var GitFetchComponent = /** @class */ (function () {
-    function GitFetchComponent(sharedService) {
-        this.sharedService = sharedService;
+    function GitFetchComponent() {
     }
     GitFetchComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -756,8 +727,7 @@ var GitFetchComponent = /** @class */ (function () {
             selector: 'visualize-git-fetch',
             template: __webpack_require__(/*! ./git-fetch.component.html */ "./src/app/git-fetch/git-fetch.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./git-fetch.component.css */ "./src/app/git-fetch/git-fetch.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], GitFetchComponent);
     return GitFetchComponent;
 }());
@@ -800,13 +770,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GitPullComponent", function() { return GitPullComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var GitPullComponent = /** @class */ (function () {
-    function GitPullComponent(sharedService) {
-        this.sharedService = sharedService;
+    function GitPullComponent() {
     }
     GitPullComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -824,8 +791,7 @@ var GitPullComponent = /** @class */ (function () {
             selector: 'visualize-git-pull',
             template: __webpack_require__(/*! ./git-pull.component.html */ "./src/app/git-pull/git-pull.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./git-pull.component.css */ "./src/app/git-pull/git-pull.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], GitPullComponent);
     return GitPullComponent;
 }());
@@ -868,13 +834,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GitPushComponent", function() { return GitPushComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var GitPushComponent = /** @class */ (function () {
-    function GitPushComponent(sharedService) {
-        this.sharedService = sharedService;
+    function GitPushComponent() {
     }
     GitPushComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -892,8 +855,7 @@ var GitPushComponent = /** @class */ (function () {
             selector: 'visualize-git-push',
             template: __webpack_require__(/*! ./git-push.component.html */ "./src/app/git-push/git-push.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./git-push.component.css */ "./src/app/git-push/git-push.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], GitPushComponent);
     return GitPushComponent;
 }());
@@ -936,13 +898,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GitResetComponent", function() { return GitResetComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var GitResetComponent = /** @class */ (function () {
-    function GitResetComponent(sharedService) {
-        this.sharedService = sharedService;
+    function GitResetComponent() {
         this.commands = [
             { name: 'hard' },
             { name: 'mixed' },
@@ -1113,8 +1072,7 @@ var GitResetComponent = /** @class */ (function () {
             selector: 'visualize-git-reset',
             template: __webpack_require__(/*! ./git-reset.component.html */ "./src/app/git-reset/git-reset.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./git-reset.component.css */ "./src/app/git-reset/git-reset.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], GitResetComponent);
     return GitResetComponent;
 }());
@@ -1146,13 +1104,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InitComponent", function() { return InitComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var InitComponent = /** @class */ (function () {
-    function InitComponent(sharedService) {
-        this.sharedService = sharedService;
+    function InitComponent() {
     }
     InitComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -1170,8 +1125,7 @@ var InitComponent = /** @class */ (function () {
             selector: 'visualize-init',
             template: __webpack_require__(/*! ./init.component.html */ "./src/app/init/init.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], InitComponent);
     return InitComponent;
 }());
@@ -1215,14 +1169,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 var LogComponent = /** @class */ (function () {
-    function LogComponent(sharedService) {
-        this.sharedService = sharedService;
+    function LogComponent() {
     }
     LogComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -1241,8 +1192,7 @@ var LogComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./log.component.html */ "./src/app/log/log.component.html"),
             animations: [_animations__WEBPACK_IMPORTED_MODULE_2__["fade"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger2"], _animations__WEBPACK_IMPORTED_MODULE_2__["fade2"], _animations__WEBPACK_IMPORTED_MODULE_2__["ani3"]],
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./log.component.css */ "./src/app/log/log.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"]])
+        })
     ], LogComponent);
     return LogComponent;
 }());
@@ -1269,7 +1219,7 @@ module.exports = ".pull-up-pc {\n    margin-top: -5px;\n    /* border: 1px solid
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex direction-column w-full align-center\">\n  <div class=\"flex direction-column align-center justify-center\">\n    <div class=\" h-change-28-48 pb-change-16-32\">\n      <div class=\"blue\" [ngClass]=\"{'hide': !hideMessage, 'show': hideMessage}\">Example: the user has main branch checked out</div>\n      <div class=\"green flex direction-column pl-32 pr-32 w-550 max-w-550\" [ngClass]=\"{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}\">\n        The main branch is updated with the latest commits from the feature branch.\n        (A merge conflict may need to be resolved.)\n      </div>\n    </div>\n    <div class=\"flex\">\n      <button [disabled]=\"!hideMessage\" (click)=\"visualizeMerge()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git merge feature\"</button>\n      <div class=\"pr-16\"></div>\n      <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button>\n      <div class=\"pr-8\"></div>\n    </div>\n  </div>\n <div class=\"flex pt-32 w-full justify-center\"> \n    <section class=\"flex direction-column pr-16\"> \n      <div class=\"pb-8 pl-16 bold text-center\">feature branch </div>\n      <div class=\"flex\">\n        <div class=\"flex direction-column pt-36\">\n          <div class=\"flex align-center\">\n            <div class=\"h-30\"></div>     \n            <div class=\"pr-2 pl-28\">commit 86b5f</div>\n            <div class=\"pr-8 pull-left\" [ngClass]=\"{'hide': hideMessage, 'show move-right-merge': !hideMessage}\">commit 86b5f</div>\n          </div>\n          <div class=\"flex pr-2\">\n            <div class=\"pl-28\">commit e34b2</div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"flex direction-column text-left pr-16\"> \n      <div class=\"pb-8 pl-16 bold text-center\">main branch </div>\n      <div class=\"flex\">\n        <div class=\"flex direction-column pt-32\">\n          <div class=\"flex align-center h-20\">\n            <div class=\"pr-4 pt-25\" [ngClass]=\"{'hide': hideMessage, 'fade-in-arrow-2': !hideMessage}\">\n              <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=\">\n            </div>         \n            <div class=\"pr-2\"></div>\n          </div>\n          <div class=\"flex pr-2 mt-8 align-center justify-center\">\n            <div class=\"pr-4\" [ngClass]=\"{'fade-out-arrow-2': !hideMessage}\">\n              <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=\">\n            </div>    \n            <div class=\"\">commit e34b2</div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n"
+module.exports = "<div class=\"flex direction-column w-full align-center\">\n  <div class=\"flex direction-column align-center justify-center\">\n    <div class=\" h-change-28-48 pb-change-16-32\">\n      <div class=\"blue\" [ngClass]=\"{'hide': !hideMessage, 'show': hideMessage}\">Example: the user has main branch checked out</div>\n      <div class=\"green flex direction-column pl-32 pr-32 w-550 max-w-550\" [ngClass]=\"{'hide': hideMessage, 'show-slow-fadeIn text-center': !hideMessage}\">\n        The main branch is updated with the latest commits from the feature branch.\n        (A merge conflict may need to be resolved.)\n      </div>\n    </div>\n    <div class=\"flex\">\n      <button [disabled]=\"!hideMessage\" (click)=\"visualizeMerge()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git merge feature\"</button>\n      <div class=\"pr-16\"></div>\n      <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button>\n      <div class=\"pr-8\"></div>\n    </div>\n  </div>\n <div class=\"flex pt-32 w-full justify-center\"> \n    <section class=\"flex direction-column pr-16\"> \n      <div class=\"pb-8 pl-16 green bold text-center\">feature branch </div>\n      <div class=\"flex\">\n        <div class=\"flex direction-column pt-36\">\n          <div class=\"flex align-center\">\n            <div class=\"h-30\"></div>     \n            <div class=\"pr-2 pl-28\">commit 86b5f</div>\n            <div class=\"pr-8 pull-left\" [ngClass]=\"{'hide': hideMessage, 'show move-right-merge': !hideMessage}\">commit 86b5f</div>\n          </div>\n          <div class=\"flex pr-2\">\n            <div class=\"pl-28\">commit e34b2</div>\n          </div>\n        </div>\n      </div>\n    </section>\n    <section class=\"flex direction-column text-left pr-16\"> \n      <div class=\"pb-8 pl-16 blue bold text-center\">main branch </div>\n      <div class=\"flex\">\n        <div class=\"flex direction-column pt-32\">\n          <div class=\"flex align-center h-20\">\n            <div class=\"pr-4 pt-25\" [ngClass]=\"{'hide': hideMessage, 'fade-in-arrow-2': !hideMessage}\">\n              <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=\">\n            </div>         \n            <div class=\"pr-2\"></div>\n          </div>\n          <div class=\"flex pr-2 mt-8 align-center justify-center\">\n            <div class=\"pr-4\" [ngClass]=\"{'fade-out-arrow-2': !hideMessage}\">\n              <img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAjElEQVRIie3VPQ4BURiF4ScSetbANtiNtWitg42MXUw1vUYjrsYoZEhG7qk4ySm/++b7ybn8FdAmDbhhj1kKUB4+YZUEFJyxTQJ6H7FIAgparIcKug9FY33FDtMUoHeDZRLwPIDJmznXUMEl1UFsRINL/qb1UWdaA3DAvMbjr4BoVMTCLh7X8Q/nx3QHemGZLZvPo5wAAAAASUVORK5CYII=\">\n            </div>    \n            <div class=\"\">commit e34b2</div>\n          </div>\n        </div>\n      </div>\n    </section>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1285,13 +1235,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MergeComponent", function() { return MergeComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var MergeComponent = /** @class */ (function () {
-    function MergeComponent(sharedService) {
-        this.sharedService = sharedService;
+    function MergeComponent() {
     }
     MergeComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -1309,63 +1256,9 @@ var MergeComponent = /** @class */ (function () {
             selector: 'visualize-merge',
             template: __webpack_require__(/*! ./merge.component.html */ "./src/app/merge/merge.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./merge.component.css */ "./src/app/merge/merge.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], MergeComponent);
     return MergeComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/shared.service.ts":
-/*!***********************************!*\
-  !*** ./src/app/shared.service.ts ***!
-  \***********************************/
-/*! exports provided: SharedService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SharedService", function() { return SharedService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm5/snack-bar.es5.js");
-
-
-
-var SharedService = /** @class */ (function () {
-    function SharedService(snackBar) {
-        this.snackBar = snackBar;
-    }
-    SharedService.prototype.showSnackbar = function () {
-        var _this = this;
-        if (this.notificationsOn) {
-            var message = 'Animation complete. Choose another command.';
-            var action = 'Disable this Notification Bar';
-            var snackbarRef = this.snackBar.open(message, action, { duration: 2800 });
-            snackbarRef.onAction().subscribe(function () {
-                _this.notificationsOn = false;
-            });
-        }
-    };
-    SharedService.prototype.showSnackbarCssStyles = function (content, action, duration) {
-        var sb = this.snackBar.open(content, action, {
-            duration: duration,
-            panelClass: ["custom-style"]
-        });
-        sb.onAction().subscribe(function () {
-            sb.dismiss();
-        });
-    };
-    SharedService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-            providedIn: 'root'
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"]])
-    ], SharedService);
-    return SharedService;
 }());
 
 
@@ -1395,13 +1288,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StashComponent", function() { return StashComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 var StashComponent = /** @class */ (function () {
-    function StashComponent(sharedService) {
-        this.sharedService = sharedService;
+    function StashComponent() {
         this.commands = [
             { name: 'no option' },
             { name: 'include-untracked' },
@@ -1582,8 +1472,7 @@ var StashComponent = /** @class */ (function () {
             selector: 'visualize-stash',
             template: __webpack_require__(/*! ./stash.component.html */ "./src/app/stash/stash.component.html"),
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"]])
+        })
     ], StashComponent);
     return StashComponent;
 }());
@@ -1610,7 +1499,7 @@ module.exports = ".green-bold {\n    color: green;\n    font-weight: bold;\n    
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"flex direction-column w-full align-center\">\n  <div class=\"blue pt-8 pr-16 pl-16 h-change-28-48 font-16-14\" >\n    <div class=\"blue w-550 text-center\" *ngIf=\"hideMessage\">Git status displays the state of the working directory and the staging area.</div>\n    <div class=\"blue w-450 text-center\" *ngIf=\"!hideMessage\" [@myTrigger]=\"fadeIn\"><span class=\"red bold pr-8\">Red: <span class=\"black regular\">in Working Area.</span> </span><span class=\"green bold\">Green:<span class=\"black regular\">  in Index.</span></span></div>\n  </div>\n  <div class=\"flex pt-8\">\n    <button [disabled]=\"!hideMessage\" (click)=\"visualizeStatus()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git status\"</button>\n    <div class=\"pr-16\"></div>\n    <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button><div class=\"pr-8\"></div>\n    <div class=\"pr-8\"></div>\n  </div>\n  <section class= \"flex direction-column pl-change-status pt-16 text-left\" >\n    <div [ngClass]=\"{\n                    'ml-neg': i == '0',\n                    'green-bold pl-16': i == '1',\n                    'red-bold': i == '3'\n                  }\" \n                    class=\"pt-8 pb-8\" *ngFor=\"let message of messages; let i = index\" [@myTrigger]=\"fadeIn\">{{message}}</div>\n  </section>\n</div>\n\n\n"
+module.exports = "<div class=\"flex direction-column w-full align-center\">\n  <div class=\"blue pt-8 pr-16 pl-16 h-change-28-48 font-16-14\" >\n    <div class=\"blue w-550 text-center\" *ngIf=\"hideMessage\">Git status displays the state of the working directory and the Index (staging area).</div>\n    <div class=\"blue w-450 text-center\" *ngIf=\"!hideMessage\" [@myTrigger]=\"fadeIn\"><span class=\"red bold pr-8\">Red: <span class=\"black regular\">in Working Area.</span> </span><span class=\"green bold\">Green:<span class=\"black regular\">  in Index.</span></span></div>\n  </div>\n  <div class=\"flex pt-8\">\n    <button [disabled]=\"!hideMessage\" (click)=\"visualizeStatus()\" class=\"w-250\" mat-raised-button color=\"warn\">Visualize \"git status\"</button>\n    <div class=\"pr-16\"></div>\n    <button mat-fab [disabled]=\"!enableReload\" (click)=\"ngOnInit()\" mat-raised-button color=\"warn\"><span>Reload</span></button><div class=\"pr-8\"></div>\n    <div class=\"pr-8\"></div>\n  </div>\n  <section class= \"flex direction-column pl-change-status pt-16 text-left\" >\n    <div [ngClass]=\"{\n                    'ml-neg': i == '0',\n                    'green-bold pl-16': i == '1',\n                    'red-bold': i == '3'\n                  }\" \n                    class=\"pt-8 pb-8\" *ngFor=\"let message of messages; let i = index\" [@myTrigger]=\"fadeIn\">{{message}}</div>\n  </section>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1627,14 +1516,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../animations */ "./src/app/animations.ts");
-/* harmony import */ var _shared_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../shared.service */ "./src/app/shared.service.ts");
-
 
 
 
 var StatusComponent = /** @class */ (function () {
-    function StatusComponent(sharedService) {
-        this.sharedService = sharedService;
+    function StatusComponent() {
     }
     StatusComponent.prototype.ngOnInit = function () {
         this.hideMessage = true;
@@ -1671,8 +1557,7 @@ var StatusComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./status.component.html */ "./src/app/status/status.component.html"),
             animations: [_animations__WEBPACK_IMPORTED_MODULE_2__["fade"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger"], _animations__WEBPACK_IMPORTED_MODULE_2__["myTrigger2"], _animations__WEBPACK_IMPORTED_MODULE_2__["fade2"], _animations__WEBPACK_IMPORTED_MODULE_2__["ani3"]],
             styles: [__webpack_require__(/*! ../app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./status.component.css */ "./src/app/status/status.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_service__WEBPACK_IMPORTED_MODULE_3__["SharedService"]])
+        })
     ], StatusComponent);
     return StatusComponent;
 }());
