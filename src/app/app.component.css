@@ -792,9 +792,7 @@ li {
         width: 9.357rem;
     }
 
-    .image-size--fetch {
-        width: 9.357rem;
-    }
+
     .pt-change {
         padding-top: 2rem;
     }
@@ -1096,11 +1094,6 @@ li {
         margin-top: -3.625rem;
     }
 
-    .image-size--fetch {
-        width: 3.125rem;
-        height: 3.125rem;
-    }
-
     .flex-direction-change {
         flex-direction: row;
     }
@@ -1366,11 +1359,6 @@ li {
     }
     .pull-up-image{
         margin-top: -3.75rem;
-    }
-
-    .image-size--fetch {
-        width: 3.125rem;
-        height: 3.125rem;
     }
 
     @keyframes moveAndColor {

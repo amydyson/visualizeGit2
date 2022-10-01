@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.image-size--fetch {
+    width: 9.357rem;
+}
+
 .z-1 {
     z-index: 1;
 }
@@ -85,6 +89,11 @@
         display: flex;
     }
 
+    .image-size--fetch {
+        width: 3.125rem;
+        height: 5.125rem;
+    }
+
     .fetch-section--middle {
         width: 100px;
     }
@@ -126,6 +135,11 @@
         width: 90px;
     }
 
+    .image-size--fetch {
+        width: 3.125rem;
+        height: 5.125rem;
+    }
+
     .portrait-A-top {
         padding-right: 2px;
     }
@@ -152,7 +166,7 @@
     }
     
     .pt-feature {
-        padding-top: 50px;
+        padding-top: 70px;
     }
     .font-switch {
         font-size: 12px;
