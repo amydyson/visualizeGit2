@@ -1,33 +1,3 @@
-<!-- 
-<section class="visGitApp flex direction-column align-center"> 
-  <div class="flex align-center justify-center pl-8 pv-change">
-    <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
-    <div class="font-size-change bold pl-16">Visualize Git</div>
-  </div>
-  <mat-form-field class="w-250 pt-32" appearance="fill">
-    <mat-label float="never">Choose a git command</mat-label>
-    <mat-select (selectionChange)="selectCommand($event.value)">
-      <mat-option *ngFor = "let command of commands" [value]="command.name"
-      >{{command.name}}</mat-option>
-    </mat-select>
-  </mat-form-field>
-  
-  <visualize-add  @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
-  <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
-  <visualize-checkout @fade *ngIf="chosenCommand === 'checkout'" class="flex w-full justify-center change-direction"></visualize-checkout>
-  <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
-  <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
-  <visualize-git-fetch @fade *ngIf="chosenCommand === 'fetch'" class="flex w-full justify-center change-direction"></visualize-git-fetch>
-  <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>
-  <visualize-log @fade *ngIf="chosenCommand === 'log'" class="flex w-full justify-center change-direction"></visualize-log>
-  <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
- <visualize-git-pull  *ngIf="chosenCommand === 'pull'"class="flex w-full justify-center change-direction" ></visualize-git-pull>
-  <visualize-git-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-git-push>
-  <visualize-git-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-git-reset>
-  <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
-  <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>
-
-</section> -->
 
 <mat-drawer-container class="drawer-container" autosize>
   <mat-drawer #drawer class="drawer-sidenav" mode="side">
@@ -42,7 +12,7 @@
           <h3>About this App</h3>
           <p>This interactive web app uses animation to help people understand Git. It includes fourteen commands, enough to work with Git effectively. While other Git commands and options do cool things, these fourteen commands are all an engineer needs for successful version control.</p>
           <h3>About Git</h3>
-          <p>Git, released in 2005, holds a whopping 90% market share. Developed by Linus Torvalds practically overnight to support the Linux operating system, it solved a lot of problems of earlier version control systems. It’s distributed – allowing programmers to work independently and merge their code later. It’s fast. It can also be maddening to learn. While introducing Torvalds at the Google Tech Talk Conference in 2007, Andrew Morton asked Torvalds why he wrote a software tool that only Torvalds was smart enough to use. (It was a joke. Kind of.) Visualize Git was developed for developers who could use a quickstart guide.</p>
+          <p>Git, released in 2005, holds a whopping 90% market share. Developed by Linus Torvalds practically overnight to support the Linux operating system, it solved a lot of problems of earlier version control systems. It’s distributed – allowing programmers to work independently and merge their code later. It’s fast. It can also be maddening to learn. While introducing Torvalds at the Google Tech Talk Conference in 2007, Andrew Morton asked him why he wrote a software tool that only Torvalds was smart enough to use. (It was a joke. Kind of.) Visualize Git serves as a quickstart guide for those new to Git, and as a refresher for more experienced engineers who could benefit from visualizing Git commands.</p>
           <div class="flex align-center justify-center pt-16">
             <div class="material-icons email-icon">email</div>
             <div class="pl-4">feedback@visualizegit.com</div>
@@ -54,6 +24,36 @@
     *ngIf="!drawer.opened">
       About
     </button>
+
+    <section class="visGitApp flex direction-column align-center"> 
+      <div class="flex align-center justify-center pl-8 pv-change">
+        <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
+        <div class="font-size-change bold pl-16">Visualize Git</div>
+      </div>
+      <mat-form-field class="w-250 pt-32" appearance="fill">
+        <mat-label float="never">Choose a git command</mat-label>
+        <mat-select (selectionChange)="selectCommand($event.value)">
+          <mat-option *ngFor = "let command of commands" [value]="command.name"
+          >{{command.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <visualize-add  @fade *ngIf="chosenCommand === 'add'" class="flex w-full justify-center change-direction"></visualize-add>
+      <visualize-branch @fade *ngIf="chosenCommand === 'branch'" class="flex w-full justify-center change-direction"></visualize-branch>
+      <visualize-checkout @fade *ngIf="chosenCommand === 'checkout'" class="flex w-full justify-center change-direction"></visualize-checkout>
+      <visualize-clone @fade *ngIf="chosenCommand === 'clone'" class="flex w-full justify-center change-direction"></visualize-clone>
+      <visualize-commit @fade *ngIf="chosenCommand === 'commit'" class="flex w-full justify-center change-direction"></visualize-commit>
+      <visualize-git-fetch @fade *ngIf="chosenCommand === 'fetch'" class="flex w-full justify-center change-direction"></visualize-git-fetch>
+      <visualize-init @fade *ngIf="chosenCommand === 'init'" class="flex w-full justify-center change-direction"></visualize-init>
+      <visualize-log @fade *ngIf="chosenCommand === 'log'" class="flex w-full justify-center change-direction"></visualize-log>
+      <visualize-merge @fade *ngIf="chosenCommand === 'merge'" class="flex w-full justify-center change-direction"></visualize-merge>
+    <visualize-git-pull  *ngIf="chosenCommand === 'pull'"class="flex w-full justify-center change-direction" ></visualize-git-pull>
+      <visualize-git-push @fade *ngIf="chosenCommand === 'push'" class="flex w-full justify-center change-direction"></visualize-git-push>
+      <visualize-git-reset @fade *ngIf="chosenCommand === 'reset'" class="flex w-full justify-center change-direction"></visualize-git-reset>
+      <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
+      <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>
+
+    </section>
 
 </mat-drawer-container>
 
