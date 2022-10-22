@@ -1,4 +1,4 @@
-
+<!-- 
 <section class="visGitApp flex direction-column align-center"> 
   <div class="flex align-center justify-center pl-8 pv-change">
     <img class="image-size-icon" alt="Visual Git Logo" src="favicon.ico"/>
@@ -27,4 +27,33 @@
   <visualize-stash @fade *ngIf="chosenCommand === 'stash'" class="flex w-full justify-center change-direction"></visualize-stash>
   <visualize-status @fade *ngIf="chosenCommand === 'status'" class="flex w-full justify-center change-direction"></visualize-status>
 
-</section>
+</section> -->
+
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+    <div class="flex align-end">
+      <button class="pointer close-button" type="button" mat-button (click)="drawer.toggle()">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+
+    <section class="flex direction-column align-center p-32">
+
+          <h3>About this App</h3>
+          <p>This interactive web app uses animation to help people understand Git. It includes fourteen commands, enough to work with Git effectively. While other Git commands and options do cool things, these fourteen commands are all an engineer needs for successful version control.</p>
+          <h3>About Git</h3>
+          <p>Git, released in 2005, holds a whopping 90% market share. Developed by Linus Torvalds practically overnight to support the Linux operating system, it solved a lot of problems of earlier version control systems. It’s distributed – allowing programmers to work independently and merge their code later. It’s fast. It can also be maddening to learn. While introducing Torvalds at the Google Tech Talk Conference in 2007, Andrew Morton asked Torvalds why he wrote a software tool that only Torvalds was smart enough to use. (It was a joke. Kind of.) Visualize Git was developed for developers who could use a quickstart guide.</p>
+          <div class="flex align-center justify-center pt-16">
+            <div class="material-icons email-icon">email</div>
+            <div class="pl-4">feedback@visualizegit.com</div>
+          </div>
+    </section>
+  </mat-drawer>
+
+    <button class="pointer" type="button" mat-button (click)="drawer.toggle()"
+    *ngIf="!drawer.opened">
+      About
+    </button>
+
+</mat-drawer-container>
+
