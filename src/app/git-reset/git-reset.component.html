@@ -40,7 +40,7 @@
         <div class="w-full min-w-150--reset background-black white">Working Area</div>
         <div class="flex align-center justify-center pt-8 mt-4 pb-32">
           <div class="dot " 
-              [ngClass]="{'gold': initArrow || (!initArrow && overwriteType !== 'hard'),
+              [ngClass]="{'gold': initArrow,
                           'fade-to-green': !initArrow && copyHead() && overwriteType() === 'hard',
                           'fade-to-red': !initArrow && copyHead1() && overwriteType() === 'hard',
                           'fade-to-purple': !initArrow && copyHead2() && overwriteType() === 'hard',
