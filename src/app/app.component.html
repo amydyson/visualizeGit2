@@ -31,7 +31,7 @@
         <div class="font-size-change bold pl-16">Visualize Git</div>
       </div>
       <mat-form-field class="w-250 pt-32" appearance="fill">
-        <mat-label float="never">* Choose a git command * </mat-label>
+        <mat-label float="never">Choose a git command</mat-label>
         <mat-select (selectionChange)="selectCommand($event.value)">
           <mat-option *ngFor = "let command of commands" [value]="command.name"
           >{{command.name}}</mat-option>
